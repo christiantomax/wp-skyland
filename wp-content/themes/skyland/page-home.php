@@ -3,7 +3,7 @@
     require get_theme_file_path( 'config.php' );
 ?>
 
-<section class="bg-rose-400 w-screen h-screen full-page" id="home-banner">
+<section class="w-screen h-screen full-page" id="home-banner">
     <div class="bg-fixed bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-home.png';?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
             <h1 class="figtree-light font-bold text-white text-6xl">Luxury Redefined:</h1>
@@ -14,18 +14,18 @@
 </section>
 
 <!-- Offered Section Properties -->
-<section class="w-screen full-page bg-black flex justify-center" id="properties">
+<section class="w-screen full-page flex justify-center" id="properties">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-36">
-        <div class="flex mb-12">
+        <div class="flex mb-16">
             <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
                 <p class="figtree-light text-white">01</p>
             </div>
-            <h1 class="figtree-light font-bold text-white text-6xl">Properties</h1>
+            <p class="figtree-light font-bold text-white text-6xl">Properties</p>
         </div>
     </div>
 </section>
 
-<section class="w-screen full-page bg-black" id="properties-swiper">
+<section class="w-screen full-page" id="properties-swiper">
     <div>
         <!-- Swiper -->
         <div class="swiper home-properties w-full mb-12">
@@ -62,22 +62,21 @@
 </section>
 
 <!-- Investment Section -->
-<section class="w-screen full-page bg-black flex justify-center" id="properties">
-    <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-40">
-        <div class="flex mb-14">
-            <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
-                <p class="figtree-light text-white">02</p>
-            </div>
-            <h1 class="figtree-light font-bold text-white text-6xl">Investment</h1>
-        </div>
-    </div>
-</section>
-
-<section class="w-screen full-page bg-black" id="properties-swiper">
+<section class="w-screen full-page" id="properties-swiper">
     <div class="flex h-8-12 mb-36">
-        <div class="w-6/12 ps-36">
+        <div class="w-1/12 flex justify-end">
+            <div class="flex mb-14">
+                <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
+                    <p class="figtree-light text-white">02</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-6/12">
+            <div class="w-full h-30 mb-16">
+                <h1 class="figtree-light font-bold text-white text-6xl"><strong>Investment</strong></h1>
+            </div>
             <div class="w-full h-48 mb-16">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/200/300"/>
+                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
             </div>
             <div class="flex">
                 <div class="w-8/12">
@@ -106,16 +105,16 @@
                 </div>
             </div>
         </div>
-        <div class="w-6/12 flex justify-end items-end">
+        <div class="w-5/12 flex justify-end items-end">
             <div class="w-8/12 home-investment-right-image">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/200/300"/>
+                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
             </div>
         </div>
     </div>
 </section>
 
 <!-- story section -->
-<section class="bg-rose-400 w-screen full-page mb-40" id="home-story">
+<section class="w-screen full-page mb-40" id="home-story">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-home-story.png';?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24 text-white">
             <div class="flex justify-between w-full">
@@ -124,7 +123,7 @@
                         <p class="figtree-light">03</p>
                     </div>
                     <div class="w-3/12">
-                        <h1 class="figtree-light font-bold text-white text-6xl mb-16">The Story</h1>
+                        <h1 class="figtree-light font-bold text-white text-6xl mb-12"><strong>The Story</strong></h1>
                         <p class="text-white pt-1 min-h-content text-ellipsis overflow-hidden">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 

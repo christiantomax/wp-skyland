@@ -1,5 +1,9 @@
 .full-page{
-    max-width: 99.14vw;
+    max-width: 98.5vw;
+}
+
+#home-story{
+    height: 80vh
 }
 
 /* testing */
