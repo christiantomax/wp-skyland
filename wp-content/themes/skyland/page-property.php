@@ -13,8 +13,8 @@
                         <p class="figtree-light">01</p>
                     </div>
                     <div class="w-12/12">
-                        <h1 class="figtree-light font-bold text-white text-6xl mb-8"><strong>Foreword</strong></h1>
-                        <h2 class="figtree-light font-bold text-white text-8xl mb-16">Where all things happens.</h2>
+                        <h2 class="figtree-light font-bold text-white text-4xl mb-4">Foreword</h2>
+                        <h1 class="figtree-light font-bold text-white text-7xl mb-16"><strong>Where all things happens.</strong></h1>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
 
 <!-- section project list item -->
 <section class="w-screen full-page flex flex-col items-center text-white pb-20" id="project-list">
-        <div class="w-10/12 h-full flex flex-col justify-center pb-2 ms-16 mt-16">
+        <div class="w-10/12 h-full flex flex-col justify-center pb-2 ms-15 mt-16">
     <?php
         for ($i = 0; $i < 3; $i++) {
     ?>
@@ -95,11 +95,13 @@
                                 </p>
                             </div>
                             <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description">
-                                <p class="text-white text-2xl font-normal text-end me-3">
-                                    Explore more
-                                </p>
-                                <div class="flex items-end pb-1">
-                                    <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                <div class="flex explore-rotate-left">
+                                    <p class="text-white text-2xl font-normal text-end me-3">
+                                        Explore more
+                                    </p>
+                                    <div class="flex items-end pb-1 icon animate-pulse">
+                                        <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -112,8 +114,6 @@
         }
     ?>
     </div>
-
-    
 </section>
 
 <?php get_footer() ?>

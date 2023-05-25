@@ -25,7 +25,7 @@
     </div>
 </section>
 
-<section class="w-screen full-page" id="properties-swiper">
+<section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
         <!-- Swiper -->
         <div class="swiper home-properties w-full mb-12">
@@ -51,12 +51,14 @@
         </div>
     </div>
 
-    <div class="flex justify-center">
-        <p class="text-white text-2xl font-normal w-11/12 text-end me-3">
-            Explore more
-        </p>
-        <div class="flex items-end pb-1">
-            <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+    <div class="flex justify-end mr-16">
+        <div class="flex explore-rotate-left">
+            <p class="text-white text-2xl font-normal text-end me-3">
+                Explore more
+            </p>
+            <div class="flex items-end pb-1 icon animate-pulse">
+                <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+            </div>
         </div>
     </div>
 </section>
@@ -71,7 +73,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-6/12">
+        <div class="w-5/12">
             <div class="w-full h-30 mb-16">
                 <h1 class="figtree-light font-bold text-white text-6xl"><strong>Investment</strong></h1>
             </div>
@@ -94,24 +96,27 @@
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     </p>
-                    <div class="flex justify-center mt-10">
-                        <p class="text-white text-2xl font-normal w-11/12 text-end me-3">
-                            Explore more
-                        </p>
-                        <div class="flex items-end pb-1">
-                            <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                    <div class="flex justify-end mt-10 pe-4">
+                        <div class="flex explore-rotate-left">
+                            <p class="text-white text-2xl font-normal text-end me-3">
+                                Explore more
+                            </p>
+                            <div class="flex items-end pb-1 icon animate-pulse">
+                                <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-5/12 flex justify-end items-end">
+        <div class="w-6/12 flex justify-end items-end">
             <div class="w-8/12 home-investment-right-image">
                 <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- story section -->
 <section class="w-screen full-page mb-40" id="home-story">
@@ -131,11 +136,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex w-2/12">
+                <div class="flex w-4/12 h-fit explore-rotate-left">
                     <p class="text-white text-2xl font-normal w-11/12 text-right">
                         Explore more
                     </p>
-                    <div class="pt-2 ms-3">
+                    <div class="pt-2 ms-3 icon animate-pulse">
                         <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                     </div>
                 </div>

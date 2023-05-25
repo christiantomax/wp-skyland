@@ -107,8 +107,8 @@
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24 text-white">
             <div class="flex justify-between w-full">
                 <div class="flex" >
-                    <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12 rotate-180 font-bold">
-                        <p class="figtree-light">
+                    <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12 rotate-180 font-bold hover:cursor-pointer">
+                        <p class="figtree-light animate-pulse">
                             <svg id="SvgjsSvg1011" width="18" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" 
                             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
                                 <defs id="SvgjsDefs1012"></defs>
@@ -122,11 +122,13 @@
                     </div>
                 </div>
                 <div class="flex items-end w-2/12 pb-16">
-                    <p class="text-white text-2xl font-normal w-11/12 text-right">
-                        Explore more
-                    </p>
-                    <div class="pb-1 ms-3">
-                        <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                    <div class="flex explore-rotate-left">
+                        <p class="text-white text-2xl font-normal text-end me-3">
+                            Explore more
+                        </p>
+                        <div class="flex items-end pb-1 icon animate-pulse">
+                            <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                        </div>
                     </div>
                 </div>
             </div>

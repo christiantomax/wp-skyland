@@ -2,8 +2,22 @@
     max-width: 98.5vw;
 }
 
-#home-story{
+.full-page-height{
+    height: 88.5vh;
+}
+
+#home-story, #reach-us{
     height: 80vh
 }
 
-/* testing */
+.explore-rotate-left, .explore-rotate-down{
+    cursor: pointer;
+}
+
+.explore-rotate-down:hover .icon{
+    transform: rotate(135deg);
+}
+
+.icon{
+    transition: ease-in 0.3s;
+}
