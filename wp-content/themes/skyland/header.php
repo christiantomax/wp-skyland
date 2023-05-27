@@ -11,6 +11,15 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <?php
+        $site_icon_id = get_option('site_icon');
+        $site_icon_url = get_site_icon_url($size = null, $blog_id = null, $scheme = null);
+
+        if (!empty($site_icon_url)) {
+            echo '<link rel="icon" href="' . esc_url($site_icon_url) . '" />';
+        }
+    ?>
+
     <link rel="stylesheet" href="<?= $assets_folder_path."/style/style.css"; ?>">
     <link rel="stylesheet" href="<?= $assets_folder_path."/style/".strtolower(get_the_title()).".css"; ?>">
     <!-- swiper -->
