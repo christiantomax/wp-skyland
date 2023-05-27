@@ -127,7 +127,7 @@
                     <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
                         <p class="figtree-light">03</p>
                     </div>
-                    <div class="w-3/12">
+                    <div class="w-5/12">
                         <h1 class="figtree-light font-bold text-white text-6xl mb-12"><strong>The Story</strong></h1>
                         <p class="text-white pt-1 min-h-content text-ellipsis overflow-hidden">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

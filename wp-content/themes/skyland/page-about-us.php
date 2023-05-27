@@ -43,7 +43,7 @@
             <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
         </div>
 
-        <div class="flex w-9/12">
+        <div class="flex w-11/12">
             <div class="w-2/12 flex items-start pe-20">
                 <p class="border-b-2 border-white pt-2">skyland</p>
             </div>
@@ -199,7 +199,7 @@
                 <div class="w-8/12">
                     <span class="border-b-2 border-white">skyland</span>
                 </div>
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between pe-12">
                     <p class="text-white pt-1 min-h-content text-ellipsis overflow-hidden">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 

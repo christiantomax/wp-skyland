@@ -50,7 +50,7 @@
 <!-- section investment quote -->
 <section class="w-screen full-page" id="investment-quote">
     <div class="flex h-8-12 mb-36">
-        <div class="w-8/12">
+        <div class="w-10/12">
             <div class="flex">
                 <div class="w-4/12 flex items-start justify-end pe-20">
                     <p class="border-b-2 border-white pt-2">skyland</p>
@@ -69,7 +69,7 @@
 
 <!-- section investment opportunity -->
 <section class="w-screen full-page m-0" id="properties-swiper">
-    <div class="flex h-8-12 mb-36">
+    <div class="flex h-8-12 mb-36 ps-16">
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
                 <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
