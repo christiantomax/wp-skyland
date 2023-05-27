@@ -12,7 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="<?= $assets_folder_path."/style/style.css"; ?>">
-    <link rel="stylesheet" href="<?= $assets_folder_path."/style/".get_the_title().".css"; ?>">
+    <link rel="stylesheet" href="<?= $assets_folder_path."/style/".strtolower(get_the_title()).".css"; ?>">
     <!-- swiper -->
     <link
         rel="stylesheet"

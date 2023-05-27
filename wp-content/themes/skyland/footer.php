@@ -10,6 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     
-    <script src="<?= $js_folder_path.get_the_title().'.js';?>"></script>
+    <script src="<?= $js_folder_path.strtolower(get_the_title()).'.js';?>"></script>
     </body>
 </html>
