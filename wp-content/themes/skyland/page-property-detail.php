@@ -7,9 +7,9 @@
 <section class="w-screen h-screen full-page mb-10" id="property-banner">
     <div class="bg-fixed bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-property-detail.png';?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
-            <h1 class="figtree-light text-white text-6xl">The Private</h1>
-            <h2 class="figtree-light text-white text-8xl mt-4">One Corner in The East</h2>
-            <p class="figtree-light font-thin text-white text-3xl mt-12">3 Eastboure Road <span class="ms-60">2020</span></p>
+            <h1 class="figtree-light text-6xl">The Private</h1>
+            <h2 class="figtree-light text-8xl mt-4">One Corner in The East</h2>
+            <p class="figtree-light font-thin text-3xl mt-12">3 Eastboure Road <span class="ms-60">2020</span></p>
         </div>
     </div>
 </section>
@@ -17,13 +17,13 @@
 <!-- section description of detail property -->
 <section class="w-12/12 ms-72 flex justify-center" id="property-description">
         <div class="w-11/12 flex justify-end foreword-description mb-16 pe-20">
-            <p class="text-white pt-1 text-ellipsis overflow-hidden w-6/12 h-24">
+            <p class="pt-1 text-ellipsis overflow-hidden w-6/12 h-24">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
             when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             It has survived not only five centuries, but also the leap into electronic typesetting, 
             </p>
-            <p class="text-white pt-1 text-ellipsis overflow-hidden w-6/12 h-24 ms-16">
+            <p class="pt-1 text-ellipsis overflow-hidden w-6/12 h-24 ms-16">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
             when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -33,7 +33,7 @@
 </section>
 
 <!-- section galleries detail property -->
-<section class="w-screen full-page text-white mb-36" id="property-galleries">
+<section class="w-screen full-page mb-36" id="property-galleries">
     <div class="flex justify-center">
         <div class="w-11/12">
             <div class="w-full flex justify-center pb-2 mb-6">
@@ -104,7 +104,7 @@
 <!-- story section -->
 <section class="w-screen full-page mb-40" id="home-story">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-home-story.png';?>)">
-        <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24 text-white">
+        <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
             <div class="flex justify-between w-full">
                 <div class="flex" >
                     <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12 rotate-180 font-bold hover:cursor-pointer">
@@ -117,13 +117,13 @@
                         </p>
                     </div>
                     <div class="w-12/12">
-                        <p class="figtree-light font-bold text-white text-2xl mb-12 pt-2">Up Next</p>
-                        <p class="figtree-light font-bold text-white text-6xl mb-12"><strong>Villa Bellevue Hill</strong></p>
+                        <p class="figtree-light font-bold text-2xl mb-12 pt-2">Up Next</p>
+                        <p class="figtree-light font-bold text-6xl mb-12"><strong>Villa Bellevue Hill</strong></p>
                     </div>
                 </div>
                 <div class="flex items-end w-2/12 pb-16">
                     <div class="flex explore-rotate-left">
-                        <p class="text-white text-2xl font-normal text-end me-3">
+                        <p class="text-2xl font-normal text-end me-3">
                             Explore more
                         </p>
                         <div class="flex items-end pb-1 icon animate-pulse">

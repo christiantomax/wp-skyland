@@ -28,16 +28,24 @@
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
 </head>
-<body class="scroll-smooth bg-black">
+<body class="scroll-smooth bg-black text-white">
 <header>
-    <div class="container">
-        <!-- <nav>
+    <nav class="flex justify-center items-center pt-10" id="nav-header">
+        <div class="w-11/12 flex justify-between items-center">
+            <div class="w-4/12">
+                <img class="nav-header__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
+            </div>
             <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container' => false,
-            ));
+                $menu_name = 'Menu Header';
+
+                $menu_exists = wp_get_nav_menu_object($menu_name);
+
+                if ($menu_exists) {
+                    wp_nav_menu(array('menu' => $menu_name));
+                } else {
+                    echo "The menu '" . $menu_name . "' does not exist.";
+                }
             ?>
-        </nav> -->
-    </div>
+        </div>
+    </nav>
 </header>

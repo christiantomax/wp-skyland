@@ -4,30 +4,50 @@
 
     <footer>
         <section class="w-screen full-page" id="footer">
-            <div class="h-60 flex justify-center text-white text-1xl mb-16">
+            <div class="h-fit flex justify-center text-1xl mb-14">
                 <div class="flex w-11/12 items-between">
-                    <div class="w-4/12 me-2">
-                        <p class="h-2/4">Skye, Victoria, 3977<br/>Australia</p>
-                        <div class="h-2/4 flex flex-col justify-between">
+                    <div class="w-3/12 me-2">
+                        <p class="h-1/4">Skye, Victoria, 3977<br/>Australia</p>
+                        <div class="h-2/4 pt-12 grid grid-cols-1 gap-4">
                             <a>Instagram</a>
                             <a>Email</a>
                             <a>Facebook</a>
                         </div>
+                        <div class="h-1/4 flex flex-col justify-between text-transparent">Skyland</div>
                     </div>
-                    <div class="w-4/12 me-2">
-                        <div>
-                            <img class="w-6/12 object-cover" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
-                            <p>&copy; Copyright <?php echo date('Y'); ?> Skyland Group. All rights reserved.</p>
+                    <div class="w-5/12 me-2 ps-36">
+                        <div class="flex flex-col">
+                            <div class="w-6/12 h-1/4">
+                                <img class="footer__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
+                            </div>
+                            <div class="h-2/4 pt-12">
+                                <?php
+                                    $menu_name = 'Menu Footer';
+
+                                    $menu_exists = wp_get_nav_menu_object($menu_name);
+
+                                    if ($menu_exists) {
+                                        wp_nav_menu(array('menu' => $menu_name));
+                                    } else {
+                                        echo "The menu '" . $menu_name . "' does not exist.";
+                                    }
+                                ?>
+                            </div>
+                            <div class="flex items-end h-1/2 pt-12">
+                                <p>&copy; Copyright <?php echo date('Y'); ?> Skyland Group. <span class="font-light">All rights reserved.</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-4/12 flex flex-col justify-between text-right">
-                        <p>EN</p>
-                        <div class="w-full flex justify-end w-4/12 h-fit explore-rotate-left">
-                            <p class="text-white font-normal w-11/12 text-right">
-                                Scroll to Top
-                            </p>
-                            <div class="ms-3 icon animate-pulse">
-                                <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                    <div class="w-4/12 me-2">
+                        <div class="h-full flex flex-col justify-between items-end">
+                            <p class="h-2/4">EN</p>
+                            <div class="w-full h-2/4 flex justify-end w-4/12 h-fit icon-rotate-up">
+                                <p class="font-normal w-11/12 text-right">
+                                    Scroll to Top
+                                </p>
+                                <div class="ms-3 icon animate-pulse">
+                                    <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                </div>
                             </div>
                         </div>
                     </div>
