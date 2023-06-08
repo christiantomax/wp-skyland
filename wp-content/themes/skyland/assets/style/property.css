@@ -17,3 +17,7 @@
 .property-project-description{
 	max-width: 28vw;
 }
+
+.project-list__container__project{
+	max-width: 85.5vw;
+}

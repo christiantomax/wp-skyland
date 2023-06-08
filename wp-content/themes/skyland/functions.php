@@ -1,5 +1,8 @@
 <?php
 
+// For Metabox
+require_once get_template_directory().'/inc/meta.php';
+
 function my_custom_theme_setup()
 {
     // Add theme support
@@ -22,10 +25,10 @@ function remove_editor() {
 	remove_post_type_support( 'page', 'editor' );
 }
 
-function my_custom_theme_scripts()
-{
+function my_custom_theme_scripts(){
     wp_enqueue_style('my-custom-theme-style', get_stylesheet_uri());
-    wp_enqueue_script('my-custom-theme-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
+    wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0', true );
+    wp_enqueue_script( 'property-category', get_template_directory_uri() . '/js/property-category.js' );
 }
 add_action('wp_enqueue_scripts', 'my_custom_theme_scripts');
 

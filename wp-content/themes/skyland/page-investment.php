@@ -3,12 +3,23 @@
     require get_theme_file_path( 'config.php' );
 ?>
 
+<?php 
+    $prefix = "investment_";
+    $section = "foreword_section_";
+    $languages = "";
+
+    $title1= rwmb_meta($prefix.$section.'title1'.$languages);
+    $title2= rwmb_meta($prefix.$section.'title2'.$languages);
+    $paragraph= rwmb_meta($prefix.$section.'paragraph'.$languages);
+    $quotes= rwmb_meta($prefix.$section.'quotes'.$languages);
+    $image= rwmb_meta($prefix.$section.'image'.$languages)['full_url'];
+?>
 <!-- Investment Section -->
 <section class="w-screen full-page" id="investment-description">
-    <div class="flex mb-36">
+    <div class="flex mb-36 mt-40">
         <div class="w-6/12 flex justify-start items-end">
             <div class="w-full h-full">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                <img class="w-full h-full object-cover" src="<?= $image; ?>"/>
             </div>
         </div>
         <div class="w-1/12 flex justify-end">
@@ -20,15 +31,13 @@
         </div>
         <div class="w-4/12 flex flex-col justify-between">
             <div class="w-full">
-                <h1 class="figtree-light font-bold text-5xl mb-8">Foreword</h1>
-                <h2 class="figtree-light font-bold text-7xl mb-16"><strong>The Wise.</strong></h2>
+                <h1 class="figtree-light font-bold text-5xl mb-2"><?= $title1; ?></h1>
+                <h2 class="figtree-light font-bold text-7xl mb-16"><strong><?= $title2; ?></strong></h2>
             </div>
-            <div class="flex">
+            <div class="flex h-96">
                 <div class="flex flex-col justify-between">
                     <p class="pt-1 min-h-content text-ellipsis overflow-hidden">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        <?= $paragraph; ?>
                     </p>
                     <div class="flex mt-10 pe-4">
                         <div class="flex explore-rotate-down">
@@ -53,13 +62,11 @@
         <div class="w-10/12">
             <div class="flex">
                 <div class="w-4/12 flex items-start justify-end pe-20">
-                    <p class="border-b-2 border-white pt-2">skyland</p>
+                    <p class="pt-2 border-b-2 border-white text-transparent">skyland</p>
                 </div>
                 <div class="flex flex-col justify-between">
                     <p class="pt-1 min-h-content text-ellipsis overflow-hidden text-5xl leading-normal">
-                        With a good perspective on history,<br/>
-                        we can have a better understanding of the past and present, and thus<br/>
-                        a clear vision of the future.<br/>
+                        <?= $quotes; ?>
                     </p>
                 </div>
             </div>

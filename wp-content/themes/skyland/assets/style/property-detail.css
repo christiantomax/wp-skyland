@@ -21,3 +21,7 @@
 .property-project-description{
 	max-width: 28vw;
 }
+
+.property-galleries__image__container{
+	height: 55vh;
+}

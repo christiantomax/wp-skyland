@@ -21,7 +21,15 @@
     ?>
 
     <link rel="stylesheet" href="<?= $assets_folder_path."/style/style.css"; ?>">
-    <link rel="stylesheet" href="<?= $assets_folder_path."/style/".strtolower(get_the_title()).".css"; ?>">
+    <link rel="stylesheet" href="<?php 
+        if (is_singular('property')) {
+            echo $assets_folder_path."/style/".'property-detail.css';
+        } else if (is_singular('news')) {
+            echo $assets_folder_path."/style/".'news-detail.css';
+        } else {
+            echo $assets_folder_path."/style/".strtolower(get_the_title()).".css";
+        }
+    ?>">
     <!-- swiper -->
     <link
         rel="stylesheet"
@@ -30,22 +38,24 @@
 </head>
 <body class="scroll-smooth bg-black text-white">
 <header>
-    <nav class="flex justify-center items-center pt-10" id="nav-header">
-        <div class="w-11/12 flex justify-between items-center">
-            <div class="w-4/12">
-                <img class="nav-header__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
+    <nav class="fixed top-0 w-full z-10" id="nav-header">
+        <div class="flex justify-center items-center pt-10 ">
+            <div class="w-11/12 flex justify-between items-center">
+                <div class="w-4/12">
+                    <img class="nav-header__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
+                </div>
+                <?php
+                    $menu_name = 'Menu Header';
+    
+                    $menu_exists = wp_get_nav_menu_object($menu_name);
+    
+                    if ($menu_exists) {
+                        wp_nav_menu(array('menu' => $menu_name));
+                    } else {
+                        echo "The menu '" . $menu_name . "' does not exist.";
+                    }
+                ?>
             </div>
-            <?php
-                $menu_name = 'Menu Header';
-
-                $menu_exists = wp_get_nav_menu_object($menu_name);
-
-                if ($menu_exists) {
-                    wp_nav_menu(array('menu' => $menu_name));
-                } else {
-                    echo "The menu '" . $menu_name . "' does not exist.";
-                }
-            ?>
         </div>
     </nav>
 </header>

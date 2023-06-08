@@ -1,6 +1,18 @@
 <?php 
     get_header();
+    
     require get_theme_file_path( 'config.php' );
+    
+    $prefix = "about_";
+    $section = "beginning_section_";
+    $languages = "";
+
+    $title1 = rwmb_meta($prefix.$section.'title1'.$languages);
+    $title2 = rwmb_meta($prefix.$section.'title2'.$languages);
+    $paragraph_left = rwmb_meta($prefix.$section.'paragraph_left'.$languages);
+    $paragraph_right = rwmb_meta($prefix.$section.'paragraph_right'.$languages);
+    $quotes = rwmb_meta($prefix.$section.'quotes'.$languages);
+    $image = rwmb_meta($prefix.$section.'image'.$languages)['full_url'];
 ?>
 
 
@@ -14,8 +26,8 @@
                         <p class="figtree-light">01</p>
                     </div>
                     <div class="w-12/12">
-                        <h2 class="figtree-light font-bold text-4xl mb-4">The Beginning</h2>
-                        <h1 class="figtree-light font-bold text-7xl mb-16"><strong>Where the password_get_info leads.</strong></h1>
+                        <h2 class="figtree-light font-bold text-4xl mb-4"><?= $title1; ?></h2>
+                        <h1 class="figtree-light font-bold text-7xl mb-16"><strong><?= $title2; ?>.</strong></h1>
                     </div>
                 </div>
             </div>
@@ -26,32 +38,24 @@
 <section class="w-12/12 ms-72 mb-24" id="property-description">
         <div class="flex foreword-description mb-16">
             <p class="pt-1 text-ellipsis overflow-hidden w-4/12 h-24">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
+                <?= $paragraph_left; ?>
             </p>
             <p class="pt-1 text-ellipsis overflow-hidden w-4/12 h-24 ms-16">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
+                <?= $paragraph_right; ?> 
             </p>
         </div>
         
         <div class="w-12/12 flex foreword-image-container mb-24">
-            <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+            <img class="w-full h-full object-cover" src="<?= $image; ?>"/>
         </div>
 
         <div class="flex w-11/12">
             <div class="w-2/12 flex items-start pe-20">
-                <p class="border-b-2 border-white pt-2">skyland</p>
+                <p class="pt-2 border-b-2 border-white text-transparent">skyland</p>
             </div>
             <div class="flex flex-col justify-between">
                 <p class="pt-1 text-ellipsis overflow-hidden text-5xl leading-normal">
-                    Creating high-quality, sustainable, and<br/>
-                    innovative properties that enhance the<br/>
-                    communities.
+                    <?= $quotes; ?>.
                 </p>
                 
                 <div class="flex justify-end pb-4 project-description-<?= $j; ?> about-us-description">
@@ -118,6 +122,14 @@
     </div>
 </section>
 
+<?php
+    $section = "background_story_section_";
+
+    $paragraph_top= rwmb_meta($prefix.$section.'paragraph_top'.$languages);
+    $paragraph_bottom= rwmb_meta($prefix.$section.'paragraph_bottom'.$languages);
+    $image_left= rwmb_meta($prefix.$section.'image_left'.$languages)['full_url'];
+    $image_right= rwmb_meta($prefix.$section.'image_right'.$languages)['full_url'];
+?>
 <!-- section background story -->
 <section class="w-screen full-page" id="about-us-background-story">
     <div class="flex h-8-12 mb-52">
@@ -133,23 +145,18 @@
                 <h1 class="figtree-light font-bold text-6xl"><strong>Background Story</strong></h1>
             </div>
             <div class="w-full h-48 mb-16">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
             </div>
             <div class="flex">
                 <div class="w-8/12">
-                    <span class="border-b-2 border-white">skyland</span>
+                    <span class="border-b-2 border-white text-transparent">skyland</span>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p class="pt-1 min-h-content text-ellipsis overflow-hidden">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        <br/>
-                        <br/>
-                        <br/>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <p class="pt-1 h-40 text-ellipsis overflow-hidden">
+                        <?= $paragraph_top;?>
+                    </p>
+                    <p class="h-40 text-ellipsis overflow-hidden">
+                        <?= $paragraph_bottom;?>
                     </p>
                     <div class="flex justify-end mt-10 pe-4">
                         <div class="flex explore-rotate-left">
@@ -166,19 +173,26 @@
         </div>
         <div class="w-6/12 flex justify-end items-end">
             <div class="w-9/12 home-investment-right-image">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                <img class="w-full h-full object-cover" src="<?= $image_right; ?>"/>
             </div>
         </div>
     </div>
 </section>
 
 
+<?php
+    $section = "team_section_";
+    
+    $paragraph_top= rwmb_meta($prefix.$section.'paragraph_top'.$languages);
+    $paragraph_bottom= rwmb_meta($prefix.$section.'paragraph_bottom'.$languages);
+    $image_left= rwmb_meta($prefix.$section.'image_left'.$languages)['full_url'];
+?>
 <!-- Section team -->
 <section class="w-screen full-page" id="about-us-team">
-    <div class="flex h-8-12 mb-36">
+    <div class="flex h-8-12">
         <div class="w-6/12 flex">
             <div class="w-12/12 h-full home-investment-right-image">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                <img class="w-full h-full object-cover" src="<?= $image_left;?>"/>
             </div>
         </div>
         <div class="w-1/12 flex justify-end">
@@ -192,24 +206,13 @@
             <div class="w-full h-30 mb-16">
                 <h1 class="figtree-light font-bold text-6xl"><strong>Team</strong></h1>
             </div>
-            <div class="w-full h-48 mb-16">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
-            </div>
             <div class="flex">
-                <div class="w-8/12">
-                    <span class="border-b-2 border-white">skyland</span>
-                </div>
                 <div class="flex flex-col justify-between pe-12">
-                    <p class="pt-1 min-h-content text-ellipsis overflow-hidden">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        <br/>
-                        <br/>
-                        <br/>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <p class="pt-1 h-40 text-ellipsis overflow-hidden">
+                        <?= $paragraph_top;?>
+                    </p>
+                    <p class="mt-10 h-40 text-ellipsis overflow-hidden">
+                        <?= $paragraph_bottom;?>
                     </p>
                     <div class="flex justify-end mt-10 pe-4">
                         <div class="flex explore-rotate-left">

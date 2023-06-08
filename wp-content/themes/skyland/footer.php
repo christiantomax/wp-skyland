@@ -4,7 +4,7 @@
 
     <footer>
         <section class="w-screen full-page" id="footer">
-            <div class="h-fit flex justify-center text-1xl mb-14">
+            <div class="h-fit flex justify-center text-1xl mb-14 mt-32">
                 <div class="flex w-11/12 items-between">
                     <div class="w-3/12 me-2">
                         <p class="h-1/4">Skye, Victoria, 3977<br/>Australia</p>
@@ -62,6 +62,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     
-    <script src="<?= $js_folder_path.strtolower(get_the_title()).'.js';?>"></script>
+    <script src="<?php 
+        if (is_singular('property')) {
+            echo $js_folder_path.'property-detail.js';
+        }else if (is_singular('news')) {
+            echo $js_folder_path.'news-detail.js';
+        } else {
+            echo $js_folder_path.strtolower(get_the_title()).'.js';
+        }
+    ?>"></script>
     </body>
 </html>
