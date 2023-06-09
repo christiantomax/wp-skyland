@@ -1,0 +1,23 @@
+.foreword-image-container{
+    height: 52vh;
+}
+
+.expander {
+	width: 27.5vw;
+	background:black;
+	overflow:hidden;
+	margin-top:20px;
+	margin-left:30px;
+}
+
+.expander:first-child {
+	margin-left:0px;
+}
+
+.property-project-description{
+	max-width: 28vw;
+}
+
+.project-list__container__project{
+	max-width: 85.5vw;
+}

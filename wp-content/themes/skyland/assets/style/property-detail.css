@@ -1,0 +1,27 @@
+.min-h-content-description{
+    height: 10vw;
+}
+
+.foreword-image-container{
+    height: 52vh;
+}
+
+.expander {
+	width: 27.5vw;
+	background:black;
+	overflow:hidden;
+	margin-top:20px;
+	margin-left:20px;
+}
+
+.expander:first-child {
+	margin-left:0px;
+}
+
+.property-project-description{
+	max-width: 28vw;
+}
+
+.property-galleries__image__container{
+	height: 55vh;
+}

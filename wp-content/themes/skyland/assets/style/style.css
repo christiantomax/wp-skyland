@@ -1,0 +1,53 @@
+.full-page{
+    max-width: 98.9vw;
+}
+
+.full-page-height{
+    height: 88.5vh;
+}
+
+#home-story, #reach-us{
+    height: 80vh
+}
+
+.explore-rotate-left, .explore-rotate-down, .icon-rotate-up{
+    cursor: pointer;
+}
+
+.explore-rotate-left:hover .icon{
+    transform: rotate(45deg);
+}
+
+.explore-rotate-down:hover .icon{
+    transform: rotate(135deg);
+}
+
+.icon-rotate-up:hover .icon{
+    transform: rotate(-45deg);
+}
+
+.icon{
+    transition: ease-in 0.3s;
+}
+
+#menu-menu-header{
+    display: flex;
+}
+
+#menu-menu-header li{
+    margin-left: 3rem;
+}
+
+#menu-menu-footer{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+}
+
+.footer__logo__container{
+    height: 3rem;
+}
+
+.nav-header__logo__container{
+    height: 2.3rem;
+}

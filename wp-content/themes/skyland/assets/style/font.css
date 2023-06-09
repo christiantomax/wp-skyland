@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Figtree-Light';
+    src:url('../font/Figtree-Light.woff2') format('woff2'),
+        url('../font/Figtree-Light.woff') format('woff');
+}
+/* ==================================== */
+@font-face {
+    font-family: 'Figtree-Medium';
+    src:url('../font/Figtree-Medium.woff2') format('woff2'),
+        url('../font/Figtree-Medium.woff') format('woff');
+}
+/* ==================================== */
+@font-face {
+    font-family: 'Figtree-Regular';
+    src:url('../font/Figtree-Regular.woff2') format('woff2'),
+        url('../font/Figtree-Regular.woff') format('woff');
+}
+/* ==================================== */
+@font-face {
+    font-family: 'Lora-Regular';
+    src:url('../font/Lora-Regular.woff2') format('woff2'),
+        url('../font/Lora-Regular.woff') format('woff');
+}
+
+.figtree-light {
+    font-family: 'Figtree-Light';
+}
+.figtree-Medium {
+    font-family: 'Figtree-Medium';
+}
+.figtree-Regular {
+    font-family: 'Figtree-Regular';
+}
+.Lora-Regular {
+    font-family: 'Lora-Regular';
+}
