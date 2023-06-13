@@ -37,9 +37,8 @@
                     <h2 class="text-5xl mt-5 text-center"><strong>Skyland</strong></h2>
                 </div>
                 <div class="flex text-xl">
-                    <a class="mx-8" href="#<?= $instagram; ?>">Instagram</a> 
-                    <a class="mx-8" href="#<?= $email; ?>">Email</a>
-                    <a class="mx-8" href="#<?= $facebook; ?>">Facebook</a>
+                    <a class="mx-8" href="https://www.instagram.com/skyland.group/" target="_blank">Instagram</a> 
+                    <a class="mx-8" href="mailto:Angeline@skylandgroup.com.au" target="_blank">Email</a>
                 </div>
             </div>
         </section>
