@@ -23,7 +23,7 @@
                     <div class="w-28 h-[5.5rem]">
                         <img class="w-full h-full object-cover bg-top bg-cover bg-no-repeat rounded-full" src="<?= $assets_folder_path."/img/logo-gold.gif";?>">
                     </div>
-                    <h2 class="text-5xl mt-5 text-center"><strong>Luxury Redefined:</strong></h2>
+                    <h2 class="text-5xl mt-5 text-center"><strong>Skyland</strong></h2>
                 </div>
                 <div class="flex text-xl">
                     <a class="mx-8" href="https://www.instagram.com/skyland.group/" target="_blank">Instagram</a> 
