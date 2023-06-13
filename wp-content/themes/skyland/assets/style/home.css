@@ -1,6 +1,14 @@
 .swiper-slide{
     height: 30vw !important;
 }
+.swiper-slide-home-banner{
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.swiper-slide{
+    height: 30vw !important;
+}
 
 .min-h-content{
     height: 19vw;
@@ -9,3 +17,28 @@
 .home-investment-right-image{
     height: 70vh;
 }
+
+  .wrapper{
+    width:100%;
+    padding-top: 20px;
+    text-align:center;
+  }
+  h2{
+    font-family:sans-serif;
+    color:#fff;
+  }
+  .carousel{
+    width:90%;
+    margin:0px auto;
+  }
+  .slick-slide{
+    margin:10px;
+  }
+  .slick-slide img{
+    width:100%;
+    border: 2px solid #fff;
+  }
+  .wrapper .slick-dots li button:before {
+    font-size:20px;
+    color:white;
+  }

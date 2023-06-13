@@ -29,14 +29,19 @@
         } else {
             echo $assets_folder_path."/style/".strtolower(get_the_title()).".css";
         }
-    ?>">
+        ?>">
+    <?php 
+        if (strtolower(get_the_title()) == "home") {
+            echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>';
+        }
+    ?>
     <!-- swiper -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
 </head>
-<body class="scroll-smooth bg-black text-white">
+<body class="scroll-smooth bg-black text-white overflow-x-hidden relative">
 <header>
     <nav class="fixed top-0 w-full z-10" id="nav-header">
         <div class="flex justify-center items-center pt-10 ">

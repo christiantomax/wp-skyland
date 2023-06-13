@@ -6,7 +6,7 @@
         $section = "Maps_section_";
         $languages = "";
         $meta_boxes[] = [
-            'title'      => esc_html__( 'Investment Maps Section', 'online-generator' ),
+            'title'      => esc_html__( 'Contact Section With Maps', 'online-generator' ),
             'id'         => 'contact_foreword',
             'post_types' => ['page'],
             'autosave'   => true,
@@ -35,6 +35,37 @@
                     'id'               => $prefix.$section.'lon'.$languages,
                     'type' 			   => 'text',
                     'name'             => esc_html__( 'Map Longitude', 'english' ),
+                ],
+            ],
+        ];
+    return $meta_boxes;
+    }
+
+    add_filter( 'rwmb_meta_boxes', 'contact_section' );
+    function contact_section( $meta_boxes ) {
+        $prefix = "contact_";
+        $section = "section_";
+        $languages = "";
+        $meta_boxes[] = [
+            'title'      => esc_html__( 'Contact Section', 'online-generator' ),
+            'id'         => 'contact_section',
+            'post_types' => ['page'],
+            'autosave'   => true,
+            'fields'     => [
+                [
+                    'id'               => $prefix.$section.'instagram'.$languages,
+                    'type' 			   => 'text',
+                    'name'             => esc_html__( 'Link Instagram', 'english' ),
+                ],
+                [
+                    'id'               => $prefix.$section.'email'.$languages,
+                    'type' 			   => 'text',
+                    'name'             => esc_html__( 'Email Address', 'english' ),
+                ],
+                [
+                    'id'               => $prefix.$section.'facebook'.$languages,
+                    'type' 			   => 'text',
+                    'name'             => esc_html__( 'Link Facebook', 'english' ),
                 ],
             ],
         ];

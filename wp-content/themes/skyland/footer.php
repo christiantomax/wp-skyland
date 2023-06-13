@@ -62,6 +62,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     
+    <?php
+        if (strtolower(get_the_title()) == "home") {
+            echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>';
+            echo '<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>';
+        }
+        
+    ?>
     <script src="<?php 
         if (is_singular('property')) {
             echo $js_folder_path.'property-detail.js';
@@ -71,5 +78,6 @@
             echo $js_folder_path.strtolower(get_the_title()).'.js';
         }
     ?>"></script>
+
     </body>
 </html>

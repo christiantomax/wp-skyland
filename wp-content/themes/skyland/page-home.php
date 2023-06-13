@@ -12,12 +12,25 @@
     $year= rwmb_meta($prefix.$section.'year'.$languages);
     $image= rwmb_meta($prefix.$section.'image'.$languages)['full_url'];
 ?>
-<section class="w-screen h-screen full-page" id="home-banner">
-    <div class="bg-fixed bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image; ?>)">
-        <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
+<section class="w-screen h-screen full-page relative" id="home-banner">
+    <div class="bg-fixed w-full h-full flex justify-center">
+        <div class="w-11/12 h-full flex flex-col justify-end py-32 z-10">
             <h1 class="figtree-light font-bold text-6xl"><?= $title1; ?></h1>
             <h2 class="figtree-light font-bold text-8xl mt-4"><?= $title2; ?></h2>
             <p class="figtree-light font-bold text-2xl mt-12"><?= $title3; ?> <span class="ms-16">est. <?= $year; ?></span></p>
+        </div>
+    </div>
+    <div class="absolute top-0 w-screen h-screen z-0">
+        <!-- Swiper -->
+        <div class="swiper swiper-home-banner w-full h-full">
+            <div class="swiper-wrapper w-full h-full">
+                <div class="swiper-slide swiper-slide-home-banner w-full h-full">
+                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="<?= $assets_folder_path."/img/".'banner-home.png'; ?>" alt="img">
+                </div>
+                <div class="swiper-slide swiper-slide-home-banner w-full h-full">
+                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="<?= $assets_folder_path."/img/".'banner-home-story.png'; ?>" alt="img">
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -34,11 +47,23 @@
     </div>
 </section>
 
+<div class="wrapper">
+    <h2>Slick Carousel Example<h2>
+        <div class="carousel">
+            <div><img src="https://picsum.photos/300/200?random=1"></div>
+            <div><img src="https://picsum.photos/300/200?random=2"></div>
+            <div><img src="https://picsum.photos/300/200?random=3"></div>
+            <div><img src="https://picsum.photos/300/200?random=4"></div>
+            <div><img src="https://picsum.photos/300/200?random=5"></div>
+            <div><img src="https://picsum.photos/300/200?random=6"></div>
+        </div>
+</div>
+
 <section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
         <!-- Swiper -->
         <div class="swiper home-properties w-full mb-12">
-            <div class="swiper-wrapper h-full">
+            <div class="swiper-wrapper h-full" id="home-properties-container">
                 <div class="swiper-slide bg-white flex justify-center items-center w-36 opacity-0">Slide 1</div>
                 <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>House<h5/></div>
                 <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Office<h5/></div>
@@ -163,5 +188,13 @@
         </div>
     </div>
 </section>
+
+<div class="hidden drag-cursor fixed z-40 pointer-events-none lg:hidden">
+    <div class="relative h-[5rem] w-[5rem] rounded-full border-white border-2">
+        <div class="flex items-center justify-center absolute top-1/4 left-1/4 bottom-1/4 right-1/4">
+        DRAG
+        </div>
+    </div>
+</div>
 
 <?php get_footer() ?>
