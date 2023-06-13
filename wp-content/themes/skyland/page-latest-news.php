@@ -16,7 +16,7 @@
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-40">
             <div class="flex justify-between w-full">
                 <div class="w-full flex">
-                    <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12 rotate-180 font-bold hover:cursor-pointer">
+                    <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12 rotate-180 font-medium hover:cursor-pointer">
                         <p class="figtree-light animate-pulse">
                             <svg id="SvgjsSvg1011" width="18" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" 
                             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
@@ -26,8 +26,8 @@
                         </p>
                     </div>
                     <div class="w-full flex flex-col justify-between">
-                        <h2 class="figtree-light font-bold text-4xl mb-4">Latest News</h2>
-                        <h1 class="figtree-light font-bold text-7xl mb-8"><strong><?= $title; ?></strong></h1>
+                        <h2 class="font-medium text-4xl mb-4">Latest News</h2>
+                        <h1 class="font-medium text-7xl mb-8"><strong><?= $title; ?></strong></h1>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
 
 <!-- section news list item -->
 <section class="w-screen full-page flex flex-col items-center" id="news-list">
-        <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15">
+        <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15 figtree-light">
     <?php
         for ($i = 0; $i < 3; $i++) {
     ?>

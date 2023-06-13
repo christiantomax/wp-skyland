@@ -13,3 +13,46 @@
 .home-investment-right-image{
     height: 70vh;
 }
+
+.expander {
+	width: 27.5vw;
+	background:black;
+	overflow:hidden;
+	margin-top:20px;
+	margin-left:30px;
+}
+
+.expander:first-child {
+	margin-left:0px;
+}
+
+.property-project-description{
+	max-width: 28vw;
+}
+
+.project-list__container__project{
+	max-width: 85.5vw;
+}
+
+.wrapper{
+	width:100%;
+	padding-top: 20px;
+	text-align:center;
+}
+
+.carousel{
+	width: full;
+	margin:0px auto;
+}
+
+.slick-slide{
+	width: 23vw !important;
+	height: 60vh !important;
+	display: flex !important;
+	margin: 0 1rem;
+}
+
+#carousel-first-child {
+	width: 6vw !important;
+	height: 60vh !important;
+}

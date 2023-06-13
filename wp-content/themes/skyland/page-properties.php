@@ -24,8 +24,8 @@
                         <p class="figtree-light">01</p>
                     </div>
                     <div class="w-12/12">
-                        <h2 class="figtree-light font-bold text-4xl mb-4"><?= $title1; ?></h2>
-                        <h1 class="figtree-light font-bold text-7xl mb-16"><strong><?= $title2; ?></strong></h1>
+                        <h2 class="font-medium text-4xl mb-4"><?= $title1; ?></h2>
+                        <h1 class="font-medium text-7xl mb-16"><strong><?= $title2; ?></strong></h1>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
 </section>
     
 <section class="w-12/12 ms-72" id="property-description">
-        <div class="flex foreword-description mb-16">
+        <div class="flex foreword-description mb-16 figtree-light">
             <p class="pt-1 text-ellipsis overflow-hidden w-4/12 h-24">
                 <?= $paragraph_left; ?>
             </p>
@@ -43,8 +43,8 @@
             </p>
         </div>
         
-        <div class="w-12/12 flex foreword-image-container">
-            <img class="w-full h-full object-cover" src="<?= $image; ?>"/>
+        <div class="w-12/12 h-72 flex foreword-image-container">
+            <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
         </div>
 </section>
 
@@ -59,10 +59,10 @@
                         <p class="figtree-light">02</p>
                     </div>
                     <div class="w-full flex justify-between">
-                        <p class="figtree-light font-bold text-6xl">The Projects</p>
+                        <p class="font-medium text-6xl">The Projects</p>
                         <nav class="w-5/12 flex items-center">
-                            <ul class="w-full flex justify-between text-2xl text-slate-300">
-                                <li class="font-bold cursor-pointer"><strong>House</strong></li>
+                            <ul class="w-full flex justify-between text-2xl text-slate-300 figtree-light">
+                                <li class="font-medium cursor-pointer"><strong>House</strong></li>
                                 <li class="hover:text-white cursor-pointer">Office</li>
                                 <li class="hover:text-white cursor-pointer">Apartment</li>
                                 <li class="hover:text-white cursor-pointer">Commercial</li>
@@ -78,7 +78,7 @@
 
 <!-- section project list item -->
 <section class="w-screen full-page flex flex-col items-center" id="project-list">
-        <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15">
+        <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15 figtree-light">
     <?php
         for ($i = 0; $i < 3; $i++) {
     ?>
@@ -95,11 +95,6 @@
                             <header class="mt-6 text-3xl h-10/12 truncate pb-2">
                                 <time class="text-2xl me-8">2020 </time>Project Name Project Name
                             </header>
-                            <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description">
-                                <p class="property-project-description pb-4">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                </p>
-                            </div>
                             <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description">
                                 <div class="flex explore-rotate-left">
                                     <p class="text-2xl font-normal text-end me-3">

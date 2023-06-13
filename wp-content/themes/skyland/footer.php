@@ -4,7 +4,7 @@
 
     <footer>
         <section class="w-screen full-page" id="footer">
-            <div class="h-fit flex justify-center text-1xl mb-14 mt-32">
+            <div class="h-fit flex justify-center text-1xl mb-14 mt-32 figtree-light">
                 <div class="flex w-11/12 items-between">
                     <div class="w-3/12 me-2">
                         <p class="h-1/4">Skye, Victoria, 3977<br/>Australia</p>
@@ -63,7 +63,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     
     <?php
-        if (strtolower(get_the_title()) == "home") {
+        $slick = ["home", "about-us"];
+        if (in_array(strtolower(get_the_title()), $slick)) {
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>';
             echo '<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>';
         }

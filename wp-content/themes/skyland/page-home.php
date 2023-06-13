@@ -15,9 +15,9 @@
 <section class="w-screen h-screen full-page relative" id="home-banner">
     <div class="bg-fixed w-full h-full flex justify-center">
         <div class="w-11/12 h-full flex flex-col justify-end py-32 z-10">
-            <h1 class="figtree-light font-bold text-6xl"><?= $title1; ?></h1>
-            <h2 class="figtree-light font-bold text-8xl mt-4"><?= $title2; ?></h2>
-            <p class="figtree-light font-bold text-2xl mt-12"><?= $title3; ?> <span class="ms-16">est. <?= $year; ?></span></p>
+            <h1 class="font-medium text-6xl"><?= $title1; ?></h1>
+            <h2 class="font-medium text-8xl mt-4"><?= $title2; ?></h2>
+            <p class="figtree-light font-regular text-2xl mt-12"><?= $title3; ?> <span class="ms-16">est. <?= $year; ?></span></p>
         </div>
     </div>
     <div class="absolute top-0 w-screen h-screen z-0">
@@ -25,10 +25,10 @@
         <div class="swiper swiper-home-banner w-full h-full">
             <div class="swiper-wrapper w-full h-full">
                 <div class="swiper-slide swiper-slide-home-banner w-full h-full">
-                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="<?= $assets_folder_path."/img/".'banner-home.png'; ?>" alt="img">
+                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="https://picsum.photos/id/237/200/300" alt="img">
                 </div>
                 <div class="swiper-slide swiper-slide-home-banner w-full h-full">
-                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="<?= $assets_folder_path."/img/".'banner-home-story.png'; ?>" alt="img">
+                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="https://picsum.photos/id/238/200/300" alt="img">
                 </div>
             </div>
         </div>
@@ -42,52 +42,38 @@
             <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
                 <p class="figtree-light">01</p>
             </div>
-            <p class="figtree-light font-bold text-6xl">Properties</p>
+            <p class="font-medium text-6xl">Properties</p>
         </div>
     </div>
 </section>
 
-<div class="wrapper">
-    <h2>Slick Carousel Example<h2>
-        <div class="carousel">
-            <div><img src="https://picsum.photos/300/200?random=1"></div>
-            <div><img src="https://picsum.photos/300/200?random=2"></div>
-            <div><img src="https://picsum.photos/300/200?random=3"></div>
-            <div><img src="https://picsum.photos/300/200?random=4"></div>
-            <div><img src="https://picsum.photos/300/200?random=5"></div>
-            <div><img src="https://picsum.photos/300/200?random=6"></div>
-        </div>
-</div>
-
 <section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
-        <!-- Swiper -->
-        <div class="swiper home-properties w-full mb-12">
-            <div class="swiper-wrapper h-full" id="home-properties-container">
-                <div class="swiper-slide bg-white flex justify-center items-center w-36 opacity-0">Slide 1</div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>House<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Office<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Apartment<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Commercial<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>House<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Office<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Apartment<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Commercial<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>House<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Office<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Apartment<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Commercial<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>House<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Office<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Apartment<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Commercial<h5/></div>
+        <div class="wrapper mb-10">
+            <div class="carousel hover:cursor-none">
+                <div class="slick-slide opacity-0" id="carousel-first-child">
+                    <div class="w-full h-full px-10 py-10 flex items-end">
+                        <h5 class="figtree-light">House</h5>
+                    </div>
+                </div>
+                <?php
+                    for ($i=0; $i < 10; $i++) { 
+                        ?>
+                            <div class="slick-slide bg-gray-700 text-2xl">
+                                <div class="w-full h-full px-10 py-10 flex items-end">
+                                    <h5 class="figtree-light">House</h5>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
 
     <div class="flex justify-end mr-16">
         <div class="flex explore-rotate-left">
-            <p class="text-2xl font-normal text-end me-3">
+            <p class="text-2xl font-normal text-end me-3 figtree-light ">
                 Explore more
             </p>
             <div class="flex items-end pb-1 icon animate-pulse">
@@ -117,7 +103,7 @@
         </div>
         <div class="w-5/12">
             <div class="w-full h-30 mb-16">
-                <h1 class="figtree-light font-bold text-6xl"><strong>Investment</strong></h1>
+                <h1 class="figtree-light font-medium text-6xl"><strong>Investment</strong></h1>
             </div>
             <div class="w-full h-48 mb-16">
                 <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
@@ -126,7 +112,7 @@
                 <div class="w-8/12">
                     <span class="border-b-2 border-white text-transparent">skyland</span>
                 </div>
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between figtree-light ">
                     <p class="pt-1 h-40 text-ellipsis overflow-hidden">
                         <?= $paragraph_top;?>
                     </p>
@@ -135,7 +121,7 @@
                     </p>
                     <div class="flex justify-end mt-10 pe-4">
                         <div class="flex explore-rotate-left">
-                            <p class="text-2xl font-normal text-end me-3">
+                            <p class="text-2xl font-normal text-end me-3 figtree-light ">
                                 Explore more
                             </p>
                             <div class="flex items-end pb-1 icon animate-pulse">
@@ -170,14 +156,14 @@
                         <p class="figtree-light">03</p>
                     </div>
                     <div class="w-5/12">
-                        <h1 class="figtree-light font-bold text-6xl mb-12"><strong>The Story</strong></h1>
-                        <p class="pt-1 min-h-content text-ellipsis overflow-hidden">
+                        <h1 class="figtree-light font-medium text-6xl mb-12"><strong>The Story</strong></h1>
+                        <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light">
                             <?= $paragraph;?>
                         </p>
                     </div>
                 </div>
                 <div class="flex w-4/12 h-fit explore-rotate-left">
-                    <p class="text-2xl font-normal w-11/12 text-right">
+                    <p class="text-2xl font-normal w-11/12 text-right figtree-light ">
                         Explore more
                     </p>
                     <div class="pt-2 ms-3 icon animate-pulse">

@@ -20,6 +20,7 @@ var swiperBanner = new Swiper(".swiper-home-banner", {
 $('.carousel').hover(function(){
     $('.drag-cursor').removeClass('lg:hidden')
     $('.drag-cursor').addClass('lg:block')
+    
 }, function(){
     $('.drag-cursor').addClass('lg:hidden')
     $('.drag-cursor').removeClass('lg:block')
@@ -32,15 +33,9 @@ window.addEventListener('mousemove', function(e){
     });
 })
 
-$('#home-properties-container-example').slick({
-    slidesToShow: 1,
-    centerMode: true,
-    variableWidth: true
-});
-
 $(document).ready(function(){
-    $('.carousel').slick({
-    slidesToShow: 3,
-    centerMode: true,
+    $('.carousel').slick({  
+        arrows: false,
+        infinite: false,
     });
-  });
+});

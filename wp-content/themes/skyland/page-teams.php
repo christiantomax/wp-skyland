@@ -18,16 +18,16 @@
             <div class="flex justify-between items-end w-full">
                 <div class="flex items-end">
                     <div class="w-5/12">
-                        <h1 class="figtree-light font-bold text-7xl mb-0"><strong><?= $title_right; ?></strong></h1>
+                        <h1 class="font-medium text-7xl mb-0"><strong><?= $title_right; ?></strong></h1>
                     </div>
                     <div class="w-5/12">
-                        <p class="pt-1 text-ellipsis overflow-hidden">
+                        <p class="pt-1 text-ellipsis overflow-hidden figtree-light ">
                             <?= $paragraph; ?>
                         </p>
                     </div>
                 </div>
                 <div class="flex w-4/12 h-fit justify-end explore-rotate-down me-4">
-                    <p class="text-2xl font-normal text-right">
+                    <p class="text-2xl font-normal text-right figtree-light ">
                         Scroll
                     </p>
                     <div class="pt-2 ms-3 icon animate-pulse rotate-90">
@@ -41,7 +41,7 @@
 
 <!-- Section team -->
 <section class="w-screen full-page" id="team-person">
-    <div class="flex justify-center h-8-12 mb-12">
+    <div class="flex justify-center h-8-12 mb-12 figtree-light">
         <div class="w-11/12 flex ps-2">
             <?php
                 for ($i = 0; $i < 2; $i++) {
@@ -67,7 +67,7 @@
             <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
                 <p class="figtree-light">02</p>
             </div>
-            <h1 class="figtree-light font-bold text-6xl"><strong>Partners</strong></h1>
+            <h1 class="font-medium text-6xl"><strong>Partners</strong></h1>
         </div>
     </div>
 </section>

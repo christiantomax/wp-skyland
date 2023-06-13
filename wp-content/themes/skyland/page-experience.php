@@ -16,8 +16,8 @@
 <section class="w-screen h-screen full-page mb-12" id="home-banner">
     <div class="bg-fixed bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image; ?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
-            <h1 class="figtree-light font-bold text-6xl"><?= $title1; ?></h1>
-            <h2 class="figtree-light font-bold text-8xl mt-4"><?= $title2; ?></h2>
+            <h1 class="font-medium text-6xl"><?= $title1; ?></h1>
+            <h2 class="font-medium text-8xl mt-4"><?= $title2; ?></h2>
         </div>
     </div>
 </section>
@@ -42,7 +42,7 @@
         </div>
         <div class="w-5/12">
             <div class="w-full h-30 mb-16">
-                <h1 class="figtree-light font-bold text-6xl"><strong>Customer First</strong></h1>
+                <h1 class="font-medium text-6xl"><strong>Customer First</strong></h1>
             </div>
             <div class="w-full h-48 mb-16">
                 <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
@@ -51,7 +51,7 @@
                 <div class="w-8/12">
                     <span class="border-b-2 border-white text-transparent">skyland</span>
                 </div>
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between figtree-light ">
                     <p class="pt-1 h-40 text-ellipsis overflow-hidden">
                         <?= $paragraph_top;?>
                     </p>
@@ -92,7 +92,7 @@
             <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
                 <p class="figtree-light">02</p>
             </div>
-            <p class="figtree-light font-bold text-6xl">Customize</p>
+            <p class="font-medium text-6xl">Customize</p>
         </div>
     </div>
 </section>
@@ -100,7 +100,7 @@
 <section class="w-screen full-page mb-32" id="properties-swiper">
     <div>
         <!-- Swiper -->
-        <div class="swiper home-properties w-full mb-12">
+        <div class="swiper home-properties w-full mb-12 figtree-light ">
             <div class="swiper-wrapper h-full">
                 <div class="swiper-slide bg-white flex justify-center items-center w-36 opacity-0">Slide 1</div>
                 <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>House<h5/></div>
@@ -124,7 +124,7 @@
     </div>
 
     <div class="flex justify-center">
-        <div class="flex w-12/12">
+        <div class="flex w-12/12 figtree-light ">
             <div class="w-2/12"></div>
             <div class="w-7/12 flex foreword-description mb-16">
                 <p class="pt-1 w-6/12 h-24 me-8">
@@ -164,13 +164,13 @@
                         <p class="figtree-light">04</p>
                     </div>
                     <div class="w-5/12">
-                        <h1 class="figtree-light font-bold text-6xl mb-12"><strong>Partnership</strong></h1>
+                        <h1 class="font-medium text-6xl mb-12"><strong>Partnership</strong></h1>
                         <p class="pt-1 min-h-content text-ellipsis overflow-hidden">
                             <?= $paragraph; ?>
                         </p>
                     </div>
                 </div>
-                <div class="flex w-4/12 h-fit explore-rotate-left">
+                <div class="flex w-4/12 h-fit explore-rotate-left figtree-light ">
                     <p class="text-2xl font-normal w-11/12 text-right">
                         Explore more
                     </p>

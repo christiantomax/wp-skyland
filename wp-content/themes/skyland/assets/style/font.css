@@ -22,15 +22,15 @@
         url('../font/Lora-Regular.woff') format('woff');
 }
 
-.figtree-light {
-    font-family: 'Figtree-Light';
+.figtree-light, .figtree-light * {
+    font-family: 'Figtree-Light' !important;
 }
-.figtree-Medium {
-    font-family: 'Figtree-Medium';
+.figtree-medium {
+    font-family: 'Figtree-Medium'!important;
 }
-.figtree-Regular {
-    font-family: 'Figtree-Regular';
+.figtree-regular {
+    font-family: 'Figtree-Regular'!important;
 }
-.Lora-Regular {
+.lora-regular, .lora-regular * {
     font-family: 'Lora-Regular';
 }

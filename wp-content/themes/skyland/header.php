@@ -20,6 +20,7 @@
         }
     ?>
 
+<link rel="stylesheet" href="<?= $assets_folder_path."/style/font.css"; ?>">
     <link rel="stylesheet" href="<?= $assets_folder_path."/style/style.css"; ?>">
     <link rel="stylesheet" href="<?php 
         if (is_singular('property')) {
@@ -31,7 +32,8 @@
         }
         ?>">
     <?php 
-        if (strtolower(get_the_title()) == "home") {
+        $slick = ["home", "about-us"];
+        if (in_array(strtolower(get_the_title()), $slick)) {
             echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>';
         }
     ?>
@@ -41,9 +43,9 @@
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
 </head>
-<body class="scroll-smooth bg-black text-white overflow-x-hidden relative">
+<body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular">
 <header>
-    <nav class="fixed top-0 w-full z-10" id="nav-header">
+    <nav class="fixed top-0 w-full z-10 figtree-light" id="nav-header">
         <div class="flex justify-center items-center pt-10 ">
             <div class="w-11/12 flex justify-between items-center">
                 <div class="w-4/12">

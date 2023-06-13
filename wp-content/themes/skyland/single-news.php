@@ -46,19 +46,19 @@
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
                 <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
-                    <p class="figtree-light">02</p>
+                    <p class="figtree-light">01</p>
                 </div>
             </div>
         </div>
         <div class="w-4/12">
             <div class="w-full h-30 mb-16">
                 <div>
-                    <p class="figtree-light font-bold text-3xl">News</p>
-                    <h1 class="figtree-light font-bold text-6xl"><strong><?= $news__title_1; ?></strong></h1>
+                    <p class="font-medium text-3xl">News</p>
+                    <h1 class="font-medium text-6xl"><strong><?= $news__title_1; ?></strong></h1>
                 </div>
             </div>
             <div class="flex">
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between figtree-light">
                     <p class="pt-1 h-96 text-ellipsis overflow-hidden">
                         <?= $news__paragraph_top; ?>
                     </p>
@@ -81,7 +81,7 @@
 
 <!-- news content Section -->
 <section class="w-screen full-page" id="properties-swiper">
-    <div class="flex h-8-12 mb-10 mt-40">
+    <div class="flex h-8-12 mb-10 mt-40 figtree-light">
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
             </div>
@@ -124,8 +124,8 @@
                 <p class="figtree-light">02</p>
             </div>
             <div>
-                <p class="figtree-light font-bold text-3xl">Related</p>
-                <h1 class="figtree-light font-bold text-6xl"><strong>Articles</strong></h1>
+                <p class="font-medium text-3xl">Related</p>
+                <h1 class="font-medium text-6xl"><strong>Articles</strong></h1>
             </div>
         </div>
     </div>
@@ -161,12 +161,12 @@
                             <div class="w-full h-80">
                                 <img class="w-full h-full object-cover" src="<?= $assets_folder_path."/img/".'banner-home-story.png'; ?>"/>
                             </div>
-                            <p class="mt-8 figtree-light font-bold text-3xl">News</p>
-                            <h2 class="mt-2 figtree-light font-bold text-3xl"><?= $news__title_1; ?></strong></h2>
-                            <p class="mt-7 h-20 line-clamp-3 text-ellipsis figtree-link-light">
+                            <p class="mt-8 font-medium text-3xl">News</p>
+                            <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
+                            <p class="mt-7 h-20 line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                 <?= $news__paragraph_top; ?>
                             </p>
-                            <div class="mt-12 flex items-end">
+                            <div class="mt-12 flex items-end figtree-light">
                                 <p class="figtree-link-light">
                                     2023
                                 </p>

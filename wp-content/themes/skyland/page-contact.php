@@ -29,11 +29,11 @@
         </div>
         <div class="w-4/12 flex flex-col justify-between">
             <div class="w-full">
-                <h1 class="figtree-light font-bold text-5xl mb-2">Our Base</h1>
-                <h2 class="figtree-light font-bold text-7xl mb-16"><strong><?= $title; ?></strong></h2>
+                <h1 class="font-medium text-5xl mb-2">Our Base</h1>
+                <h2 class="font-medium text-7xl mb-16"><strong><?= $title; ?></strong></h2>
             </div>
             <div class="flex h-3/4">
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between figtree-light ">
                     <div class="pt-1 min-h-content text-ellipsis overflow-hidden">
                         <?= $paragraph; ?>
                     </div>
@@ -64,10 +64,10 @@
                         <p class="figtree-light">03</p>
                     </div>
                     <div class="w-4/12">
-                        <h1 class="figtree-light font-bold text-6xl mb-12"><strong>Reach Us</strong></h1>
+                        <h1 class="font-medium text-6xl mb-12"><strong>Reach Us</strong></h1>
                     </div>
                     <div class="w-7/12">
-                        <p class="pt-1 min-h-content text-ellipsis overflow-hidden">
+                        <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light ">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.

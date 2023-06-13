@@ -26,8 +26,8 @@
                         <p class="figtree-light">01</p>
                     </div>
                     <div class="w-12/12">
-                        <h2 class="figtree-light font-bold text-4xl mb-4"><?= $title1; ?></h2>
-                        <h1 class="figtree-light font-bold text-7xl mb-16"><strong><?= $title2; ?>.</strong></h1>
+                        <h2 class="font-medium text-4xl mb-4"><?= $title1; ?></h2>
+                        <h1 class="font-medium text-7xl mb-16"><strong><?= $title2; ?>.</strong></h1>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
 </section>
     
 <section class="w-12/12 ms-72 mb-24" id="property-description">
-        <div class="flex foreword-description mb-16">
+        <div class="flex foreword-description mb-16 figtree-light">
             <p class="pt-1 text-ellipsis overflow-hidden w-4/12 h-24">
                 <?= $paragraph_left; ?>
             </p>
@@ -60,7 +60,7 @@
                 
                 <div class="flex justify-end pb-4 project-description-<?= $j; ?> about-us-description">
                     <div class="flex explore-rotate-left">
-                        <p class="text-2xl font-normal text-end me-3">
+                        <p class="text-2xl font-normal text-end me-3 figtree-light">
                             How?
                         </p>
                         <div class="flex items-end pb-1 icon animate-pulse">
@@ -79,40 +79,38 @@
             <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
                 <p class="figtree-light">02</p>
             </div>
-            <p class="figtree-light font-bold text-6xl">Mission</p>
+            <p class="font-medium text-6xl">Mission</p>
         </div>
     </div>
 </section>
 
-<section class="w-screen full-page mb-44" id="properties-swiper">
+<section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
-        <!-- Swiper -->
-        <div class="swiper home-properties w-full mb-12">
-            <div class="swiper-wrapper h-full">
-                <div class="swiper-slide bg-white flex justify-center items-center w-36 opacity-0">Slide 1</div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
-                <div class="swiper-slide bg-gray-700 text-2xl flex items-end w-3/12 px-10 py-10"><h5>Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.<h5/></div>
+        <div class="wrapper mb-10">
+            <div class="carousel hover:cursor-none">
+                <div class="slick-slide opacity-0" id="carousel-first-child">
+                    <div class="w-full h-full px-10 py-10 flex items-end text-left">
+                        <h5 class="figtree-light">Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.</h5>
+                    </div>
+                </div>
+                <?php
+                    for ($i=0; $i < 10; $i++) { 
+                        ?>
+                            <div class="slick-slide bg-gray-700">
+                                <div class="w-full h-full px-10 py-10 flex items-end text-left">
+                                    <h5 class="figtree-light">Contribute to the economic growth and vitality of Sydney’s Eastern Suburbs.</h5>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
 
     <div class="flex justify-end mr-16">
         <div class="flex explore-rotate-left">
-            <p class="text-2xl font-normal text-end me-3">
+            <p class="text-2xl font-normal text-end me-3 figtree-light ">
                 Explore more
             </p>
             <div class="flex items-end pb-1 icon animate-pulse">
@@ -142,7 +140,7 @@
         </div>
         <div class="w-5/12">
             <div class="w-full h-30 mb-16">
-                <h1 class="figtree-light font-bold text-6xl"><strong>Background Story</strong></h1>
+                <h1 class="font-medium text-6xl"><strong>Background Story</strong></h1>
             </div>
             <div class="w-full h-48 mb-16">
                 <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
@@ -151,7 +149,7 @@
                 <div class="w-8/12">
                     <span class="border-b-2 border-white text-transparent">skyland</span>
                 </div>
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between figtree-light">
                     <p class="pt-1 h-40 text-ellipsis overflow-hidden">
                         <?= $paragraph_top;?>
                     </p>
@@ -204,10 +202,10 @@
         </div>
         <div class="w-5/12">
             <div class="w-full h-30 mb-16">
-                <h1 class="figtree-light font-bold text-6xl"><strong>Team</strong></h1>
+                <h1 class="font-medium text-6xl"><strong>Team</strong></h1>
             </div>
             <div class="flex">
-                <div class="flex flex-col justify-between pe-12">
+                <div class="flex flex-col justify-between pe-12 figtree-light">
                     <p class="pt-1 h-40 text-ellipsis overflow-hidden">
                         <?= $paragraph_top;?>
                     </p>
@@ -229,5 +227,13 @@
         </div>
     </div>
 </section>
+
+<div class="hidden drag-cursor fixed z-40 pointer-events-none lg:hidden">
+    <div class="relative h-[5rem] w-[5rem] rounded-full border-white border-2">
+        <div class="flex items-center justify-center absolute top-1/4 left-1/4 bottom-1/4 right-1/4">
+        DRAG
+        </div>
+    </div>
+</div>
 
 <?php get_footer() ?>
