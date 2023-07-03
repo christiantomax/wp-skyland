@@ -13,3 +13,62 @@
 .home-investment-right-image{
     height: 70vh;
 }
+
+.wrapper{
+    width:100%;
+    padding-top: 20px;
+    text-align:center;
+}
+
+.carousel{
+    width: full;
+    margin:0px auto;
+}
+
+.slick-slide{
+    width: 23vw !important;
+    height: 60vh !important;
+    display: flex !important;
+    margin: 0 1rem;
+}
+
+#carousel-first-child {
+    width: 6vw !important;
+    height: 60vh !important;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .slick-slide{
+        width: 65vw !important;
+        height: 48vh !important;
+    }
+
+    #carousel-first-child {
+        width: 8vw !important;
+        height: 48vh !important;
+    }
+
+    .home-investment-right-image{
+        height: 25vh;
+    }
+
+    .min-h-content{
+        height: fit-content;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}

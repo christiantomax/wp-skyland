@@ -85,20 +85,20 @@
 <section class="w-screen h-screen full-page mb-10" id="property-banner">
     <div class="bg-fixed bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner;?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
-            <h1 class="text-6xl"><?= $title_1;?></h1>
-            <h2 class="text-8xl mt-4"><?= $title_2;?></h2>
-            <p class="figtree-light font-thin text-3xl mt-12"><?= $address;?> <span class="ms-60"><?= $year;?></span></p>
+            <h1 class="text-3xl xl:text-6xl"><?= $title_1;?></h1>
+            <h2 class="text-4xl xl:text-8xl mt-4"><?= $title_2;?></h2>
+            <p class="figtree-light font-thin text-lg xl:text-3xl mt-12"><?= $address;?><br class="xl:hidden" /> <span class="xl:ms-60"><?= $year;?></span></p>
         </div>
     </div>
 </section>
 
 <!-- section description of detail property -->
-<section class="w-12/12 ms-72 flex justify-center" id="property-description">
-        <div class="w-11/12 flex justify-end foreword-description mb-16 pe-20 figtree-light">
-            <p class="pt-1 text-ellipsis overflow-hidden w-6/12 h-24">
+<section class="w-12/12 xl:ms-72 flex justify-center" id="property-description">
+        <div class="w-11/12 flex flex-col xl:flex-row justify-end foreword-description mb-16 xl:pe-20 figtree-light">
+            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12 h-24">
             <?= $paragraph_left;?>
             </p>
-            <p class="pt-1 text-ellipsis overflow-hidden w-6/12 h-24 ms-16">
+            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12 h-24 xl:ms- mt-8 xl:mt-0">
             <?= $paragraph_right;?>
             </p>
         </div>
@@ -107,7 +107,22 @@
 <!-- section galleries detail property -->
 <section class="w-screen full-page mb-36" id="property-galleries">
     <div class="flex justify-center">
-        <div class="w-11/12">
+        <div class="w-full xl:hidden">
+            <div class="slider">
+                <?php
+                    for ($i = 0; $i < count($fieldset_text_image); $i++) {
+                        ?>
+                            <article>
+                                <img src="<?= $fieldset_text_image[$i]; ?>" alt="Image 1">
+                                <h2 class="paragraph text-xl figtree-light"><?= $address;?></h2>
+                                <p class="paragraph text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
+                            </article>
+                        <?php
+                    }
+                ?>
+            </div>
+        </div>
+        <div class="w-11/12 hidden xl:block">
             <div class="w-full flex justify-center pb-2 mb-6">
                 <?php
                     for ($i = 0; $i < count($fieldset_text_image); $i++) {
@@ -172,7 +187,7 @@
             <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
                 <div class="flex justify-between w-full">
                     <div class="flex" >
-                        <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12 rotate-180 font-medium hover:cursor-pointer">
+                        <div class="border w-14 h-10 xl:w-10 xl:h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 rotate-180 font-medium hover:cursor-pointer">
                             <p class="figtree-light animate-pulse">
                                 <svg id="SvgjsSvg1011" width="18" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" 
                                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
@@ -182,13 +197,23 @@
                             </p>
                         </div>
                         <div class="w-12/12">
-                            <p class="figtree-light font-medium text-2xl mb-12 pt-2">Up Next</p>
-                            <p class="font-medium text-6xl mb-12"><strong><?= $title_2_next; ?></strong></p>
+                            <p class="figtree-light font-medium text-2xl mb-4 xl:mb-12 pt-2">Up Next</p>
+                            <p class="font-medium text-4xl xl:text-6xl mb-12"><strong><?= $title_2_next; ?></strong></p>
+                            <div class="items-end w-full pb-16 xl:hidden">
+                                <div class="flex explore-rotate-left">
+                                    <p class="text-lg xl:text-2xl font-normal text-end me-3 figtree-light">
+                                        Explore more
+                                    </p>
+                                    <div class="flex items-end pb-1 icon animate-pulse">
+                                        <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-end w-2/12 pb-16">
+                    <div class="items-end w-2/12 pb-16 hidden xl:flex">
                         <div class="flex explore-rotate-left">
-                            <p class="text-2xl font-normal text-end me-3 figtree-light">
+                            <p class="text-lg xl:text-2xl font-normal text-end me-3 figtree-light">
                                 Explore more
                             </p>
                             <div class="flex items-end pb-1 icon animate-pulse">

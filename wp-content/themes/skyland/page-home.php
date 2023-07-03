@@ -14,10 +14,10 @@
 ?>
 <section class="w-screen h-screen full-page relative" id="home-banner">
     <div class="bg-fixed w-full h-full flex justify-center">
-        <div class="w-11/12 h-full flex flex-col justify-end py-32 z-10">
-            <h1 class="font-medium text-6xl"><?= $title1; ?></h1>
-            <h2 class="font-medium text-8xl mt-4"><?= $title2; ?></h2>
-            <p class="figtree-light font-regular text-2xl mt-12"><?= $title3; ?> <span class="ms-16">est. <?= $year; ?></span></p>
+        <div class="w-11/12 h-full flex flex-col justify-end py-10 lg:py-32 ps-4 lg:ps-0 z-10">
+            <h1 class="font-medium text-3xl lg:text-6xl"><?= $title1; ?></h1>
+            <h2 class="font-medium text-4xl lg:text-8xl mt-4"><?= $title2; ?></h2>
+            <p class="figtree-light font-regular text-xl lg:text-2xl mt-12"><?= $title3; ?> <span class="lg:ms-16">est. <?= $year; ?></span></p>
         </div>
     </div>
     <div class="absolute top-0 w-screen h-screen z-0">
@@ -37,12 +37,12 @@
 
 <!-- Offered Section Properties -->
 <section class="w-screen full-page flex justify-center" id="properties">
-    <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-36">
-        <div class="flex mb-16">
-            <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
+    <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-10 lg:pt-36 xl:ps-4 lg:ps-0">
+        <div class="flex mb-2 lg:mb-16">
+            <div class="border w-8 h-8 lg:w-10 lg:h-10 rounded-full border-white flex justify-center items-center me-3 lg:me-12">
                 <p class="figtree-light">01</p>
             </div>
-            <p class="font-medium text-6xl">Properties</p>
+            <p class="font-medium text-4xl lg:text-6xl">Properties</p>
         </div>
     </div>
 </section>
@@ -71,9 +71,9 @@
         </div>
     </div>
 
-    <div class="flex justify-end mr-16">
+    <div class="flex lg:justify-end mr-16">
         <div class="flex explore-rotate-left">
-            <p class="text-2xl font-normal text-end me-3 figtree-light ">
+            <p class="text-xl lg:text-2xl font-normal text-end me-3 ms-20 lg:ms-0 figtree-light ">
                 Explore more
             </p>
             <div class="flex items-end pb-1 icon animate-pulse">
@@ -93,48 +93,53 @@
 ?>
 <!-- Investment Section -->
 <section class="w-screen full-page" id="properties-swiper">
-    <div class="flex h-8-12 mb-36">
-        <div class="w-1/12 flex justify-end">
-            <div class="flex mb-14">
-                <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
+    <div class="flex h-8-12 mb-36 m-4 xl:ms-10">
+        <div class="w-1/12">
+            <div class="w-full flex mb-14">
+                <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:me-12">
                     <p class="figtree-light">02</p>
                 </div>
             </div>
+            <div class="w-full lg:hidden mr-2 mt-36">
+                <span class="border-b-2 border-white text-transparent">sky</span>
+            </div>
         </div>
-        <div class="w-5/12">
-            <div class="w-full h-30 mb-16">
-                <h1 class="figtree-light font-medium text-6xl"><strong>Investment</strong></h1>
-            </div>
-            <div class="w-full h-48 mb-16">
-                <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
-            </div>
-            <div class="flex">
-                <div class="w-8/12">
-                    <span class="border-b-2 border-white text-transparent">skyland</span>
+        <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
+            <div>
+                <div class="w-full h-30 mb-8 lg:mb-16">
+                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Investment</strong></h1>
                 </div>
-                <div class="flex flex-col justify-between figtree-light ">
-                    <p class="pt-1 h-40 text-ellipsis overflow-hidden">
-                        <?= $paragraph_top;?>
-                    </p>
-                    <p class="mt-10 h-40 text-ellipsis overflow-hidden">
-                        <?= $paragraph_bottom;?>
-                    </p>
-                    <div class="flex justify-end mt-10 pe-4">
-                        <div class="flex explore-rotate-left">
-                            <p class="text-2xl font-normal text-end me-3 figtree-light ">
-                                Explore more
-                            </p>
-                            <div class="flex items-end pb-1 icon animate-pulse">
-                                <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16">
+                    <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-8/12 hidden lg:block">
+                        <span class="border-b-2 border-white text-transparent">skyland</span>
+                    </div>
+                    <div class="flex flex-col justify-between figtree-light ">
+                        <p class="pt-1 h-40 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                            <?= $paragraph_top;?>
+                        </p>
+                        <p class="mt-10 h-40 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                            <?= $paragraph_bottom;?>
+                        </p>
+                        <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
+                            <div class="flex explore-rotate-left">
+                                <p class="text-xl lg:text-2xl font-normal text-end me-3 figtree-light ">
+                                    Explore more
+                                </p>
+                                <div class="flex items-end pb-1 icon animate-pulse">
+                                    <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="w-6/12 flex justify-end items-end">
-            <div class="w-8/12 home-investment-right-image">
-                <img class="w-full h-full object-cover" src="<?= $image_right; ?>"/>
+            <div class="flex justify-end items-end">
+                <div class="w-full lg:w-8/12 home-investment-right-image">
+                    <img class="w-full h-full object-cover" src="<?= $image_right; ?>"/>
+                </div>
             </div>
         </div>
     </div>
@@ -150,20 +155,20 @@
 <section class="w-screen full-page" id="home-story">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image;?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
-            <div class="flex justify-between w-full">
-                <div class="w-6/12 flex" >
-                    <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-12">
+            <div class="flex flex-col lg:flex-row lg:justify-between w-full">
+                <div class="w-full lg:w-6/12 flex ps-0 lg:ps-0" >
+                    <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-0 lg:me-12">
                         <p class="figtree-light">03</p>
                     </div>
-                    <div class="w-5/12">
-                        <h1 class="figtree-light font-medium text-6xl mb-12"><strong>The Story</strong></h1>
+                    <div class="w-full lg:w-5/12 ps-2 lg:ps-0">
+                        <h1 class="figtree-light font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>The Story</strong></h1>
                         <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light">
                             <?= $paragraph;?>
                         </p>
                     </div>
                 </div>
-                <div class="flex w-4/12 h-fit explore-rotate-left">
-                    <p class="text-2xl font-normal w-11/12 text-right figtree-light ">
+                <div class="flex w-full lg:w-4/12 my-4 lg:my-0 ms-14 lg:ms-0 h-fit explore-rotate-left">
+                    <p class="text-xl lg:text-2xl font-normal lg:w-11/12 lg:text-right figtree-light ">
                         Explore more
                     </p>
                     <div class="pt-2 ms-3 icon animate-pulse">

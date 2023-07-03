@@ -25,3 +25,31 @@
 .property-galleries__image__container{
 	height: 55vh;
 }
+
+@media only screen and (max-width: 600px) {
+	.full-page-height {
+		height: 30rem;
+	}
+
+	.slider {
+		width: 100%;
+		margin: 0;
+	}
+	
+	.slick-slide img {
+		width: 100%;
+		height: 8rem;
+		padding: 0 5px;
+	}
+	
+	.slick-center .paragraph {
+		display: block;
+		margin-top: 3rem;
+		overflow-y: scroll;
+	}
+	
+	.paragraph {
+		display: none;
+		margin-top: 8px;
+	}
+}

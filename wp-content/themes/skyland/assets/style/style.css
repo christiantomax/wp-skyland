@@ -51,3 +51,84 @@
 .nav-header__logo__container{
     height: 2.3rem;
 }
+
+.reach-us-form{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 3px 5px;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    border-bottom: solid 1px white;
+    background-color: transparent;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #message{
+        height: 2rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .reach-us-form input{
+        height: 2.5rem;
+    }
+    
+    #message{
+        height: 5rem;
+    }
+    
+    .reach-us-form:active, .reach-us-form:focus, .reach-us-form:hover{
+        outline: none;
+    }
+    
+    .reach-us-form::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+    
+    .reach-us-form:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: white;
+    }
+    
+    .reach-us-form::-ms-input-placeholder { /* Microsoft Edge */
+        color: white;
+    }
+    
+    #submit{
+        font-size: .875rem;
+        line-height: 1.25rem;
+    }
+    
+    #form{
+        margin-right: 5rem;
+    }
+
+    #wpcf7-f174-o1 > form > p:nth-child(2) { 
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    #form span:last-child { 
+        grid-column: span 2 / span 2;
+    }
+    
+    #form span{ 
+        margin-left: 4rem;
+    }
+    
+    #form br { 
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}

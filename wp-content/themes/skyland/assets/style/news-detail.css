@@ -9,3 +9,31 @@
 .home-investment-right-image{
     height: 70vh;
 }
+
+
+@media only screen and (max-width: 600px) {
+	.slider {
+		width: 100%;
+		margin: 0;
+	}
+
+	.slick-slide img {
+		width: 100%;
+		height: 10rem;
+		padding: 0 5px;
+	}
+
+    #explore-more{
+        height: 1rem;
+    }
+	
+	.slick-center .paragraph {
+		display: block;
+		margin-top: 3rem;
+	}
+	
+	.paragraph {
+		display: none;
+		margin-top: 8px;
+	}
+}

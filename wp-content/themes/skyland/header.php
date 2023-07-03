@@ -32,10 +32,7 @@
         }
         ?>">
     <?php 
-        $slick = ["home", "about-us"];
-        if (in_array(strtolower(get_the_title()), $slick)) {
-            echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>';
-        }
+        echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>';
     ?>
     <!-- swiper -->
     <link
@@ -43,8 +40,12 @@
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
 </head>
-<body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular">
-<header>
+<body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular overflow-x-hidden">
+
+<?php 
+    require get_theme_file_path( 'navbar.php' );
+?>
+<!-- <header>
     <nav class="fixed top-0 w-full z-10 figtree-light" id="nav-header">
         <div class="flex justify-center items-center pt-10 ">
             <div class="w-11/12 flex justify-between items-center">
@@ -65,4 +66,4 @@
             </div>
         </div>
     </nav>
-</header>
+</header> -->

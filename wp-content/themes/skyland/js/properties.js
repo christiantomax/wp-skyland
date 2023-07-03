@@ -51,3 +51,31 @@ expanders.forEach(function(expander, index){
 	}
 
 })
+
+const showButton = document.getElementById('showButton');
+const dropdownOptions = document.getElementById('dropdownOptions');
+const optionItems = document.getElementsByClassName('option');
+
+// Toggle dropdown visibility when the button is clicked
+showButton.addEventListener('click', function() {
+    dropdownOptions.classList.toggle('hidden');
+});
+
+// Apply styling to all option items
+Array.from(optionItems).forEach(function(item) {
+    item.addEventListener('click', function() {
+        // Remove selected class from all options
+        Array.from(optionItems).forEach(function(option) {
+            option.classList.remove('selected');
+        });
+
+        // Add selected class to the clicked option
+        this.classList.add('selected');
+
+        // Update the button text to the selected option
+        showButton.textContent = this.textContent;
+
+        // Hide the dropdown options
+        dropdownOptions.classList.add('hidden');
+    });
+});
