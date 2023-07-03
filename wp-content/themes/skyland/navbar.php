@@ -28,7 +28,7 @@
                         <a href="#" class="block py-2 mx-6 rounded hover:text-gray-200 nav-service-dropdown__li" aria-current="about">Contact</a>
                     </li>
                     <li>
-                        <p class="text-sm mb-10 mt-10">© Copyright 2023 Skyland Group. All Rights Reserved.</p>
+                        <p class="text-sm mb-10 mt-10 xl:hidden">© Copyright 2023 Skyland Group. All Rights Reserved.</p>
                     </li>
                 </ul>
             </div>
