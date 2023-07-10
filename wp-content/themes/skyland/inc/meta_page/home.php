@@ -32,11 +32,10 @@
                     'name'             => esc_html__( 'Year', 'english' ),
                 ],
                 [
-                    'id'               => $prefix.$section.'image'.$languages,
+                    'id'               => $prefix.$section.'image_banner',
                     'name'             => esc_html__( 'Image Banner', 'english' ),
-                    'type'    		   => 'single_image',
+                    'type'    		   => 'image_advanced',
                     'force_delete'     => false,
-                    'max_file_uploads' => 1,
                 ],
             ],
         ];

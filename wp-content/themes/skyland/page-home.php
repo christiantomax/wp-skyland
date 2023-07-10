@@ -23,7 +23,7 @@
     $title2= rwmb_meta($prefix.$section.'title2'.$languages);
     $title3= rwmb_meta($prefix.$section.'title3'.$languages);
     $year= rwmb_meta($prefix.$section.'year'.$languages);
-    $image= rwmb_meta($prefix.$section.'image'.$languages)['full_url'];
+    $image= rwmb_meta($prefix.$section.'image_banner'.$languages);
 ?>
 <section class="w-screen h-screen full-page relative" id="home-banner">
     <div class="bg-fixed w-full h-full flex justify-center">
@@ -37,12 +37,15 @@
         <!-- Swiper -->
         <div class="swiper swiper-home-banner w-full h-full">
             <div class="swiper-wrapper w-full h-full">
-                <div class="swiper-slide swiper-slide-home-banner w-full h-full">
-                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="https://picsum.photos/id/237/200/300" alt="img">
-                </div>
-                <div class="swiper-slide swiper-slide-home-banner w-full h-full">
-                    <img class=" w-screen h-screen bg-no-repeat bg-cover" src="https://picsum.photos/id/238/200/300" alt="img">
-                </div>
+                <?php
+                    foreach ($image as $key => $value) {
+                        ?>
+                            <div class="swiper-slide swiper-slide-home-banner w-full h-full">
+                                <img class=" w-screen h-screen bg-no-repeat bg-cover" src="<?= $image[$key]['url'];?>" alt="img">
+                            </div>
+                        <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
