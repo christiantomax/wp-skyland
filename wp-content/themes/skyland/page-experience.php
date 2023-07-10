@@ -1,6 +1,19 @@
 <?php 
     get_header();
     require get_theme_file_path( 'config.php' );
+    $base_url = home_url();
+    
+    function get_posts_taxonomy($post_type, $post_id) {
+        $args = array(
+            'post_type'      => $post_type,
+            'posts_per_page' => -1,
+            'post__not_in'   => array($post_id),
+            'post_status'    => 'publish',
+        );
+        
+        $query = new WP_Query($args);
+        return $query->posts;
+    }
 ?>
 
 <?php 
@@ -36,8 +49,8 @@
     <div class="flex h-8-12 mb-0 lg:mb-10 ms-4">
         <div class="w-1/12">
             <div class="w-full flex mb-14">
-                <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:me-12">
-                    <p class="figtree-light">03</p>
+                <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:ms-12 lg:me-6">
+                    <p class="figtree-light">01</p>
                 </div>
             </div>
             <div class="w-full lg:hidden mr-2 mt-36">
@@ -47,7 +60,7 @@
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div>
                 <div class="w-full h-30 mb-8 lg:mb-16">
-                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Customer First</strong></h1>
+                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl lg:ml-3"><strong>Customer First</strong></h1>
                 </div>
                 <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16">
                     <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
@@ -57,15 +70,15 @@
                         <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light ">
-                        <p class="pt-1 h-40 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="pt-1 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 h-40 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="mt-10 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
                             <div class="flex explore-rotate-left">
-                                <p class="text-xl lg:text-2xl font-normal text-end me-3 figtree-light ">
+                                <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
                                     Partners
                                 </p>
                                 <div class="flex items-end pb-1 icon animate-pulse">
@@ -95,7 +108,7 @@
 <section class="w-screen full-page flex justify-center" id="experience-customize">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-24 ms-4 lg:ms-0">
         <div class="flex mb-16">
-            <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
+            <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:ms-1 lg:me-10">
                 <p class="figtree-light">02</p>
             </div>
             <p class="font-medium text-3xl lg:text-6xl">Customize</p>
@@ -103,6 +116,11 @@
     </div>
 </section>
 
+<?php
+    $list_all_post = get_posts_taxonomy("property_category", "");
+    $limit_posts = count($list_all_post);
+	$prefix1 = 'properties_category_';
+?>
 <section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
         <div class="wrapper mb-10">
@@ -113,11 +131,20 @@
                     </div>
                 </div>
                 <?php
-                    for ($i=0; $i < 10; $i++) { 
+                    for ($i = 0; $i < $limit_posts; $i++) {
+                        $post_id = $list_all_post[$i]->ID;
+
+                        $title_1 = get_post_meta($post_id, $prefix1 . 'title_1' )[0];
+
+                        //get image thumbnail property category
+                        $image_thumbnail = get_post_meta($post_id, $prefix1 . 'image_thumbnail' )[0];
+                        $image_thumbnail = wp_get_attachment_image_src($image_thumbnail)[0];
+                        $link_slug = get_permalink($post_id);
                         ?>
-                            <div class="slick-slide bg-gray-700 text-2xl">
-                                <div class="w-full h-full px-10 py-10 flex items-end">
-                                    <h5 class="figtree-light">House</h5>
+                            <div class="relative slick-slide bg-gray-700 text-2xl">
+                                <img class="w-full h-full absolute top-0 bg-cover bg-center" src="<?= $image_thumbnail; ?>"/>
+                                <div class="w-full h-full px-10 py-10 flex items-end z-10">
+                                    <h5 class="figtree-light drop-shadow-sm"><?= $title_1;?></h5>
                                 </div>
                             </div>
                         <?php
@@ -139,14 +166,16 @@
                 </p>
             </div>
             <div class="w-full lg:w-3/12 flex lg:justify-end me-12 ms-20 lg:ms-0">
-                <div class="flex explore-rotate-left">
-                    <p class="text-lg lg:text-2xl font-normal text-end me-3">
-                        Explore more
-                    </p>
-                    <div class="flex pb-1 icon animate-pulse mt-1">
-                        <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                <a href="<?= $base_url;?>/about-us">
+                    <div class="flex explore-rotate-left">
+                        <p class="text-lg lg:text-md font-normal text-end me-3">
+                            Explore more
+                        </p>
+                        <div class="flex pb-1 icon animate-pulse mt-1">
+                            <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -174,13 +203,17 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-full lg:w-4/12 flex h-fit explore-rotate-left figtree-light ms-10 lg:ms-0 mt-8 lg:mt-0">
-                    <p class="text-lg lg:text-2xl font-normal lg:w-11/12 lg:text-right">
-                        Explore more
-                    </p>
-                    <div class="pt-2 ms-3 icon animate-pulse">
-                        <img class="h-4 lg:h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
-                    </div>
+                <div class="flex lg:justify-end w-full lg:w-4/12 my-4 lg:my-0 ms-14 lg:ms-0 h-fit explore-rotate-left">
+                    <a href="<?= $base_url;?>/teams">
+                        <div class="flex items-end explore-rotate-left">
+                            <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
+                                Explore more
+                            </p>
+                            <div class="flex items-end pb-1 icon animate-pulse">
+                                <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

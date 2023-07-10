@@ -7,13 +7,6 @@
             $args = array(
                 'post_type'      => $post_type,
                 'posts_per_page' => -1,
-                // 'tax_query'         => array(
-                //     array(
-                //         'taxonomy' => 'properties-category',
-                //         'field' => 'slug',
-                //         'terms' => $terms
-                //     )
-                // ),
                 'post_status'    => 'publish',
             );
             
@@ -95,10 +88,10 @@
 <!-- section description of detail property -->
 <section class="w-12/12 xl:ms-72 flex justify-center" id="property-description">
         <div class="w-11/12 flex flex-col xl:flex-row justify-end foreword-description mb-16 xl:pe-20 figtree-light">
-            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12 h-24">
+            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12">
             <?= $paragraph_left;?>
             </p>
-            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12 h-24 xl:ms- mt-8 xl:mt-0">
+            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12 xl:ms-8 mt-8 xl:mt-0">
             <?= $paragraph_right;?>
             </p>
         </div>

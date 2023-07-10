@@ -39,6 +39,11 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <?php 
+        if(get_the_title() != 'Contact' && get_the_title() != 'Investment'){
+            echo '<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />';
+        }
+    ?>
 </head>
 <body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular overflow-x-hidden">
 

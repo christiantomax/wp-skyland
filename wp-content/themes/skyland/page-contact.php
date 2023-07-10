@@ -17,7 +17,16 @@
     <div class="flex flex-col lg:flex-row mb-36 pt-40">
         <div class="w-full lg:w-6/12 flex justify-start items-end">
             <div class="w-full h-full">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                <div class="w-full h-64 lg:h-full object-cover grayscale">
+                    <iframe 
+                        title="Skyland Property"
+                        id="iframe-skyland-property"
+                        width="100%"
+                        height="100%"
+                        src='https://maps.google.com/maps?q=<?= $lat;?>,<?= $lon;?>&hl=es;&output=embed'
+                    >
+                    </iframe>
+                </div>
             </div>
         </div>
         <div class="w-full lg:w-5/12 flex lg:ps-20 mt-10 lg:mt-0">
@@ -38,15 +47,17 @@
                         <div class="pt-1 min-h-content text-ellipsis overflow-hidden">
                             <?= $paragraph; ?>
                         </div>
-                        <div class="flex mt-10 pe-4">
-                            <div class="flex explore-rotate-left">
-                                <p class="text-lg lg:text-2xl font-normal text-end me-3">
-                                    Open in Maps
-                                </p>
-                                <div class="flex items-end pb-1 icon animate-pulse">
-                                    <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                        <div class="flex mt-10 lg:mt-24 pe-4">
+                            <a href="https://maps.google.com/maps?q=<?= $lat;?>,<?= $lon;?>" target="_blank">
+                                <div class="flex explore-rotate-left">
+                                    <p class="text-md lg:text-md font-normal text-end me-3">
+                                        Open in Maps
+                                    </p>
+                                    <div class="flex items-end pb-1 icon animate-pulse">
+                                        <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

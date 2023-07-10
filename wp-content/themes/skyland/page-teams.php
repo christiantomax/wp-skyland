@@ -41,11 +41,11 @@
 
 <!-- Section team -->
 <section class="w-screen full-page" id="team-person">
-    <div class="grid grid-cols-2 h-8-12 mb-12 figtree-light ps-4 pe-4 lg:pe-16">
+    <div class="grid grid-cols-2 h-8-12 mb-12 figtree-light ps-4 pe-4 lg:pe-16 lg:ps-16">
         <?php
             for ($i = 0; $i < 2; $i++) {
         ?>
-            <div class="w-full team-person__container__image mb-16 <?= $i%2 == 0 ? 'me-2' : 'ms-2'?>">
+            <div class="w-full team-person__container__image mb-16 <?= $i%2 == 0 ? 'me-4' : 'ms-4'?>">
                 <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
                 <div class="flex flex-col lg:flex-row text-lg mt-12">
                     <p>Name</p>
@@ -72,7 +72,7 @@
 
 <!-- section partner list -->
 <section class="w-screen full-page" id="team-partners-list">
-    <div class="grid grid-cols-3 lg:grid-cols-5 gap-4 justify-center">
+    <div class="grid grid-cols-3 lg:grid-cols-5 gap-4 justify-center lg:me-20 lg:ms-16">
         <?php
             for ($i = 0; $i < 5; $i++) {
         ?>

@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <div class="flex items-end h-1/2: mt-8">
+                            <div class="flex items-end h-1/2: mt-8 xl:hidden">
                                 <p class="text-sm text-center">&copy; Copyright <?php echo date('Y'); ?> Skyland Group. <span class="font-light">All rights reserved.</span></p>
                             </div>
                         </div>
@@ -94,6 +94,8 @@
         echo '<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>';
         
     ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
     <script src="<?php 
         if (is_singular('property')) {
             echo $js_folder_path.'property-detail.js';

@@ -34,12 +34,12 @@
                 <div class="w-full">
                     <h1 class="font-medium text-3xl lg:text-4xl mb-2"><?= $title1; ?></h1>
                     <h2 class="font-medium text-4xl lg:text-7xl mb-10 lg:mb-16"><strong><?= $title2; ?></strong></h2>
+                    <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light">
+                        <?= $paragraph; ?>
+                    </p>
                 </div>
-                <div class="flex lg:h-96">
+                <div class="flex">
                     <div class="flex flex-col lg:justify-between">
-                        <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light">
-                            <?= $paragraph; ?>
-                        </p>
                         <div class="flex mt-8 lg:mt-10 pe-4">
                             <div class="flex explore-rotate-down">
                                 <p class="text-md lg:text-2xl font-normal me-3 figtree-light">
