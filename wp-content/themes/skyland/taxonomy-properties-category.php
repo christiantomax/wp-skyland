@@ -34,19 +34,26 @@
         $query = new WP_Query($args);
         return $query->posts;
     }
-    $getCategory = 'All';
+    $getCategory = get_queried_object();
+    $getCategory = $getCategory->slug;
+
+    // Get the page slug
+    $page_slug = 'properties'; 
+
+    // Retrieve the page object
+    $page = get_page_by_path($page_slug);
 ?>
 
 <?php 
     $prefix = "property_";
     $section = "foreword_section_";
     $languages = "";
-
-    $title1= rwmb_meta($prefix.$section.'title1'.$languages);
-    $title2= rwmb_meta($prefix.$section.'title2'.$languages);
-    $paragraph_left= rwmb_meta($prefix.$section.'paragraph_left'.$languages);
-    $paragraph_right= rwmb_meta($prefix.$section.'paragraph_right'.$languages);
-    $image= rwmb_meta($prefix.$section.'image'.$languages)['full_url'];
+    
+    $title1= rwmb_meta($prefix.$section.'title1'.$languages, [], $page->ID);
+    $title2= rwmb_meta($prefix.$section.'title2'.$languages, [], $page->ID);
+    $paragraph_left= rwmb_meta($prefix.$section.'paragraph_left'.$languages, [], $page->ID);
+    $paragraph_right= rwmb_meta($prefix.$section.'paragraph_right'.$languages, [], $page->ID);
+    $image= rwmb_meta($prefix.$section.'image'.$languages, [], $page->ID)['full_url'];
 ?>
 <!-- section Foreword -->
 <section class="w-screen full-page" id="property">
@@ -112,7 +119,7 @@
                                     for ($i = 0; $i < $limit_terms; $i++) {
                                         ?>
                                             <li class="font-medium cursor-pointer">
-                                                <a href="<?= get_term_link($terms[$i]);?>" class="<?= $getCategory == $title_1 ? 'font-bold text-white' : '';?>">
+                                                <a href="<?= get_term_link($terms[$i]);?>" class="<?= $getCategory == $terms[$i]->slug ? 'font-bold text-white' : '';?>">
                                                     <?= $terms[$i]->name;?>
                                                 </a>
                                             </li>
@@ -172,20 +179,20 @@
     $list_all_post = $getCategory == 'All' ? 
         get_post_without_taxonomy("property", "") : 
         get_post_with_taxonomy("property", "", "properties-category", $getCategory);
-    $limit_posts = count($list_all_post);
+    $limit_terms = count($list_all_post);
 	$prefix = 'properties_';
 ?>
 <!-- section news list item -->
 <section class="w-screen full-page flex-col items-center hidden xl:flex" id="news-list">
         <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15 figtree-light">
     <?php
-        for ($i = 0; $i < $limit_posts/2; $i++) {
+        for ($i = 0; $i < $limit_terms/2; $i++) {
             $loopingItem = $i * 3 + 3;
     ?>
         <div class="w-full flex justify-end ms-24 mb-8">
             <div class="flex justify-end border-b-4 border-white pb-8 project-list__container__project">
             <?php
-                for ($j = $i * 3; $j < $loopingItem && $j < $limit_posts; $j++) {
+                for ($j = $i * 3; $j < $loopingItem && $j < $limit_terms; $j++) {
                         $post_id = $list_all_post[$i]->ID;
 
                         $title_1 = get_post_meta($post_id, $prefix . 'title_1' )[0];
@@ -231,8 +238,8 @@
 
             <?php
                 // print last row
-                if ($i * 3 + 3 > $limit_posts && $limit_posts % 3 != 0) {
-                    $countLastRow = $limit_posts % 3;
+                if ($i * 3 + 3 > $limit_terms && $limit_terms % 3 != 0) {
+                    $countLastRow = $limit_terms % 3;
                     for ($k = 0; $k < $countLastRow + 1; $k++) {
                         ?>
                         <div class="expander h-90 opacity-0">
@@ -277,7 +284,7 @@
         <div class="w-full flex justify-end mb-8">
             <div class="flex flex-col justify-end border-b-4 border-white pb-8 project-list__container__project">
                 <?php
-                    for ($i = 0; $i < $limit_posts; $i++) {
+                    for ($i = 0; $i < $limit_terms; $i++) {
                         $post_id = $list_all_post[$i]->ID;
 
                         $title_1 = get_post_meta($post_id, $prefix . 'title_1' )[0];

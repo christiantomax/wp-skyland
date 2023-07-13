@@ -63,7 +63,7 @@ function investment_opportunities( $meta_boxes ) {
 	$prefix = 'investment_opportunities';
 	$meta_boxes[] = [
 		'title'      => esc_html__( 'Investment Opportunities Section', 'online-generator' ),
-		'id'         => 'investment_opportunities',
+		'id'         => 'opportunities',
 		'post_types' => 'opportunities',
 		'autosave'   => true,
 		'fields'     => [
@@ -75,7 +75,7 @@ function investment_opportunities( $meta_boxes ) {
 			[
 				'id'               => $prefix.'_image',
 				'name'             => esc_html__( 'Image when hover', 'english' ),
-				'type'    		   => 'image_upload',
+				'type'    		   => 'image_advanced',
 				'force_delete'     => false,
 				'max_file_uploads' => 1,
 			],

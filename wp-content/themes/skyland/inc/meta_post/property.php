@@ -101,7 +101,7 @@ function properties_section( $meta_boxes ) {
 			[
 				'id'               => $prefix.'image_banner',
 				'name'             => esc_html__( 'Image Banner', 'english' ),
-				'type'    		   => 'image_upload',
+				'type'    		   => 'image_advanced',
 				'force_delete'     => false,
 				'max_file_uploads' => 1,
 			],

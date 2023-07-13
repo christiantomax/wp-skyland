@@ -48,7 +48,7 @@
 </section>
     
 <section class="w-12/12 lg:ms-72" id="about-us-description">
-        <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-10 figtree-light pl-20 pr-4">
+        <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-10 figtree-light pl-14 lg:pl-0 pr-4">
             <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12">
                 <?= $paragraph_left; ?>
             </p>
@@ -57,30 +57,33 @@
             </p>
         </div>
         
-        <div class="lg:w-12/12 lg:h-72 flex foreword-image-container ps-20 lg:ps-0">
+        <div class="lg:w-12/12 lg:h-72 flex foreword-image-container ps-14 lg:ps-0">
             <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
         </div>
 </section>
 
 <!-- section investment quote -->
 <section class="w-screen full-page" id="about-us-quote">
-    <div class="flex h-8-12 px-8">
+    <div class="flex h-8-12 ps-4 pe-8 lg:px-8">
         <div class="w-full lg:w-10/12 mt-0 mt-10 lg:mt-20">
             <div class="flex">
-                <div class="w-4/12 flex items-start lg:justify-end pe-4 lg:pe-20">
+                <div class="w-4/12 flex items-start lg:justify-end pe-0 lg:pe-20 lg:opacity-0">
                     <p class="pt-2 border-b-2 border-white text-transparent">sky</p>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p class="mt-5 lg:pt-1 ps-2 lg:ps-5 text-ellipsis overflow-hidden text-2xl lg:text-5xl leading-normal">
-                        <?= $quotes; ?>
-                    </p>
+                    <div class="flex items-start lg:ms-8">
+                        <p class="pt-6 lg:mr-10 border-b-2 border-white text-transparent hidden lg:block">skyland</p>
+                        <p class="mt-5 lg:pt-1 ps-2 lg:ps-5 text-ellipsis overflow-hidden text-2xl lg:text-5xl leading-normal text-left">
+                            <?= $quotes; ?>
+                        </p>
+                    </div>
                     <div class="flex lg:justify-end mt-6 pb-4 ps-2 lg:ps-6 project-description">
                         <a href="<?= $base_url;?>/experience">
-                            <div class="flex items-end explore-rotate-left">
+                            <div class="flex items-end explore-rotate-down">
                                 <p class="text-lg lg:text-2xl font-normal text-end me-3">
                                     How?
                                 </p>
-                                <div class="flex items-end pb-1 icon animate-pulse">
+                                <div class="flex items-end pb-2 icon animate-pulse rotate-90">
                                     <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                                 </div>
                             </div>
@@ -134,7 +137,7 @@
                             <div class="relative slick-slide bg-gray-700">
                                 <img class="w-full h-full absolute top-0 bg-cover bg-center" src="<?= $image_thumbnail; ?>"/>
                                 <div class="w-full h-full px-3 py-3 flex items-end z-10">
-                                    <h5 class="figtree-light text-left">
+                                    <h5 class="figtree-light text-left lowercase">
                                         <?= $description;?>
                                     </h5>
                                 </div>
@@ -169,7 +172,7 @@
             </div>
         </div>
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
-            <div>
+            <div class="lg:w-11/12">
                 <div class="w-full h-30 mb-8 lg:mb-16">
                     <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Investment</strong></h1>
                 </div>
@@ -188,7 +191,7 @@
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
-                            <a href="<?= $base_url;?>/teams">
+                            <a href="#about-us-team">
                                 <div class="flex explore-rotate-left">
                                     <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
                                         Partners
@@ -203,7 +206,7 @@
                 </div>
             </div>
             <div class="flex justify-end items-end">
-                <div class="w-full lg:w-8/12 home-investment-right-image">
+                <div class="w-full lg:w-11/12 home-investment-right-image">
                     <img class="w-full h-full object-cover" src="<?= $image_right; ?>"/>
                 </div>
             </div>
@@ -212,8 +215,8 @@
 </section>
 
 
-<!-- Section About Us Mission -->
-<section class="w-screen full-page flex justify-center xl:hidden" id="about-us-mission">
+<!-- Section Team -->
+<section class="w-screen full-page flex justify-center xl:hidden" id="about-us-team-header">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-24 ps-0 lg:ps-0">
         <div class="flex mb-4 lg:mb-16">
             <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
@@ -277,9 +280,9 @@
 </section>
 
 <div class="hidden drag-cursor fixed z-40 pointer-events-none lg:hidden">
-    <div class="relative h-[5rem] w-[5rem] rounded-full border-white border-2">
-        <div class="flex items-center justify-center absolute top-1/4 left-1/4 bottom-1/4 right-1/4">
-        DRAG
+    <div class="relative h-[3.5rem] w-[3.5rem] rounded-full border-white border-2 backdrop-filter backdrop-blur-sm" style="background-color: rgba(255,255,255, 0.2)">
+        <div class="figtree-light flex items-center justify-center absolute top-1/4 left-1/4 bottom-1/4 right-1/4 text-md opacity-100 text-white font-bold">
+        drag
         </div>
     </div>
 </div>

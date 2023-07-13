@@ -15,6 +15,27 @@
         $query = new WP_Query($args);
         return $query->posts;
     }
+    
+    global $wpdb;
+
+    // Query to retrieve options where autoload is 'no'
+    $query = $wpdb->prepare("
+        SELECT option_name, option_value
+        FROM {$wpdb->prefix}options
+        WHERE autoload = 'no'
+        AND option_name like '%z_taxonomy_image%'
+    ");
+
+    // Execute the query
+    $options = $wpdb->get_results($query);
+
+    // Generate the associative array with option_name as key and option_value as value
+    $imageListTaxonomy = array();
+    foreach ($options as $option) {
+        $option_name = $option->option_name;
+        $option_value = $option->option_value;
+        $imageListTaxonomy[$option_name] = $option_value;
+    }
 
     $prefix = "home_";
     $section = "banner_";
@@ -78,23 +99,25 @@
                     </div>
                 </div>
                 <?php
-                    for ($i = 0; $i < $limit_posts; $i++) {
-                        $post_id = $list_all_post[$i]->ID;
+                    $taxonomy = 'properties-category'; // Replace 'properties-category' with your desired taxonomy slug
 
-                        $title_1 = get_post_meta($post_id, $prefix . 'title_1' )[0];
+                    // Get all the terms (categories) for the taxonomy
+                    $terms = get_terms(array(
+                        'taxonomy' => $taxonomy,
+                        'hide_empty' => false, // Set to 'true' if you want to exclude empty categories
+                    ));
 
-                        //get image thumbnail property category
-                        $image_thumbnail = get_post_meta($post_id, $prefix . 'image_thumbnail' )[0];
-                        $image_thumbnail = wp_get_attachment_image_src($image_thumbnail)[0];
-                        $link_slug = get_permalink($post_id);
+                    if (!empty($terms)) {
+                        foreach ($terms as $term) {
                         ?>
                             <div class="relative slick-slide bg-gray-700 text-2xl">
-                                <img class="w-full h-full absolute top-0 bg-cover bg-center" src="<?= $image_thumbnail; ?>"/>
+                                <img class="w-full h-full absolute top-0 bg-cover bg-center" src="<?= $imageListTaxonomy['z_taxonomy_image'.$term->term_id]; ?>"/>
                                 <div class="w-full h-full px-10 py-10 flex items-end z-10">
-                                    <h5 class="figtree-light drop-shadow-sm"><?= $title_1;?></h5>
+                                    <h5 class="figtree-light drop-shadow-sm"><?= $term->name;?></h5>
                                 </div>
                             </div>
                         <?php
+                        }
                     }
                 ?>
             </div>
@@ -104,7 +127,7 @@
     <div class="flex lg:justify-end mr-16">
         <a href="<?= $base_url;?>/properties">
             <div class="flex explore-rotate-left">
-                <p class="text-xl lg:text-md font-normal text-end me-3 ms-20 lg:ms-0 figtree-light ">
+                <p class="text-xl lg:text-md font-normal text-end me-3 ms-16 lg:ms-20 lg:ms-0 figtree-light ">
                     Explore more
                 </p>
                 <div class="flex items-end pb-1 icon animate-pulse">
@@ -126,7 +149,7 @@
 ?>
 <!-- Investment Section -->
 <section class="w-screen full-page" id="properties-swiper">
-    <div class="flex h-8-12 mb-36 m-4 xl:ms-10">
+    <div class="flex h-8-12 mb-36 m-4 mr-0 lg:mr-4 xl:ms-10">
         <div class="w-1/12">
             <div class="w-full flex mb-14">
                 <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:ms-6">
@@ -149,7 +172,7 @@
                     <div class="w-8/12 hidden lg:block">
                         <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
-                    <div class="flex flex-col justify-between figtree-light ">
+                    <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
                         <p class="pt-1 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_top;?>
                         </p>
@@ -196,13 +219,13 @@
                         <p class="figtree-light">03</p>
                     </div>
                     <div class="w-full lg:w-5/12 ps-2 lg:ps-0">
-                        <h1 class="figtree-light font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>Our History</strong></h1>
+                        <h1 class="figtree-light font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>The Story</strong></h1>
                         <p class="pt-1 text-ellipsis overflow-hidden figtree-light">
                             <?= $paragraph;?>
                         </p>
                     </div>
                 </div>
-                <div class="flex lg:justify-end w-full lg:w-4/12 my-4 lg:my-0 ms-14 lg:ms-0 h-fit explore-rotate-left">
+                <div class="flex lg:justify-end w-full lg:w-4/12 my-4 lg:my-0 ms-10 lg:ms-0 h-fit explore-rotate-left">
                     <a href="<?= $base_url;?>/about-us">
                         <div class="flex items-end explore-rotate-left">
                             <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
@@ -220,9 +243,9 @@
 </section>
 
 <div class="hidden drag-cursor fixed z-40 pointer-events-none lg:hidden">
-    <div class="relative h-[5rem] w-[5rem] rounded-full border-white border-2">
-        <div class="flex items-center justify-center absolute top-1/4 left-1/4 bottom-1/4 right-1/4">
-        DRAG
+    <div class="relative h-[3.5rem] w-[3.5rem] rounded-full border-white border-2 backdrop-filter backdrop-blur-sm" style="background-color: rgba(255,255,255, 0.2)">
+        <div class="figtree-light flex items-center justify-center absolute top-1/4 left-1/4 bottom-1/4 right-1/4 text-md opacity-100 text-white font-bold">
+        drag
         </div>
     </div>
 </div>

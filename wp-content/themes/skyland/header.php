@@ -20,7 +20,7 @@
         }
     ?>
 
-<link rel="stylesheet" href="<?= $assets_folder_path."/style/font.css"; ?>">
+    <link rel="stylesheet" href="<?= $assets_folder_path."/style/font.css"; ?>">
     <link rel="stylesheet" href="<?= $assets_folder_path."/style/style.css"; ?>">
     <link rel="stylesheet" href="<?php 
         if (is_singular('property')) {
@@ -32,6 +32,9 @@
         }
         ?>">
     <?php 
+        if (is_tax('properties-category')) {
+            echo '<link rel="stylesheet" href="'.$assets_folder_path."/style/properties.css".'">';
+        }
         echo '<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>';
     ?>
     <!-- swiper -->

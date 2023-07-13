@@ -2,7 +2,6 @@
 require_once get_template_directory().'/inc/taxonomy/taxonomy_property.php';
 
 require_once get_template_directory().'/inc/meta_post/news.php';
-require_once get_template_directory().'/inc/meta_post/property_category.php';
 require_once get_template_directory().'/inc/meta_post/property.php';
 require_once get_template_directory().'/inc/meta_post/investment_opportunities.php';
 require_once get_template_directory().'/inc/meta_post/partner.php';

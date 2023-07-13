@@ -1,6 +1,21 @@
 <?php 
     get_header();
     require get_theme_file_path( 'config.php' );
+
+    
+    function get_posts_taxonomy($post_type, $post_id) {
+        $args = array(
+            'post_type'      => $post_type,
+            'posts_per_page' => -1,
+            'post__not_in'   => array($post_id),
+            'post_status'    => 'publish',
+        );
+        
+        $query = new WP_Query($args);
+        return $query->posts;
+    }
+    
+    $list_all_post = get_posts_taxonomy("opportunities", "");
 ?>
 
 <?php 
@@ -34,7 +49,7 @@
                 <div class="w-full">
                     <h1 class="font-medium text-3xl lg:text-4xl mb-2"><?= $title1; ?></h1>
                     <h2 class="font-medium text-4xl lg:text-7xl mb-10 lg:mb-16"><strong><?= $title2; ?></strong></h2>
-                    <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light">
+                    <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light lg:me-28">
                         <?= $paragraph; ?>
                     </p>
                 </div>
@@ -63,7 +78,8 @@
         <div class="w-full lg:w-10/12">
             <div class="flex">
                 <div class="w-4/12 flex items-start lg:justify-end pe-4 lg:pe-20">
-                    <p class="pt-2 border-b-2 border-white text-transparent">sky</p>
+                    <p class="pt-2 border-b-2 border-white text-transparent hidden lg:block">skyla</p>
+                    <p class="pt-2 border-b-2 border-white text-transparent lg:hidden">sky</p>
                 </div>
                 <div class="flex flex-col justify-between">
                     <p class="pt-5 lg:pt-1 min-h-content text-ellipsis overflow-hidden text-2xl lg:text-5xl leading-normal">
@@ -75,6 +91,13 @@
     </div>
 </section>
 
+<?php 
+    $prefix = "news_";
+    $section = "latest_news_section_";
+    $languages = "";
+
+    $title= rwmb_meta($prefix.$section.'title'.$languages);
+?>
 <!-- section investment opportunity -->
 <section class="w-screen full-page m-0" id="properties-swiper">
     <div class="flex h-8-12 mb-36 ps-6 lg:ps-16">
@@ -92,16 +115,19 @@
             <div class="flex">
                 <div class="flex flex-col justify-between figtree-light">
                     <?php
-                        for ($i = 0; $i < 3; $i++) {
+                        $limit_posts = count($list_all_post);
+                        $prefix = 'investment_opportunities';
+                        for ($i = 0; $i < $limit_posts; $i++) {
+                            $post_id = $list_all_post[$i]->ID;
+                            $paragraph = get_post_meta($post_id, $prefix . '_paragraph' )[0];
+    
+                            //get image banner project detail
+                            $image = get_post_meta($post_id, $prefix . '_image' )[0];
+                            $image = wp_get_attachment_image_src($image)[0];
                     ?>
                     <article class="border-b-2 border-white" id="investment-opportunity">
                         <p class="w-full lg:w-6/12 pt-1 min-h-content text-ellipsis overflow-hidden pb-12 <?= $i == 0 ? 'mt-4' : 'mt-12';?> figtree-light pe-8 lg:pe-0">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            <?= $paragraph;?>
                         </p>
                     </article>
                     <?php

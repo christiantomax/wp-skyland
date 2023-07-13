@@ -4,18 +4,24 @@
 
     <footer>
         <section class="w-screen full-page" id="footer">
-            <div class="h-fit flex justify-center text-base xl:text-1xl mb-14 mt-0 pt-16 px-3 xl:mt-32 figtree-light relative bg-black z-30">
+            <div class="h-fit flex justify-center text-base xl:text-1xl mb-14 mt-0 pt-16 px-3 figtree-light relative bg-black z-30">
                 <div class="flex flex-col xl:flex-row w-11/12 items-between">
                     <div class="w-full xl:w-3/12 me-2">
                         <div class="xl:hidden flex justify-between">
                             <img class="h-8 mb-8 xl:mb-0 footer__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
-                            <p>EN</p>
+                            <p></p>
                         </div>
                         <p class="h-1/4">Skye, Victoria, 3977<br/>Australia</p>
-                        <div class="h-2/4 pt-12 grid grid-cols-1 gap-4 hidden xl:block">
-                            <a>Instagram</a>
-                            <a>Email</a>
-                            <a>Facebook</a>
+                        <div class="h-2/4 pt-12 lg:pt-0 grid grid-cols-1 gap-4 hidden xl:block">
+                            <div class="lg:my-7">
+                                <a>Instagram</a>
+                            </div>
+                            <div class="lg:my-7">
+                                <a>Email</a>
+                            </div>
+                            <div class="lg:my-7">
+                                <a>Facebook</a>
+                            </div>
                         </div>
                         <div class="h-2/4 grid grid-cols-3 xl:hidden">
                             <div class="flex flex-col">
@@ -41,7 +47,7 @@
                             <div class="w-6/12 h-1/4">
                                 <img class="footer__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
                             </div>
-                            <div class="h-2/4 pt-12">
+                            <div class="h-2/4 pt-12 text-md">
                                 <?php
                                     $menu_name = 'Menu Footer';
 
@@ -61,14 +67,14 @@
                     </div>
                     <div class="w-full xl:w-4/12 me-2">
                         <div class="mt-10 xl:mt-0 h-full flex flex-col xl:justify-between items-center xl:items-end">
-                            <p class="h-2/4 hidden xl:block">EN</p>
+                            <p class="h-2/4 hidden xl:block"></p>
                             <a href="#">
-                                <div class="w-full h-2/4 flex justify-end w-4/12 h-fit icon-rotate-up">
-                                    <p class="font-normal w-11/12 text-right">
+                                <div class="w-full h-2/4 flex items-end justify-end w-4/12 h-fit icon-rotate-up">
+                                    <p class="font-normal w-11/12 text-right mr-3">
                                         Scroll to Top
                                     </p>
-                                    <div class="ms-3 icon animate-pulse">
-                                        <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                    <div class="flex items-end pb-1 icon animate-pulse">
+                                        <img class="h-4 w-[1.25rem]" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                                     </div>
                                 </div>
                             </a>
@@ -87,14 +93,17 @@
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     
     <?php
         echo '<script src="'.$js_folder_path.'global.js'.'"></script>';
         echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>';
         echo '<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>';
-        
+        if (is_tax('properties-category')) {
+            echo '<script src="'.$js_folder_path.'properties.js'.'"></script>';
+            echo '<link rel="stylesheet" href="'.$assets_folder_path."/style/properties.css".'">';
+        }
     ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 
     <script src="<?php 
         if (is_singular('property')) {

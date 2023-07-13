@@ -41,8 +41,7 @@ class Mission_Post_Type {
 			'rewrite_no_front'    => false,
 			'show_in_menu'        => true,
 			'menu_position'       => 30,
-			'menu_icon'           => 'dashicons-superhero-alt
-			',
+			'menu_icon'           => 'dashicons-superhero-alt',
 			'supports' => [
 				'title',
 				'thumbnail',
