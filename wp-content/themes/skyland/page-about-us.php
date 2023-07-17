@@ -237,9 +237,9 @@
 <!-- Section team -->
 <section class="w-screen full-page" id="about-us-team">
     <div class="flex flex-col lg:flex-row h-8-12 px-8 lg:px-0">
-        <div class="w-11/12 lg:w-6/12 flex">
+        <div class="w-11/12 lg:w-6/12 flex justify-center">
             <div class="w-12/12 h-full home-investment-right-image">
-                <img class="w-full h-full object-cover" src="<?= $image_left;?>"/>
+                    <img class="w-full h-full object-cover" src="<?= $image_left;?>"/>
             </div>
         </div>
         <div class="w-1/12 flex justify-end hidden lg:block">
