@@ -71,7 +71,7 @@
 
 
 <!-- section reach us -->
-<section class="w-screen full-page mb-40" id="reach-us">
+<section class="w-screen full-page" id="reach-us">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.png';?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-24">
             <div class="flex flex-col xl:flex-row justify-end items-start w-full">
