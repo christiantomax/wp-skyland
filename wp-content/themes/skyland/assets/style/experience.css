@@ -11,7 +11,7 @@
 }
 
 .home-investment-right-image{
-    height: 70vh;
+    height: 63vh;
 }
 
 .wrapper{
@@ -45,7 +45,7 @@
     }
 
     #carousel-first-child {
-        width: 8vw !important;
+        width: 3.8vw !important;
         height: 48vh !important;
     }
 

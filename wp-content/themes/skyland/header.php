@@ -49,29 +49,8 @@
     ?>
 </head>
 <body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular overflow-x-hidden">
+    <div class="rounded-xl" id="moving-object"></div>
 
 <?php 
     require get_theme_file_path( 'navbar.php' );
 ?>
-<!-- <header>
-    <nav class="fixed top-0 w-full z-10 figtree-light" id="nav-header">
-        <div class="flex justify-center items-center pt-10 ">
-            <div class="w-11/12 flex justify-between items-center">
-                <div class="w-4/12">
-                    <img class="nav-header__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
-                </div>
-                <?php
-                    $menu_name = 'Menu Header';
-    
-                    $menu_exists = wp_get_nav_menu_object($menu_name);
-    
-                    if ($menu_exists) {
-                        wp_nav_menu(array('menu' => $menu_name));
-                    } else {
-                        echo "The menu '" . $menu_name . "' does not exist.";
-                    }
-                ?>
-            </div>
-        </div>
-    </nav>
-</header> -->

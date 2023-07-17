@@ -125,8 +125,12 @@
                             $image = get_post_meta($post_id, $prefix . '_image' )[0];
                             $image = wp_get_attachment_image_src($image)[0];
                     ?>
-                    <article class="border-b-2 border-white" id="investment-opportunity">
-                        <p class="w-full lg:w-6/12 pt-1 min-h-content text-ellipsis overflow-hidden pb-12 <?= $i == 0 ? 'mt-4' : 'mt-12';?> figtree-light pe-8 lg:pe-0">
+                    <article class="border-b-2 border-white investment-opportunity">
+                        <div class="w-full h-56 lg:hidden <?= $i == 0 ? 'mt-5' : 'mt-8'; ?>">
+                            <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
+                        </div>
+                        <p class="w-full lg:w-6/12 pt-1 min-h-content text-ellipsis overflow-hidden mb-6 lg:mb-12 cursor-pointer  <?= $i == 0 ? 'mt-4' : 'mt-12';?> figtree-light pe-8 lg:pe-0"
+                        id="investment-paragraph-<?= $i; ?>">
                             <?= $paragraph;?>
                         </p>
                     </article>
@@ -174,5 +178,46 @@
         </div>
     </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    // moving object onhover
+    <?php
+        $prefix = 'investment_opportunities';
+        for ($i = 0; $i < $limit_posts; $i++) {
+            $post_id = $list_all_post[$i]->ID;
+
+            //get image banner project detail
+            $image = get_post_meta($post_id, $prefix . '_image' )[0];
+            $image = wp_get_attachment_image_src($image)[0];
+    ?>
+
+        $("#investment-paragraph-<?= $i ?>").mouseover(function() {
+            $("#moving-object").css("background" , 'url("<?= $image; ?>") no-repeat 100%')
+        })
+    <?php
+        }
+    ?>
+
+    let is_moving_object = false;
+    let circle = document.getElementById('moving-object');
+    const onMouseMove = (e) =>{
+        if(is_moving_object){
+            circle.style.left = (e.pageX + 15) + 'px'
+            circle.style.top = (e.pageY - 250) + 'px'
+        }
+    }
+    document.addEventListener('mousemove', onMouseMove)
+
+    $(".investment-opportunity > p")
+    .mouseover(function() {
+        document.getElementById("moving-object").style.visibility = "visible"
+        is_moving_object = true
+    })
+    .mouseout(function() {
+        document.getElementById("moving-object").style.visibility = "hidden"
+        is_moving_object = false
+    })
+</script>
 
 <?php get_footer() ?>
