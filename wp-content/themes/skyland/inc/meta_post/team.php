@@ -49,7 +49,7 @@ class Team_Post_Type {
 			'rewrite' => true,
 		];
 
-		register_post_type( 'team', $args );
+		register_post_type( 't_post', $args );
 
 	}
 }
@@ -57,19 +57,19 @@ class Team_Post_Type {
 Team_Post_Type::init();
 
 // metabox for custom post properties
-add_filter( 'rwmb_meta_boxes', 'team' );
-function team( $meta_boxes ) {
+add_filter( 'rwmb_meta_boxes', 'team_custom_post' );
+function team_custom_post( $meta_boxes ) {
 	$prefix = 'team';
 	$meta_boxes[] = [
 		'title'      => esc_html__( 'Team Section', 'online-generator' ),
-		'id'         => 'team',
-		'post_types' => 'team',
+		'id'         => 't_post',
+		'post_types' => 't_post',
 		'autosave'   => true,
 		'fields'     => [
 			[
 				'id'               => $prefix.'_image',
 				'name'             => esc_html__( 'Image', 'english' ),
-				'type'    		   => 'image_upload',
+				'type'    		   => 'image_advanced',
 				'force_delete'     => false,
 				'max_file_uploads' => 1,
 			],

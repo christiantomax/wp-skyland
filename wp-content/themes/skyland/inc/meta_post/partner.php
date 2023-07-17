@@ -69,7 +69,7 @@ function partner( $meta_boxes ) {
 			[
 				'id'               => $prefix.'_image',
 				'name'             => esc_html__( 'Logo', 'english' ),
-				'type'    		   => 'image_upload',
+				'type'    		   => 'image_advanced',
 				'force_delete'     => false,
 				'max_file_uploads' => 1,
 			],

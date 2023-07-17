@@ -139,6 +139,19 @@
     </div>
 </section>
 
+<?php
+    $prefix = "contact_";
+    $section = "section_";
+    $languages = "";
+
+    $page_slug = 'contact'; // Replace with the actual slug of your page
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        $post_id = $page->ID;
+        // Now you can use the $post_id to retrieve the Metabox data
+        $reach_us = get_post_meta($post_id, $prefix.$section.'reach_us'.$languages, true);
+    }
+?>
 <!-- section reach us -->
 <section class="w-screen full-page mb-40" id="reach-us">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.png';?>)">
@@ -154,7 +167,7 @@
                 </div>
                 <div class="figtree-light w-full" id="form">
                     <?= 
-                        do_shortcode('[contact-form-7 id="174" title="Reach Us Form"]');
+                        do_shortcode('[contact-form-7 id="'.$reach_us.'" title="Reach Us Form"]');
                     ?>
                 </div>
             </div>

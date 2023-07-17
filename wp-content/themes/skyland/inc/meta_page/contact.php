@@ -67,6 +67,11 @@
                     'type' 			   => 'text',
                     'name'             => esc_html__( 'Link Facebook', 'english' ),
                 ],
+                [
+                    'id'               => $prefix.$section.'reach_us'.$languages,
+                    'type' 			   => 'text',
+                    'name'             => esc_html__( 'Reach Us Form', 'english' ),
+                ],
             ],
         ];
     return $meta_boxes;

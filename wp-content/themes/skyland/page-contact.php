@@ -4,13 +4,15 @@
 ?>
 <?php 
     $prefix = "contact_";
-    $section = "Maps_section_";
+    $section = "section_";
     $languages = "";
 
     $title= rwmb_meta($prefix.$section.'title'.$languages);
     $paragraph= rwmb_meta($prefix.$section.'paragraph'.$languages);
     $lat= rwmb_meta($prefix.$section.'lat'.$languages);
     $lon= rwmb_meta($prefix.$section.'lon'.$languages);
+
+    $reach_us= rwmb_meta($prefix.$section.'reach_us'.$languages);
 ?>
 <!-- Contact section -->
 <section class="w-screen full-page" id="contact-description">
@@ -83,7 +85,7 @@
                 </div>
                 <div class="figtree-light w-full" id="form">
                     <?= 
-                        do_shortcode('[contact-form-7 id="174" title="Reach Us Form"]');
+                        do_shortcode('[contact-form-7 id="'.$reach_us.'" title="Reach Us Form"]');
                     ?>
                 </div>
             </div>

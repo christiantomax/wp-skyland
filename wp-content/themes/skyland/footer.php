@@ -1,5 +1,19 @@
 <?php 
     require get_theme_file_path( 'config.php' );
+    
+    $prefix = "contact_";
+    $section = "section_";
+    $languages = "";
+    
+    $page_slug = 'contact'; // Replace with the actual slug of your page
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        $post_id = $page->ID;
+        // Now you can use the $post_id to retrieve the Metabox data
+        $instagram = get_post_meta($post_id, $prefix.$section.'instagram'.$languages, true);
+        $email = get_post_meta($post_id, $prefix.$section.'email'.$languages, true);
+        $facebook = get_post_meta($post_id, $prefix.$section.'instagram'.$languages, true);
+    }
 ?>
 
     <footer>
@@ -14,20 +28,20 @@
                         <p class="h-1/4">Skye, Victoria, 3977<br/>Australia</p>
                         <div class="h-2/4 pt-12 lg:pt-0 grid grid-cols-1 gap-4 hidden xl:block">
                             <div class="lg:my-7">
-                                <a>Instagram</a>
+                                <a href="<?= $instagram != '' ? $instagram : '#'; ?>" target="_blank">Instagram</a>
                             </div>
                             <div class="lg:my-7">
-                                <a>Email</a>
+                                <a href="<?= $email != '' ? $email : '#'; ?>" target="_blank">Email</a>
                             </div>
                             <div class="lg:my-7">
-                                <a>Facebook</a>
+                                <a href="<?= $facebook != '' ? $facebook : '#'; ?>" target="_blank">Facebook</a>
                             </div>
                         </div>
                         <div class="h-2/4 grid grid-cols-3 xl:hidden">
                             <div class="flex flex-col">
-                                <a class="my-4">Ig</a>
-                                <a class="my-4">Mail</a>
-                                <a class="my-4">Fb</a>
+                                <a class="my-4" href="<?= $instagram != '' ? $instagram : '#'; ?>" target="_blank">Ig</a>
+                                <a class="my-4" href="<?= $email != '' ? $email : '#'; ?>" target="_blank">Mail</a>
+                                <a class="my-4" href="<?= $facebook != '' ? $facebook : '#'; ?>" target="_blank">Fb</a>
                             </div>
                             <div class="flex flex-col ml-2">
                                 <a href="<?= esc_url( home_url() )."/properties"; ?>" class="my-4">Property</a>
