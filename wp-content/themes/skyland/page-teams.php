@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-4/12 flex h-fit lg:justify-end explore-rotate-down me-4 ps-4 lg:ps-0 mt-5 lg:mt-0">
-                    <p class="text-lg lg:text-2xl font-normal text-right figtree-light ">
+                    <p class="text-lg lg:text-md font-normal text-right figtree-light ">
                         Scroll
                     </p>
                     <div class="pt-2 ms-3 icon animate-pulse rotate-90">

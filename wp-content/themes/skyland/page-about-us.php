@@ -80,7 +80,7 @@
                     <div class="flex lg:justify-end mt-6 pb-4 ps-2 lg:ps-6 project-description">
                         <a href="<?= $base_url;?>/experience">
                             <div class="flex items-end explore-rotate-down">
-                                <p class="text-lg lg:text-2xl font-normal text-end me-3">
+                                <p class="text-xl lg:text-md font-normal text-end me-3">
                                     How?
                                 </p>
                                 <div class="flex items-end pb-2 icon animate-pulse rotate-90">
@@ -264,7 +264,7 @@
                     <div class="flex justify-start lg:justify-end mt-10 pe-4">
                         <a href="<?= $base_url;?>/teams">
                             <div class="flex explore-rotate-left">
-                                <p class="text-lg lg:text-2xl font-normal text-end me-3">
+                                <p class="text-xl lg:text-md font-normal text-end me-3">
                                     Explore more
                                 </p>
                                 <div class="flex items-end pb-1 icon animate-pulse">
