@@ -78,16 +78,6 @@
                         </p>
                     </div>
                     <div class="flex lg:justify-end mt-6 pb-4 ps-2 lg:ps-6 project-description">
-                        <a href="<?= $base_url;?>/experience">
-                            <div class="flex items-end explore-rotate-down">
-                                <p class="text-xl lg:text-md font-normal text-end me-3">
-                                    How?
-                                </p>
-                                <div class="flex items-end pb-2 icon animate-pulse rotate-90">
-                                    <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>

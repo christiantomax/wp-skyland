@@ -111,7 +111,7 @@
                         foreach ($terms as $term) {
                         ?>
                             <div class="relative slick-slide bg-gray-700 text-2xl">
-                                <img class="w-full h-full absolute top-0 bg-cover bg-center" src="<?= $imageListTaxonomy['z_taxonomy_image'.$term->term_id]; ?>"/>
+                                <img class="w-full h-full absolute top-0 bg-cover bg-center object-fit" src="<?= $imageListTaxonomy['z_taxonomy_image'.$term->term_id]; ?>"/>
                                 <div class="w-full h-full px-10 py-10 flex items-end z-10">
                                     <h5 class="figtree-light drop-shadow-sm"><?= $term->name;?></h5>
                                 </div>

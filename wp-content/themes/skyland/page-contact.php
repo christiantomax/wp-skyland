@@ -41,7 +41,7 @@
             </div>
             <div class="w-10/12 lg:w-8/12 flex flex-col justify-between">
                 <div class="w-full">
-                    <h1 class="font-medium text-3xl lg:text-4xl mb-2">Our Base</h1>
+                    <h1 class="font-medium text-3xl lg:text-4xl mb-2">Contact</h1>
                     <h2 class="font-medium text-4xl lg:text-7xl mb-10 lg:mb-16"><strong><?= $title; ?></strong></h2>
                 </div>
                 <div class="flex h-3/4">
@@ -50,16 +50,6 @@
                             <?= $paragraph; ?>
                         </div>
                         <div class="flex mt-10 lg:mt-24 pe-4">
-                            <a href="https://maps.google.com/maps?q=<?= $lat;?>,<?= $lon;?>" target="_blank">
-                                <div class="flex explore-rotate-left">
-                                    <p class="text-md lg:text-md font-normal text-end me-3">
-                                        Open in Maps
-                                    </p>
-                                    <div class="flex items-end pb-1 icon animate-pulse">
-                                        <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </div>

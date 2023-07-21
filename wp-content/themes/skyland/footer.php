@@ -74,7 +74,7 @@
                                     }
                                 ?>
                             </div>
-                            <div class="flex items-end h-1/2 pt-12">
+                            <div class="flex items-end h-1/2 pt-12 lg:mt-10">
                                 <p>&copy; Copyright <?php echo date('Y'); ?> Skyland Group. <span class="font-light">All rights reserved.</span></p>
                             </div>
                         </div>
