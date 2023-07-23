@@ -36,7 +36,7 @@
                     'id'               => $prefix.$section.'image'.$languages,
                     'name'             => esc_html__( 'Image Bottom', 'english' ),
                     'type'    		   => 'single_image',
-                    'force_delete'     => false,
+                    'force_delete'     => true,
                     'max_file_uploads' => 1,
                 ],
                 [
@@ -64,7 +64,7 @@
                     'id'               => $prefix.$section.'image_left'.$languages,
                     'name'             => esc_html__( 'Image Left', 'english' ),
                     'type'    		   => 'single_image',
-                    'force_delete'     => false,
+                    'force_delete'     => true,
                     'max_file_uploads' => 1,
                 ],
                 [
@@ -81,7 +81,7 @@
                     'id'               => $prefix.$section.'image_right'.$languages,
                     'name'             => esc_html__( 'Image Right', 'english' ),
                     'type'    		   => 'single_image',
-                    'force_delete'     => false,
+                    'force_delete'     => true,
                     'max_file_uploads' => 1,
                 ],
             ],
@@ -101,10 +101,17 @@
             'autosave'   => true,
             'fields'     => [
                 [
-                    'id'               => $prefix.$section.'image_left'.$languages,
-                    'name'             => esc_html__( 'Image Left', 'english' ),
+                    'id'               => $prefix.$section.'image_left1'.$languages,
+                    'name'             => esc_html__( 'Image Left 1', 'english' ),
                     'type'    		   => 'single_image',
-                    'force_delete'     => false,
+                    'force_delete'     => true,
+                    'max_file_uploads' => 1,
+                ],
+                [
+                    'id'               => $prefix.$section.'image_left2'.$languages,
+                    'name'             => esc_html__( 'Image Left 2', 'english' ),
+                    'type'    		   => 'single_image',
+                    'force_delete'     => true,
                     'max_file_uploads' => 1,
                 ],
                 [

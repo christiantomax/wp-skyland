@@ -71,7 +71,7 @@
 
                 //get image banner project detail
                 $image = get_post_meta($post_id, $prefix . '_image' )[0];
-                $image = wp_get_attachment_image_src($image)[0];
+                $image = wp_get_attachment_image_src($image, 'full')[0];
         ?>
             <div class="w-full team-person__container__image lg:mb-16 <?= $i%2 == 0 ? 'me-4' : 'ms-4'?>">
                 <a href="<?= $link; ?>" target="_blank">
@@ -125,7 +125,7 @@
             
             //get image banner project detail
             $image = get_post_meta($post_id, $prefix . '_image' )[0];
-            $image = wp_get_attachment_image_src($image)[0];
+            $image = wp_get_attachment_image_src($image, 'full')[0];
             ?>
 
         <?php
@@ -169,7 +169,7 @@
             
             //get image banner project detail
             $image = get_post_meta($post_id, $prefix . '_image' )[0];
-            $image = wp_get_attachment_image_src($image)[0];
+            $image = wp_get_attachment_image_src($image, 'full')[0];
             ?>
 
         <?php

@@ -102,7 +102,7 @@ function properties_section( $meta_boxes ) {
 				'id'               => $prefix.'image_banner',
 				'name'             => esc_html__( 'Image Banner', 'english' ),
 				'type'    		   => 'image_advanced',
-				'force_delete'     => false,
+				'force_delete'     => true,
 				'max_file_uploads' => 1,
 			],
 			[
@@ -112,7 +112,7 @@ function properties_section( $meta_boxes ) {
 				'id'               => $prefix.'fieldset_text_image',
 				'name'             => esc_html__( 'Image Set', 'english' ),
 				'type'    		   => 'image_advanced',
-				'force_delete'     => false,
+				'force_delete'     => true,
 			],
             [
                 'type'    => 'fieldset_text',

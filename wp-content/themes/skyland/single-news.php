@@ -32,7 +32,7 @@
 
         //get image banner project detail
         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-        $news__image = wp_get_attachment_image_src($news__image)[0];
+        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
 
         $list_all_post = get_posts_taxonomy($post_type, $post_id);
     } else {
@@ -177,7 +177,7 @@
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-                        $news__image = wp_get_attachment_image_src($news__image)[0];
+                        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
                     <div class="swiper-slide w-3/12 px-4 py-10">
@@ -238,7 +238,7 @@
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-                        $news__image = wp_get_attachment_image_src($news__image)[0];
+                        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
                     <a href="">

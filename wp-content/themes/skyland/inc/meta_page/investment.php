@@ -15,7 +15,7 @@
                     'id'               => $prefix.$section.'image'.$languages,
                     'name'             => esc_html__( 'Image Left', 'english' ),
                     'type'    		   => 'single_image',
-                    'force_delete'     => false,
+                    'force_delete'     => true,
                     'max_file_uploads' => 1,
                 ],
                 [

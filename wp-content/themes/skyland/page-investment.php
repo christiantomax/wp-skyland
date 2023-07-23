@@ -56,14 +56,16 @@
                 <div class="flex">
                     <div class="flex flex-col lg:justify-between">
                         <div class="flex mt-8 lg:mt-10 pe-4">
-                            <div class="flex explore-rotate-down">
-                                <p class="text-md lg:text-2xl font-normal me-3 figtree-light">
-                                    Scroll
-                                </p>
-                                <div class="flex items-end pb-1 icon animate-pulse rotate-90">
-                                    <img class="h-3 lg:h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                            <a href="#properties-swiper">
+                                <div class="flex explore-rotate-down">
+                                    <p class="text-md lg:text-2xl font-normal me-3 figtree-light">
+                                        Scroll
+                                    </p>
+                                    <div class="flex items-end pb-1 icon animate-pulse rotate-90">
+                                        <img class="h-3 lg:h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +125,7 @@
     
                             //get image banner project detail
                             $image = get_post_meta($post_id, $prefix . '_image' )[0];
-                            $image = wp_get_attachment_image_src($image)[0];
+                            $image = wp_get_attachment_image_src($image, 'full')[0];
                     ?>
                     <article class="border-b-2 border-white investment-opportunity">
                         <div class="w-full h-56 lg:hidden <?= $i == 0 ? 'mt-5' : 'mt-8'; ?>">
@@ -189,7 +191,7 @@
 
             //get image banner project detail
             $image = get_post_meta($post_id, $prefix . '_image' )[0];
-            $image = wp_get_attachment_image_src($image)[0];
+            $image = wp_get_attachment_image_src($image, 'full')[0];
     ?>
 
         $("#investment-paragraph-<?= $i ?>").mouseover(function() {

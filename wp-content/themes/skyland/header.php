@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> class="overflow-x-hidden">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,7 +48,7 @@
         }
     ?>
 </head>
-<body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular overflow-x-hidden">
+<body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular">
     <div class="rounded-xl" id="moving-object"></div>
 
 <?php 

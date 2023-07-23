@@ -31,13 +31,13 @@
 
         //get image banner project detail
         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
-        $image_banner = wp_get_attachment_image_src($image_banner)[0];
+        $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
 
         //get all fieldset fieldset_text_image meta box
         $fieldset_text_image = get_post_meta($post_id, $prefix . 'fieldset_text_image' );
         $temp = [];
         foreach($fieldset_text_image as $fieldset_text_image_temp){
-            array_push($temp, wp_get_attachment_image_src($fieldset_text_image_temp)[0]);
+            array_push($temp, wp_get_attachment_image_src($fieldset_text_image_temp, 'full')[0]);
         }
         $fieldset_text_image = $temp;
         
@@ -67,7 +67,7 @@
         //get meta box next data
         $title_2_next = get_post_meta($post_id, $prefix . 'title_2' )[0];
         $image_banner_next = get_post_meta($next_id, $prefix . 'image_banner' )[0];
-        $image_banner_next = wp_get_attachment_image_src($image_banner_next)[0];
+        $image_banner_next = wp_get_attachment_image_src($image_banner_next, 'full')[0];
         $next_slug = get_permalink($next_id);
     } else {
         

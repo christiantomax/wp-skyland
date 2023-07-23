@@ -67,13 +67,13 @@
     <div class="flex h-8-12 ps-4 pe-8 lg:px-8">
         <div class="w-full lg:w-10/12 mt-0 mt-10 lg:mt-20">
             <div class="flex">
-                <div class="w-4/12 flex items-start lg:justify-end pe-0 lg:pe-20 lg:opacity-0">
+                <div class="w-4/12 flex items-start lg:justify-end pe-0 lg:pe-20 lg:opacity-0 lg:hidden">
                     <p class="pt-2 border-b-2 border-white text-transparent">sky</p>
                 </div>
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between lg:ms-60">
                     <div class="flex items-start lg:ms-8">
                         <p class="pt-6 lg:mr-10 border-b-2 border-white text-transparent hidden lg:block">skyland</p>
-                        <p class="mt-5 lg:pt-1 ps-2 lg:ps-5 text-ellipsis overflow-hidden text-2xl lg:text-5xl leading-normal text-left">
+                        <p class="mt-5 lg:pt-1 ps-2 lg:ps-5 text-2xl lg:text-5xl leading-normal text-left">
                             <?= $quotes; ?>
                         </p>
                     </div>
@@ -121,7 +121,7 @@
 
                         //get image thumbnail property category
                         $image_thumbnail = get_post_meta($post_id, $prefix1 . '_image' )[0];
-                        $image_thumbnail = wp_get_attachment_image_src($image_thumbnail)[0];
+                        $image_thumbnail = wp_get_attachment_image_src($image_thumbnail, 'full')[0];
                         $link_slug = get_permalink($post_id);
                         ?>
                             <div class="relative slick-slide bg-gray-700">
@@ -222,14 +222,18 @@
     
     $paragraph_top= rwmb_meta($prefix.$section.'paragraph_top'.$languages);
     $paragraph_bottom= rwmb_meta($prefix.$section.'paragraph_bottom'.$languages);
-    $image_left= rwmb_meta($prefix.$section.'image_left'.$languages)['full_url'];
+    $image_left1= rwmb_meta($prefix.$section.'image_left1'.$languages)['full_url'];
+    $image_left2= rwmb_meta($prefix.$section.'image_left2'.$languages)['full_url'];
 ?>
 <!-- Section team -->
 <section class="w-screen full-page" id="about-us-team">
     <div class="flex flex-col lg:flex-row h-8-12 px-8 lg:px-0">
         <div class="w-11/12 lg:w-6/12 flex justify-center">
-            <div class="w-12/12 h-full home-investment-right-image">
-                    <img class="w-full h-full object-cover" src="<?= $image_left;?>"/>
+            <div class="w-6/12 h-full home-investment-right-image">
+                    <img class="w-full h-full object-cover object-fit bg-full bg-center" src="<?= $image_left1;?>"/>
+            </div>
+            <div class="w-6/12 h-full home-investment-right-image">
+                    <img class="w-full h-full object-cover object-fit bg-full bg-center" src="<?= $image_left2;?>"/>
             </div>
         </div>
         <div class="w-1/12 flex justify-end hidden lg:block">

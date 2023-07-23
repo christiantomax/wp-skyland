@@ -69,7 +69,7 @@
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-                        $news__image = wp_get_attachment_image_src($news__image)[0];
+                        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
 

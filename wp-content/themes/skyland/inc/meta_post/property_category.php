@@ -74,7 +74,7 @@ function properties_category_section( $meta_boxes ) {
 				'id'               => $prefix.'image_thumbnail',
 				'name'             => esc_html__( 'Image Thumbnail', 'english' ),
 				'type'    		   => 'image_upload',
-				'force_delete'     => false,
+				'force_delete'     => true,
 				'max_file_uploads' => 1,
 			],
 		],

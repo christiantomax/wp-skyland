@@ -76,7 +76,7 @@ function investment_opportunities( $meta_boxes ) {
 				'id'               => $prefix.'_image',
 				'name'             => esc_html__( 'Image when hover', 'english' ),
 				'type'    		   => 'image_advanced',
-				'force_delete'     => false,
+				'force_delete'     => true,
 				'max_file_uploads' => 1,
 			],
 		],

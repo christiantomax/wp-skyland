@@ -69,8 +69,8 @@ function mission( $meta_boxes ) {
 			[
 				'id'               => $prefix.'_image',
 				'name'             => esc_html__( 'Image', 'english' ),
-				'type'    		   => 'image_upload',
-				'force_delete'     => false,
+				'type'    		   => 'image_advanced',
+				'force_delete'     => true,
 				'max_file_uploads' => 1,
 			],
 			[

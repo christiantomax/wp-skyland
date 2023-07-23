@@ -88,7 +88,7 @@
                                         Scroll to Top
                                     </p>
                                     <div class="flex items-end pb-1 icon animate-pulse">
-                                        <img class="h-4 w-[1.25rem]" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                        <img class="h-4 w-[1.25rem]" src="<?= $assets_folder_path.'/icon/PANAH.png';?>"/>
                                     </div>
                                 </div>
                             </a>

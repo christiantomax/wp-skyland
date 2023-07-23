@@ -152,7 +152,7 @@
                     $taxonomy = 'properties-category'; // Replace 'properties-category' with your desired taxonomy slug
 
                     // Get all the terms (categories) for the taxonomy
-                    $terms = get_terms(array(
+                    $terms = get_terms(array(   
                         'taxonomy' => $taxonomy,
                         'hide_empty' => false, // Set to 'true' if you want to exclude empty categories
                     ));
@@ -174,9 +174,9 @@
         </div>
     </div>
 
-    <div class="flex justify-center">
-        <div class="flex flex-col lg:flex-row w-12/12 figtree-light ">
-            <div class="w-full lg:w-7/12 flex flex-col lg:flex-row foreword-description mb-8 lg:mb-16 ms-20 lg:ps-36 lg:ms-0">
+    <div class="flex">
+        <div class="flex flex-col lg:flex-row w-full figtree-light lg:justify-center">
+            <div class="w-full lg:w-7/12 flex flex-col lg:flex-row foreword-description mb-8 lg:mb-16 ms-20 lg:ps-28 lg:ms-0">
                 <p class="pt-1 w-full lg:w-6/12 lg:h-24 pe-24 lg:pe-0 lg:me-8">
                     <?= $paragraph_left; ?>
                 </p>
@@ -184,7 +184,7 @@
                     <?= $paragraph_right; ?>
                 </p>
             </div>
-            <div class="w-full lg:w-3/12 flex lg:justify-end me-12 ms-20 lg:ms-0">
+            <div class="w-full lg:w-4/12 flex lg:justify-end me-12 ms-20 lg:ms-0">
                 <a href="<?= $base_url;?>/about-us">
                     <div class="flex explore-rotate-left">
                         <p class="text-lg lg:text-md font-normal text-end me-3">

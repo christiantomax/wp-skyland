@@ -112,7 +112,7 @@
                                     for ($i = 0; $i < $limit_terms; $i++) {
                                         ?>
                                             <li class="font-medium cursor-pointer">
-                                                <a href="<?= get_term_link($terms[$i]);?>" class="<?= $getCategory == $title_1 ? 'font-bold text-white' : '';?>">
+                                                <a href="<?= get_term_link($terms[$i]);?>/#news-list" class="<?= $getCategory == $title_1 ? 'font-bold text-white' : '';?>">
                                                     <?= $terms[$i]->name;?>
                                                 </a>
                                             </li>
@@ -195,7 +195,7 @@
 
                         //get image banner project detail
                         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
-                        $image_banner = wp_get_attachment_image_src($image_banner)[0];
+                        $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
                     ?>
                     <div class="expander h-90">
@@ -287,7 +287,7 @@
 
                         //get image banner project detail
                         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
-                        $image_banner = wp_get_attachment_image_src($image_banner)[0];
+                        $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
                         ?>
                         <div class="w-full h-90 pe-4 border-b-2 border-white mb-5">

@@ -202,7 +202,7 @@
 
                         //get image banner project detail
                         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
-                        $image_banner = wp_get_attachment_image_src($image_banner)[0];
+                        $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
                     ?>
                     <div class="expander h-90">
@@ -294,7 +294,7 @@
 
                         //get image banner project detail
                         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
-                        $image_banner = wp_get_attachment_image_src($image_banner)[0];
+                        $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
                         ?>
                         <div class="w-full h-90 pe-4 border-b-2 border-white mb-5">
