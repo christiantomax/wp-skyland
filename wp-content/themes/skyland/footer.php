@@ -120,7 +120,7 @@
             echo '<link rel="stylesheet" href="'.$assets_folder_path."/style/properties.css".'">';
         }
         if(get_the_title() == 'About Us'){
-            echo '<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>';
+            echo '<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>';
         }
     ?>
     <script>
