@@ -119,33 +119,63 @@
             echo '<script src="'.$js_folder_path.'properties.js'.'"></script>';
             echo '<link rel="stylesheet" href="'.$assets_folder_path."/style/properties.css".'">';
         }
-        if(get_the_title() == 'About Us'){
-            echo '<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>';
+        if(get_the_title() == 'About Us' || get_the_title() == 'Investment'){
+            echo '<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>';
+            echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>';
+            ?>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        // Split the text into individual elements (e.g., characters or words)
+                        const textElement = document.getElementById("quotes");
+                        const splitText = Splitting({ target: textElement });
+
+                        // Animate the individual elements using CSS or any animation library of your choice
+                        // For example, you can use CSS animations or GSAP for further animation effects
+                        splitText[0].chars.forEach((char, index) => {
+                            gsap.fromTo(char, {
+                                autoAlpha: 0,
+                                yPercent: 100,
+                                ease: 'power2.out',
+                            }, {
+                                delay: index * 0.1,
+                                autoAlpha: 1,
+                                duration: 1,
+                                yPercent: 0, 
+                                scrollTrigger: {
+                                    markers: false,
+                                    trigger: '#quotes', // Use the myText element as the trigger
+                                },
+                            });
+                        });
+                    });
+
+                    const fadeElements = document.querySelectorAll('.fade-in-element');
+
+                    // Animate the opacity of elements from 0 to 1 with ScrollTrigger
+                    fadeElements.forEach((element) => {
+                        gsap.fromTo(
+                        element,
+                        {
+                            autoAlpha: 0,
+                            yPercent: 50, // Optional: Move the elements slightly up before fade-in
+                        },
+                        {
+                            autoAlpha: 1,
+                            yPercent: 0, // Optional: Move back to the original position after fade-in
+                            duration: 2,
+                            ease: 'power2.out',
+                            scrollTrigger: {
+                                markers: false,
+                                trigger: element, // Use the current element as the trigger
+                            },
+                        }
+                        );
+                    });
+                </script>
+            <?php
         }
     ?>
-    <script>
-        const myText = document.getElementById('quotes');
-
-        // Use SplitText to break the text into individual characters
-        const splitText = new SplitText(myText, { type: 'chars' });
-
-        // Animate the individual characters
-        gsap.fromTo(splitText.chars, {
-            autoAlpha: 0,
-            yPercent: 100,
-            ease: 'power2.out',
-        }, {
-            stagger: 0.1,
-            autoAlpha: 1,
-            duration: 1,
-            yPercent: 0, 
-            scrollTrigger: {
-                markers: true,
-                trigger: '#quotes', // Use the myText element as the trigger
-                start: 'center center', // Start the animation when the center of the element is at the center of the viewport
-            },
-        });
-    </script>
+    
     <script src="<?php 
         if (is_singular('property')) {
             echo $js_folder_path.'property-detail.js';

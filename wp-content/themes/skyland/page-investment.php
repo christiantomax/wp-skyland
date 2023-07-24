@@ -84,7 +84,7 @@
                     <p class="pt-2 border-b-2 border-white text-transparent lg:hidden">sky</p>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p class="pt-5 lg:pt-1 min-h-content text-ellipsis overflow-hidden text-2xl lg:text-5xl leading-normal">
+                    <p id="quotes" class="pt-5 lg:pt-1 min-h-content text-2xl lg:text-5xl leading-normal">
                         <?= $quotes; ?>
                     </p>
                 </div>

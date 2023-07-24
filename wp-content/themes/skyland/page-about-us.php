@@ -49,15 +49,15 @@
     
 <section class="w-12/12 lg:ms-72" id="about-us-description">
         <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-10 figtree-light pl-14 lg:pl-0 pr-4">
-            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 pe-8 lg:pe-0">
+            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 pe-8 lg:pe-0 fade-in-element">
                 <?= $paragraph_left; ?>
             </p>
-            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:ms-16 pe-8 lg:pe-0">
+            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:ms-16 pe-8 lg:pe-0 fade-in-element">
                 <?= $paragraph_right; ?>
             </p>
         </div>
         
-        <div class="lg:w-12/12 lg:h-72 flex foreword-image-container ps-14 lg:ps-0">
+        <div class="lg:w-12/12 lg:h-72 flex foreword-image-container ps-14 lg:ps-0 fade-in-element">
             <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
         </div>
 </section>
