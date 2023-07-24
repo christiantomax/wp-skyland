@@ -76,10 +76,10 @@
 
 <!-- section investment quote -->
 <section class="w-screen full-page" id="investment-quote">
-    <div class="flex h-8-12 mb-36 px-8">
+    <div class="flex h-8-12 px-8">
         <div class="w-full lg:w-10/12">
             <div class="flex">
-                <div class="w-4/12 flex items-start lg:justify-end pe-4 lg:pe-20">
+                <div class="w-4/12 flex items-start lg:justify-end pe-4 lg:pe-24">
                     <p class="pt-2 border-b-2 border-white text-transparent hidden lg:block">skyla</p>
                     <p class="pt-2 border-b-2 border-white text-transparent lg:hidden">sky</p>
                 </div>
@@ -102,7 +102,7 @@
 ?>
 <!-- section investment opportunity -->
 <section class="w-screen full-page m-0" id="properties-swiper">
-    <div class="flex h-8-12 mb-36 ps-6 lg:ps-16">
+    <div class="flex h-8-12 mb-36 pt-36 ps-6 lg:ps-16">
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
                 <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">

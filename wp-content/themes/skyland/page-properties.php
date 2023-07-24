@@ -144,13 +144,14 @@
                                     <div id="dropdownNavbar" class="w-11/12 ml-8 z-10 hidden font-normal divide-y divide-gray-100 shadow backdrop-filter backdrop-blur-md bg-black bg-opacity-50">
                                         <ul class="figtree-light text-white py-2 pl-8 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                             <li>
-                                                <a href="<?= $base_url."/properties";?>" class="block px-4 py-2 hover:bg-gray-100 <?= $getCategory == 'All' ? 'font-bold' : '';?>">All</a>
+                                                <a href="<?= $base_url."/properties";?>" class="block px-4 py-2 hover:bg-gray-100 font-bold">All</a>
                                             </li>
                                             <?php
+                                                $currentURL = add_query_arg(array(), $wp->request);
                                                 for ($i = 0; $i < $limit_terms; $i++) {
                                                     ?>
                                                         <li>
-                                                            <a href="<?= get_term_link($terms[$i]);?>" class="block px-4 py-2 hover:bg-gray-100 <?= $getCategory == $title_1 ? 'font-bold' : '';?>"><?= $terms[$i]->name;?></a>
+                                                            <a href="<?= get_term_link($terms[$i]);?>" class="block px-4 py-2 hover:bg-gray-100 opacity-75"><?= $terms[$i]->name;?></a>
                                                         </li>
                                                     <?php
                                                 }
@@ -174,19 +175,20 @@
         get_post_with_taxonomy("property", "", "properties-category", $getCategory);
     $limit_posts = count($list_all_post);
 	$prefix = 'properties_';
+    $idx_print = 0;
 ?>
 <!-- section news list item -->
 <section class="w-screen full-page flex-col items-center hidden xl:flex" id="news-list">
         <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15 figtree-light">
     <?php
-        for ($i = 0; $i < $limit_posts/2; $i++) {
+        for ($i = 0; $i < $limit_posts/3; $i++) {
             $loopingItem = $i * 3 + 3;
     ?>
         <div class="w-full flex justify-end ms-24 mb-8">
             <div class="flex justify-end border-b-4 border-white pb-8 project-list__container__project">
             <?php
-                for ($j = $i * 3; $j < $loopingItem && $j < $limit_posts; $j++) {
-                        $post_id = $list_all_post[$i]->ID;
+                for ($j = $i * 3; $j < $loopingItem && $j < $limit_posts; $j++, $idx_print++) {
+                        $post_id = $list_all_post[$idx_print]->ID;
 
                         $title_1 = get_post_meta($post_id, $prefix . 'title_1' )[0];
                         $title_2 = get_post_meta($post_id, $prefix . 'title_2' )[0];
@@ -232,10 +234,10 @@
             <?php
                 // print last row
                 if ($i * 3 + 3 > $limit_posts && $limit_posts % 3 != 0) {
-                    $countLastRow = $limit_posts % 3;
-                    for ($k = 0; $k < $countLastRow + 1; $k++) {
+                    $countLastRow = 3 - $limit_posts % 3;
+                    for ($k = 0; $k < $countLastRow; $k++) {
                         ?>
-                        <div class="expander h-90 opacity-0">
+                        <div class="h-90 opacity-0">
                             <article class="h-full">
                                 <div class="w-12/12 flex h-80">
                                     <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>

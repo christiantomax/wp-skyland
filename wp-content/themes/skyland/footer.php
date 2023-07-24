@@ -119,8 +119,33 @@
             echo '<script src="'.$js_folder_path.'properties.js'.'"></script>';
             echo '<link rel="stylesheet" href="'.$assets_folder_path."/style/properties.css".'">';
         }
+        if(get_the_title() == 'About Us'){
+            echo '<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>';
+        }
     ?>
+    <script>
+        const myText = document.getElementById('quotes');
 
+        // Use SplitText to break the text into individual characters
+        const splitText = new SplitText(myText, { type: 'chars' });
+
+        // Animate the individual characters
+        gsap.fromTo(splitText.chars, {
+            autoAlpha: 0,
+            yPercent: 100,
+            ease: 'power2.out',
+        }, {
+            stagger: 0.1,
+            autoAlpha: 1,
+            duration: 1,
+            yPercent: 0, 
+            scrollTrigger: {
+                markers: true,
+                trigger: '#quotes', // Use the myText element as the trigger
+                start: 'center center', // Start the animation when the center of the element is at the center of the viewport
+            },
+        });
+    </script>
     <script src="<?php 
         if (is_singular('property')) {
             echo $js_folder_path.'property-detail.js';

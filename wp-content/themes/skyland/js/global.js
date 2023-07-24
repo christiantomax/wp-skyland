@@ -11,11 +11,11 @@ button.addEventListener("click", function() {
         scrolled = true;
         element.classList.remove("hidden");
         navbar.classList.remove("bg-transparent");
-        navbar.classList.add("bg-black");
+        navbar.classList.add("bg-with-gradient");
         document.body.style.overflow = 'hidden';
     } else {
         scrolled = true;
-        navbar.classList.remove("bg-black");
+        navbar.classList.remove("bg-with-gradient");
         navbar.classList.add("bg-transparent");
         element.classList.add("hidden");
         document.body.style.overflow = 'auto';
@@ -23,23 +23,23 @@ button.addEventListener("click", function() {
 });
 
 if (scrollPosition === 0) {
-    navbar.classList.remove("bg-black");
+    navbar.classList.remove("bg-with-gradient");
     navbar.classList.add("bg-transparent");
     scrolled = false;
 } else if (!scrolled) {
     navbar.classList.remove("bg-transparent");
-    navbar.classList.add("bg-black");
+    navbar.classList.add("bg-with-gradient");
     scrolled = true;
 }
 window.addEventListener("scroll", function() {
     scrollPosition = window.scrollY;
     if (scrollPosition === 0) {
-        navbar.classList.remove("bg-black");
+        navbar.classList.remove("bg-with-gradient");
         navbar.classList.add("bg-transparent");
         scrolled = false;
     } else if (!scrolled) {
         navbar.classList.remove("bg-transparent");
-        navbar.classList.add("bg-black");
+        navbar.classList.add("bg-with-gradient");
         scrolled = true;
     }
 });

@@ -70,6 +70,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay"></div>
 </section>
 
 <!-- Offered Section Properties -->
@@ -111,7 +112,9 @@
                         foreach ($terms as $term) {
                         ?>
                             <div class="relative slick-slide bg-gray-700 text-2xl">
-                                <img class="w-full h-full absolute top-0 bg-cover bg-center object-fit" src="<?= $imageListTaxonomy['z_taxonomy_image'.$term->term_id]; ?>"/>
+                                <div class="w-full h-full absolute top-0 left-0">
+                                    <img class="w-full h-full bg-cover bg-center object-cover" src="<?= $imageListTaxonomy['z_taxonomy_image'.$term->term_id]; ?>"/>
+                                </div>
                                 <div class="w-full h-full px-10 py-10 flex items-end z-10">
                                     <h5 class="figtree-light drop-shadow-sm"><?= $term->name;?></h5>
                                 </div>
@@ -173,10 +176,10 @@
                         <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
-                        <p class="pt-1 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="pt-1 lg:ps-14 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="mt-10 lg:ps-14 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
