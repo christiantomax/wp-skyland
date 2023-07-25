@@ -65,15 +65,15 @@
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.png';?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-24">
             <div class="flex flex-col xl:flex-row justify-end items-start w-full">
-                <div class="flex w-full">
+                <div class="flex w-full lg:w-5/12">
                     <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12">
                         <p class="figtree-light">03</p>
                     </div>
                     <div class="w-full xl:w-6/12">
-                        <h1 class="font-medium text-4xl xl:text-6xl mb-12"><strong>Reach Us</strong></h1>
+                        <h1 class="font-medium text-3xl lg:text-4xl mb-12"><strong>Reach Us</strong></h1>
                     </div>
                 </div>
-                <div class="figtree-light w-full" id="form">
+                <div class="figtree-light w-full lg:w-7/12 lg:pe-28" id="form">
                     <?= 
                         do_shortcode('[contact-form-7 id="'.$reach_us.'" title="Reach Us Form"]');
                     ?>

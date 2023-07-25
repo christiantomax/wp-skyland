@@ -152,7 +152,7 @@
 ?>
 <!-- Investment Section -->
 <section class="w-screen full-page" id="properties-swiper">
-    <div class="flex h-8-12 mb-36 m-4 mr-0 lg:mr-4 xl:ms-10">
+    <div class="flex h-8-12 mb-36 m-4 mr-0 xl:ms-10">
         <div class="w-1/12">
             <div class="w-full flex mb-14">
                 <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:ms-6">

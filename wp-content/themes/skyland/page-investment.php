@@ -131,7 +131,7 @@
                         <div class="w-full h-56 lg:hidden <?= $i == 0 ? 'mt-5' : 'mt-8'; ?>">
                             <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
                         </div>
-                        <p class="w-full lg:w-6/12 pt-1 min-h-content text-ellipsis overflow-hidden mb-6 lg:mb-12 cursor-pointer  <?= $i == 0 ? 'mt-4' : 'mt-12';?> figtree-light pe-8 lg:pe-0"
+                        <p class="w-full lg:w-6/12 pt-1 min-h-content text-ellipsis overflow-hidden mb-6 lg:mb-12 cursor-pointer leading-8  <?= $i == 0 ? 'mt-4' : 'mt-12';?> figtree-light pe-8 lg:pe-0"
                         id="investment-paragraph-<?= $i; ?>">
                             <?= $paragraph;?>
                         </p>
@@ -168,7 +168,7 @@
                         <p class="figtree-light">03</p>
                     </div>
                     <div class="w-full xl:w-6/12">
-                        <h1 class="font-medium text-4xl xl:text-6xl mb-12"><strong>Reach Us</strong></h1>
+                        <h1 class="font-medium text-3xl lg:text-4xl mb-12"><strong>Reach Us</strong></h1>
                     </div>
                 </div>
                 <div class="figtree-light w-full" id="form">

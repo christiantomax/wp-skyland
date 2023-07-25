@@ -93,15 +93,15 @@
 <!-- section project list header -->
 <section class="w-screen full-page" id="project-list">
     <div class="w-full h-full flex justify-center">
-        <div class="bg-fixed w-full lg:w-11/12 flex bg-no-repeat bg-cover h-full pt-40 ml-3 lg:ml-0">
+        <div class="bg-fixed w-full lg:w-11/12 flex bg-no-repeat bg-cover h-full pt-24 lg:pt-40 ml-3 lg:ml-0">
             <div class="flex flex-col lg:flex-row justify-between w-full lg:ps-0">
-                <div class="w-full flex">
+                <div class="w-full flex mb-4 lg:mb-0">
                     <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
                         <p class="figtree-light">02</p>
                     </div>
                     <div class="w-full flex flex-col lg:flex-row justify-between lg:mb-12">
                         <p class="font-medium text-4xl lg:text-6xl">The Projects</p>
-                        <nav class="w-5/12 flex items-center hidden lg:flex">
+                        <nav class="w-5/12 flex items-center hidden lg:flex lg:hidden">
                             <ul class="w-full flex justify-between item-center text-2xl text-slate-300 figtree-light">
                                 <li class="font-medium cursor-pointer">
                                     <a href="<?= $base_url."/properties";?>" class="<?= $getCategory == 'All' ? 'font-bold text-white' : '';?>">
@@ -127,7 +127,7 @@
                     <nav class="p-0 xl:hidden">
                         <div class="flex flex-wrap items-center justify-between mx-auto p-0 ml-8">
                             <div class="w-full md:w-auto" id="navbar-dropdown">
-                            <ul class="flex flex-col font-medium md:p-0 mt-4">
+                            <ul class="flex flex-col font-medium md:p-0 mt-4 hidden">
                                 <li>
                                     <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" 
                                     class="figtree-light font-bold flex items-center justify-between w-full border-b-2 border-white ml-3 pr-8 pb-3 lg:pe-0 text-sm

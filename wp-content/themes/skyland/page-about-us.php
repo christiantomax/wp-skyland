@@ -38,8 +38,8 @@
                         <p class="figtree-light">01</p>
                     </div>
                     <div class="w-12/12 ps-1">
-                        <h2 class="font-medium text-3xl lg:text-4xl mb-4"><?= $title1; ?></h2>
-                        <h1 class="font-medium text-4xl lg:text-7xl mb-4 lg:mb-10"><strong><?= $title2; ?></strong></h1>
+                        <h2 class="font-medium text-3xl lg:text-4xl mb-4 lg:ms-1"><?= $title1; ?></h2>
+                        <h1 class="font-medium text-4xl lg:text-7xl mb-4 lg:mb-10 lg:ms-1"><strong><?= $title2; ?></strong></h1>
                     </div>
                 </div>
             </div>
@@ -89,10 +89,10 @@
 <section class="w-screen full-page flex justify-center" id="about-us-mission">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-4 lg:pt-24 ps-0 lg:ps-0">
         <div class="flex mb-4 lg:mb-16">
-            <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
+            <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:ms-1 lg:me-12">
                 <p class="figtree-light">02</p>
             </div>
-            <p class="font-medium text-3xl lg:text-6xl">Mission</p>
+            <p class="font-medium text-3xl lg:text-6xl lg:ms-1">Mission</p>
         </div>
     </div>
 </section>

@@ -54,7 +54,7 @@
             <div class="w-full h-30 mb-8 xl:mb-16">
                 <div>
                     <p class="font-medium text-3xl">News</p>
-                    <h1 class="font-medium text-4xl xl:text-6xl mt-2 xl:mt-0"><strong><?= $news__title_1; ?></strong></h1>
+                    <h1 class="font-medium text-3xl lg:text-4xl mt-2 xl:mt-0"><strong><?= $news__title_1; ?></strong></h1>
                 </div>
             </div>
             <div class="flex text-md xl:text-lg">
@@ -148,7 +148,7 @@
             </div>
             <div>
                 <p class="font-medium text-3xl hidden xl:block">Related</p>
-                <p class="font-medium text-4xl xl:text-6xl hidden xl:block">Articles</p>
+                <p class="font-medium text-3xl lg:text-4xl hidden xl:block">Articles</p>
                 <h1 class="font-medium text-3xl xl:hidden"><strong>Related Articles</strong></h1>
             </div>
         </div>

@@ -3,6 +3,18 @@
     require get_theme_file_path( 'config.php' );
     $base_url = home_url();
     
+    function get_post_without_taxonomy($post_type, $post_id) {
+        $args = array(
+            'post_type'      => $post_type,
+            'posts_per_page' => -1,
+            'post__not_in'   => array($post_id),
+            'post_status'    => 'publish',
+        );
+        
+        $query = new WP_Query($args);
+        return $query->posts;
+    }
+
     function get_posts_taxonomy($post_type, $post_id) {
         $args = array(
             'post_type'      => $post_type,
@@ -139,6 +151,11 @@
     </div>
 </section>
 
+<?php
+    $list_all_post = get_posts_taxonomy("property_category", "");
+    $limit_posts = count($list_all_post);
+	$prefix = 'properties_category_';
+?>
 <section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
         <div class="wrapper mb-10">
@@ -149,58 +166,54 @@
                     </div>
                 </div>
                 <?php
-                    $taxonomy = 'properties-category'; // Replace 'properties-category' with your desired taxonomy slug
+                    $list_all_post = get_post_without_taxonomy("property", "");
+                    $limit_posts = count($list_all_post);
+                    $prefix = 'properties_';
 
-                    // Get all the terms (categories) for the taxonomy
-                    $terms = get_terms(array(   
-                        'taxonomy' => $taxonomy,
-                        'hide_empty' => false, // Set to 'true' if you want to exclude empty categories
-                    ));
+                    for ($i = 0; $i < $limit_posts; $i++) {
+                        $post_id = $list_all_post[$i]->ID;
 
-                    if (!empty($terms)) {
-                        foreach ($terms as $term) {
+                        $title_1 = get_post_meta($post_id, $prefix . 'title_1' )[0];
+                        $title_2 = get_post_meta($post_id, $prefix . 'title_2' )[0];
+
+                        //get image banner project detail
+                        $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
+                        $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         ?>
                             <div class="relative slick-slide bg-gray-700 text-2xl">
-                                <img class="w-full h-full absolute top-0 bg-cover bg-center" src="<?= $imageListTaxonomy['z_taxonomy_image'.$term->term_id]; ?>"/>
+                                <div class="w-full h-full absolute top-0 left-0">
+                                    <img class="w-full h-full bg-cover bg-center object-cover" src="<?= $image_banner; ?>"/>
+                                </div>
                                 <div class="w-full h-full px-10 py-10 flex items-end z-10">
-                                    <h5 class="figtree-light drop-shadow-sm"><?= $term->name;?></h5>
+                                    <div>
+                                        <h5 class="figtree-light text-left"><?= $title_1?></h5>
+                                        <p class="figtree-light"><?= $title_2?></p>
+                                    </div>
                                 </div>
                             </div>
                         <?php
-                        }
                     }
                 ?>
             </div>
         </div>
     </div>
 
-    <div class="flex">
-        <div class="flex flex-col lg:flex-row w-full figtree-light lg:justify-center">
-            <div class="w-full lg:w-7/12 flex flex-col lg:flex-row foreword-description mb-8 lg:mb-16 ms-20 lg:ps-28 lg:ms-0">
-                <p class="pt-1 w-full lg:w-6/12 lg:h-24 pe-24 lg:pe-0 lg:me-8">
-                    <?= $paragraph_left; ?>
+    <div class="flex lg:justify-end mr-16">
+        <a href="<?= $base_url;?>/properties">
+            <div class="flex explore-rotate-left">
+                <p class="text-xl lg:text-md font-normal text-end me-3 ms-16 lg:ms-20 lg:ms-0 figtree-light ">
+                    Explore more
                 </p>
-                <p class="pt-1 w-full lg:w-6/12 mt-10 lg:mt-0 pe-24 lg:pe-0 lg:h-24 lg:ms-8">
-                    <?= $paragraph_right; ?>
-                </p>
+                <div class="flex items-end pb-1 icon animate-pulse">
+                    <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                </div>
             </div>
-            <div class="w-full lg:w-4/12 flex lg:justify-end me-12 ms-20 lg:ms-0">
-                <a href="<?= $base_url;?>/about-us">
-                    <div class="flex explore-rotate-left">
-                        <p class="text-lg lg:text-md font-normal text-end me-3">
-                            Explore more
-                        </p>
-                        <div class="flex pb-1 icon animate-pulse mt-1">
-                            <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        </a>
     </div>
 </section>
 
 <?php
+    $prefix = "experience_";
     $section = "partnership_section_";
 
     $paragraph= rwmb_meta($prefix.$section.'paragraph'.$languages);
