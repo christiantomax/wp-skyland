@@ -119,6 +119,11 @@
             echo '<script src="'.$js_folder_path.'properties.js'.'"></script>';
             echo '<link rel="stylesheet" href="'.$assets_folder_path."/style/properties.css".'">';
         }
+        if(get_the_title() == 'Contact' || get_the_title() == 'Investment'){
+            ?>
+                <script src="https://www.google.com/recaptcha/api.js?render=6LdZJVYnAAAAAN_pf0ciaWc4fxLGzWWehDm822jB"></script>
+            <?php
+        }
         if(get_the_title() == 'About Us' || get_the_title() == 'Investment'){
             echo '<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>';
