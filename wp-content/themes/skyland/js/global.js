@@ -43,35 +43,3 @@ window.addEventListener("scroll", function() {
         scrolled = true;
     }
 });
-
-// Get the submit button element
-const submitButton = document.getElementById('submit');
-
-// Get the parent element of the submit button
-const parentElement = submitButton.parentNode;
-
-// Add a new class to the parent element
-parentElement.classList.add('mt-5', 'flex', 'items-center', 'xl:justify-end');
-
-// Create a new sibling element
-const newSibling = document.createElement('div');
-
-// Add classes to the new sibling element
-newSibling.classList.add('pt-2', 'ms-3', 'icon', 'animate-pulse');
-
-// Create an <img> element
-const imgElement = document.createElement('img');
-imgElement.classList.add('h-4', 'lg:h-4', 'pb-1');
-imgElement.src = 'http://localhost/skyland/wp-content/themes/skyland/assets//img/icon-arrow.png';
-
-// Append the <img> element to the new sibling element
-newSibling.appendChild(imgElement);
-
-// Get the reference element
-const referenceElement = document.querySelector('.icon');
-
-// Insert the new sibling element after the reference element
-referenceElement.insertAdjacentElement('afterend', newSibling);
-
-// Insert the new sibling element after the submit button
-parentElement.insertBefore(newSibling, submitButton.nextSibling);

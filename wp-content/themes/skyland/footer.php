@@ -122,6 +122,29 @@
         if(get_the_title() == 'Contact' || get_the_title() == 'Investment'){
             ?>
                 <script src="https://www.google.com/recaptcha/api.js?render=6LdZJVYnAAAAAN_pf0ciaWc4fxLGzWWehDm822jB"></script>
+                <script>
+                    const submitButton = document.getElementById('submit');
+
+                    const parentElement = submitButton.parentNode;
+
+                    parentElement.classList.add('mt-5', 'flex', 'items-center', 'xl:justify-end');
+
+                    const newSibling = document.createElement('div');
+
+                    newSibling.classList.add('pt-2', 'ms-3', 'icon', 'animate-pulse');
+
+                    const imgElement = document.createElement('img');
+                    imgElement.classList.add('h-4', 'lg:h-4', 'pb-1');
+                    imgElement.src = '<?= $assets_folder_path.'/img/icon-arrow.png';?>';
+
+                    newSibling.appendChild(imgElement);
+
+                    const referenceElement = document.querySelector('.icon');
+
+                    referenceElement.insertAdjacentElement('afterend', newSibling);
+
+                    parentElement.insertBefore(newSibling, submitButton.nextSibling);
+                </script>
             <?php
         }
         if(get_the_title() == 'About Us' || get_the_title() == 'Investment'){
