@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  #Wordpress (image based on Apache)
+  wordpress:
+    container_name: wordpress-skyland
+    image: wordpress:latest
+    restart: always
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql_container
+      WORDPRESS_DB_USER: skyland
+      WORDPRESS_DB_PASSWORD: pass123
+      WORDPRESS_DB_NAME: skyland
+    volumes:
+      - "./:/var/www/html"
+      - "./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini"
+    networks:
+      my_network:
+        aliases:
+          - wordpress
+
+networks:
+  my_network:
+    external: true
