@@ -9,21 +9,30 @@ expanders.forEach(function(expander, index){
 	
     // add event handler resize animation when on mouse enter div
 	expander.addEventListener("mouseenter", function(){
-		expander.animation.play()
-		active = expander
-        showElements(expander);
-		scrollToElement(expander);
+		if (!animation.isActive()) { // Check if the animation is not already running
+            animation.play()
+              .then(() => { // After the animation completes
+                active = expander;
+                showElements(expander);
+                scrollToElement(expander);
+            });
+        }
 	})
 	
 
     //handler out from div selection
 	expander.addEventListener("mouseleave", function() {
-        event.stopPropagation();
-        expander.animation.reverse();
-    
-        // Add a separate animation to set the width back to normal
-        setTimeout(gsap.to(expander, { width: "27.5vw", duration: 0.4 }), 2000);
-        setTimeout(hideElements(expander), 2000);
+        if (!animation.isActive()) { // Check if the animation is not already running
+            expander.animation.reverse()
+              .then(() => { // After the animation completes
+                setTimeout(() => {
+                  gsap.to(expander, { width: "27.5vw", duration: 0.4 }); // Separate animation to set the width back to normal
+                }, 2000);
+                setTimeout(() => {
+                hideElements(expander);
+                }, 2000);
+            });
+        }
 	});
 
 	

@@ -88,10 +88,10 @@
 <!-- section description of detail property -->
 <section class="w-12/12 xl:ms-72 flex justify-center" id="property-description">
         <div class="w-11/12 flex flex-col xl:flex-row justify-end foreword-description mb-16 xl:pe-20 figtree-light">
-            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12">
+            <p class="pt-1 leading-8 text-ellipsis overflow-hidden w-full xl:w-6/12">
             <?= $paragraph_left;?>
             </p>
-            <p class="pt-1 text-ellipsis overflow-hidden w-full xl:w-6/12 xl:ms-8 mt-8 xl:mt-0">
+            <p class="pt-1 leading-8 text-ellipsis overflow-hidden w-full xl:w-6/12 xl:ms-8 mt-8 xl:mt-0">
             <?= $paragraph_right;?>
             </p>
         </div>
@@ -108,7 +108,7 @@
                             <article>
                                 <img src="<?= $fieldset_text_image[$i]; ?>" alt="Image 1">
                                 <h2 class="paragraph text-xl figtree-light"><?= $address;?></h2>
-                                <p class="paragraph text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
+                                <p class="paragraph leading-8 text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
                             </article>
                         <?php
                     }
@@ -140,7 +140,7 @@
                         for ($i = 0; $i < count($fieldset_text_image); $i++) {
                             ?>
                                 
-                            <p class="w-8/12 pt-1 min-h-content-description text-ellipsis overflow-hidden description-gallery description-gallery-<?= $i; ?> figtree-light">
+                            <p class="w-8/12 leading-8 pt-1 min-h-content-description text-ellipsis overflow-hidden description-gallery description-gallery-<?= $i; ?> figtree-light">
                                 <?= $fieldset_text[$i]["description"]; ?>
                             </p>
                             <?php

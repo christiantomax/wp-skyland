@@ -62,7 +62,7 @@
                     <div class="w-full h-40">
                         <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
                     </div>
-                    <p class="pt-1 mt-8 xl:mt-12 text-ellipsis overflow-hidden">
+                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden">
                         <?= $news__paragraph_top; ?>
                     </p>
                     <p class="pt-1 text-sm mt-12 text-ellipsis overflow-hidden">
@@ -104,7 +104,7 @@
         <div class="w-5/12">
             <div class="flex">
                 <div class="flex flex-col justify-between">
-                    <p class="pt-1 text-ellipsis overflow-hidden">
+                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden">
                         <?= $news__paragraph_top; ?>
                     </p>
                 </div>
@@ -113,7 +113,7 @@
         <div class="w-5/12 ps-20">
             <div class="flex">
                 <div class="flex flex-col justify-between">
-                    <p class="pt-1 text-ellipsis overflow-hidden">
+                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden">
                         <?= $news__paragraph_top; ?>
                     </p>
                 </div>
@@ -187,7 +187,7 @@
                             </div>
                             <p class="mt-8 font-medium text-3xl">News</p>
                             <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
-                            <p class="mt-7 h-20 line-clamp-3 text-ellipsis figtree-link-light figtree-light">
+                            <p class="mt-7 h-20 leading-8 line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                 <?= $news__paragraph_top; ?>
                             </p>
                             <div class="mt-12 flex items-end figtree-light">
@@ -252,7 +252,7 @@
                                     </p>
                                 </div>
                                 <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
-                                <p class="mt-7 h-28 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
+                                <p class="mt-7 h-28 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                     <?= $news__paragraph_top; ?>
                                 </p>
                                 <div class="flex items-end figtree-light">

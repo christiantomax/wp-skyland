@@ -35,7 +35,7 @@
                         <h1 class="font-medium text-7xl mb-0"><strong><?= $title_right; ?></strong></h1>
                     </div>
                     <div class="w-full lg:w-7/12">
-                        <p class="pt-1 text-ellipsis overflow-hidden figtree-light ">
+                        <p class="pt-1 leading-8 text-ellipsis overflow-hidden figtree-light ">
                             <?= $paragraph; ?>
                         </p>
                     </div>

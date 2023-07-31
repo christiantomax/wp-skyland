@@ -26,15 +26,14 @@
 }
 
 .slick-slide{
-    width: 23vw !important;
-    height: 60vh !important;
+    width: 400px !important;
+    height: 485px !important;
     display: flex !important;
     margin: 0 1rem;
 }
 
 #carousel-first-child {
     width: 6vw !important;
-    height: 60vh !important;
 }
 
 /* Extra small devices (phones, 600px and down) */

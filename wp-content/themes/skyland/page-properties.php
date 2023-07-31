@@ -69,10 +69,10 @@
     
 <section class="w-12/12 lg:ms-72" id="property-description">
         <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-16 figtree-light ml-3 lg:ml-0 pl-16 lg:pl-0 pr-4">
-            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:h-24">
+            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:h-24">
                 <?= $paragraph_left; ?>
             </p>
-            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:h-24 lg:ms-8">
+            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:h-24 lg:ms-8">
                 <?= $paragraph_right; ?>
             </p>
         </div>
@@ -209,18 +209,18 @@
                                 <time class="text-2xl me-8"><?= $year;?> </time><?= $title_1.' '.$title_2;;?>
                             </header>
                             <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description">
-                                <p class="property-project-description pb-4">
+                                <p class="property-project-description pb-4 leading-8">
                                     <?= $paragraph_left;?>
                                 </p>
                             </div>
                             <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description">
                                 <a href="<?= $link_slug;?>">
                                     <div class="flex explore-rotate-left">
-                                        <p class="text-2xl font-normal text-end me-3">
+                                        <p class="text-md font-normal text-end me-3">
                                             Explore more
                                         </p>
                                         <div class="flex items-end pb-1 icon animate-pulse">
-                                            <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                            <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                                         </div>
                                     </div>
                                 </a>
@@ -306,7 +306,7 @@
                                             <h1 class="text-2xl font-bold"><?= $title_1.' '.$title_2;?></h1>
                                         </header>
                                         <div class="text-ellipsis overflow-hidden">
-                                            <p class="pb-4 text-md mt-4">
+                                            <p class="pb-4 text-md mt-4 leading-8">
                                                 <?= $paragraph_left;?>
                                             </p>
                                         </div>

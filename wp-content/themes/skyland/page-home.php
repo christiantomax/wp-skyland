@@ -96,7 +96,7 @@
             <div class="carousel hover:cursor-none">
                 <div class="slick-slide opacity-0" id="carousel-first-child">
                     <div class="w-full h-full px-10 py-10 flex items-end">
-                        <h5 class="figtree-light">House</h5>
+                        <h5 class="figtree-light">Property</h5>
                     </div>
                 </div>
                 <?php
@@ -176,10 +176,10 @@
                         <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
-                        <p class="pt-1 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="pt-1 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="mt-10 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
@@ -223,7 +223,7 @@
                     </div>
                     <div class="w-full lg:w-5/12 ps-2 lg:ps-0">
                         <h1 class="figtree-light font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>The Story</strong></h1>
-                        <p class="pt-1 text-ellipsis overflow-hidden figtree-light">
+                        <p class="pt-1 leading-8 text-ellipsis overflow-hidden figtree-light">
                             <?= $paragraph;?>
                         </p>
                     </div>

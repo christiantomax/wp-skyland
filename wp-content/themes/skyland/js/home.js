@@ -37,5 +37,7 @@ $(document).ready(function(){
     $('.carousel').slick({  
         arrows: false,
         infinite: false,
+        variableWidth: true,
+        centerMode: false,
     });
 });

@@ -103,10 +103,10 @@
                         <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light ">
-                        <p class="pt-1 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="pt-1 leading-8 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="mt-10 leading-8 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-20 mb-8 lg:mb-0 pe-4">
@@ -230,7 +230,7 @@
                     </div>
                     <div class="w-full lg:w-5/12">
                         <h1 class="font-medium text-3xl lg:text-6xl mb-6 lg:mb-12"><strong>Partnership</strong></h1>
-                        <p class="figtree-light lg:w-7/12 pt-1 min-h-content text-ellipsis overflow-hidden">
+                        <p class="figtree-light leading-8 lg:w-7/12 pt-1 min-h-content text-ellipsis overflow-hidden">
                             <?= $paragraph; ?>
                         </p>
                     </div>

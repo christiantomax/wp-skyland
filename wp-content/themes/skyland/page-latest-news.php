@@ -88,7 +88,7 @@
                                     <p class="font-medium text-3xl">News</p>
                                 </div>
                                 <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
-                                <p class="mt-7 h-28 overflow-y-hidden line-clamp-3 text-ellipsis figtree-link-light figtree-light">
+                                <p class="mt-7 leading-8 h-28 overflow-y-hidden line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                     <?= $news__paragraph_top; ?>
                                 </p>
                                 <div class="flex items-end figtree-light mb-10">
