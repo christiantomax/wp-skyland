@@ -49,10 +49,10 @@
     
 <section class="w-12/12 lg:ms-72" id="about-us-description">
         <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-10 figtree-light pl-14 lg:pl-0 pr-4">
-            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 pe-8 lg:pe-0 fade-in-element">
+            <p class="pt-1 leading-8 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 pe-8 lg:pe-0 fade-in-element">
                 <?= $paragraph_left; ?>
             </p>
-            <p class="pt-1 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:ms-16 pe-8 lg:pe-0 fade-in-element">
+            <p class="pt-1 leading-8 my-3 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:ms-16 pe-8 lg:pe-0 fade-in-element">
                 <?= $paragraph_right; ?>
             </p>
         </div>
@@ -174,10 +174,10 @@
                         <span class="border-b-2 border-white text-transparent lg:me-8">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light ">
-                        <p class="pt-2 text-ellipsis overflow-y-scroll lg:overflow-hidden pe-8 lg:pe-0">
+                        <p class="pt-2 leading-8 text-ellipsis overflow-y-scroll lg:overflow-hidden pe-8 lg:pe-0">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 text-ellipsis overflow-y-scroll lg:overflow-hidden pe-8 lg:pe-0">
+                        <p class="mt-10 leading-8 text-ellipsis overflow-y-scroll lg:overflow-hidden pe-8 lg:pe-0">
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
@@ -249,10 +249,10 @@
             </div>
             <div class="flex mt-10 lg:mt-0">
                 <div class="flex flex-col justify-between ps-16 lg:ps-0 lg:pe-12 figtree-light">
-                    <p class="pt-1 text-ellipsis overflow-hidden pe-8 lg:pe-0">
+                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden pe-8 lg:pe-0">
                         <?= $paragraph_top;?>
                     </p>
-                    <p class="mt-10 text-ellipsis overflow-hidden pe-8 lg:pe-0">
+                    <p class="mt-10 leading-8 text-ellipsis overflow-hidden pe-8 lg:pe-0">
                         <?= $paragraph_bottom;?>
                     </p>
                     <div class="flex mt-10 pe-4">

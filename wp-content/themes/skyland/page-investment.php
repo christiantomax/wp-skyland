@@ -49,7 +49,7 @@
                 <div class="w-full">
                     <h1 class="font-medium text-3xl lg:text-4xl mb-2"><?= $title1; ?></h1>
                     <h2 class="font-medium text-4xl lg:text-7xl mb-10 lg:mb-16"><strong><?= $title2; ?></strong></h2>
-                    <p class="pt-1 min-h-content text-ellipsis overflow-hidden figtree-light lg:me-28">
+                    <p class="pt-1 leading-8 min-h-content text-ellipsis overflow-hidden figtree-light lg:me-28">
                         <?= $paragraph; ?>
                     </p>
                 </div>

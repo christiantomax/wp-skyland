@@ -176,10 +176,10 @@
                         <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
-                        <p class="pt-1 lg:ps-14 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="pt-1 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 lg:ps-14 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="mt-10 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
@@ -189,7 +189,7 @@
                                         Explore more
                                     </p>
                                     <div class="flex items-end pb-1 icon animate-pulse">
-                                        <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                        <img class="h-4" src="<?= $assets_folder_path.'/icon/PANAH.png';?>"/>
                                     </div>
                                 </div>
                             </a>

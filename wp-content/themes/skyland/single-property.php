@@ -131,7 +131,7 @@
                     }
                 ?>
             </div>
-            <div class="flex">
+            <div class="flex justify-between">
                 <div class="w-5/12">
                     <h2 class="text-3xl figtree-light"><?= $address;?></h2>
                 </div>
