@@ -39,9 +39,9 @@
                         </div>
                         <div class="h-2/4 grid grid-cols-3 xl:hidden">
                             <div class="flex flex-col">
-                                <a class="my-4" href="<?= $instagram != '' ? $instagram : '#'; ?>" target="_blank">Ig</a>
-                                <a class="my-4" href="<?= $email != '' ? $email : '#'; ?>" target="_blank">Mail</a>
-                                <a class="my-4" href="<?= $facebook != '' ? $facebook : '#'; ?>" target="_blank">Fb</a>
+                                <a class="my-4" href="<?= $instagram != '' ? $instagram : '#'; ?>" target="_blank">Instagram</a>
+                                <a class="my-4" href="<?= $email != '' ? $email : '#'; ?>" target="_blank">Email</a>
+                                <a class="my-4" href="<?= $facebook != '' ? $facebook : '#'; ?>" target="_blank">Facebook</a>
                             </div>
                             <div class="flex flex-col ml-2">
                                 <a href="<?= esc_url( home_url() )."/properties"; ?>" class="my-4">Property</a>
@@ -201,7 +201,7 @@
                     });
                 </script>
             <?php
-        }
+        } 
     ?>
     
     <script src="<?php 

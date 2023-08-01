@@ -164,11 +164,11 @@
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-24">
             <div class="flex flex-col xl:flex-row justify-end items-start w-full">
                 <div class="flex w-full">
-                    <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12">
-                        <p class="figtree-light">03</p>
+                    <div class="border w-9 h-9 p-1 md:p-0 md:w-10 md:h-10 rounded-full border-white flex justify-center items-center lg:me-12">
+                        <p class="figtree-light text-sm">02</p>
                     </div>
                     <div class="w-full xl:w-6/12">
-                        <h1 class="font-medium text-3xl lg:text-4xl mb-12"><strong>Reach Us</strong></h1>
+                        <h1 class="font-medium text-3xl lg:text-4xl mb-12 ms-4 md:ms-0"><strong>Reach Us</strong></h1>
                     </div>
                 </div>
                 <div class="figtree-light w-full" id="form">

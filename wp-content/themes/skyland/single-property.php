@@ -65,7 +65,8 @@
         }
 
         //get meta box next data
-        $title_2_next = get_post_meta($post_id, $prefix . 'title_2' )[0];
+        $title_1_next = get_post_meta($next_id, $prefix . 'title_1' )[0];
+        $title_2_next = get_post_meta($next_id, $prefix . 'title_2' )[0];
         $image_banner_next = get_post_meta($next_id, $prefix . 'image_banner' )[0];
         $image_banner_next = wp_get_attachment_image_src($image_banner_next, 'full')[0];
         $next_slug = get_permalink($next_id);
@@ -191,7 +192,8 @@
                         </div>
                         <div class="w-12/12">
                             <p class="figtree-light font-medium text-2xl mb-4 xl:mb-12 pt-2">Up Next</p>
-                            <p class="font-medium text-3xl lg:text-4xl mb-12"><strong><?= $title_2_next; ?></strong></p>
+                            <p class="font-medium text-3xl lg:text-6xl mb-3"><strong><?= $title_1_next; ?></strong></p>
+                            <p class="font-medium text-4xl lg:text-8xl mb-12"><strong><?= $title_2_next; ?></strong></p>
                             <div class="items-end w-full pb-16 xl:hidden">
                                 <div class="flex explore-rotate-left">
                                     <p class="text-lg xl:text-2xl font-normal text-end me-3 figtree-light">

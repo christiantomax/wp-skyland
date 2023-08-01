@@ -201,31 +201,33 @@
                         $link_slug = get_permalink($post_id);
                     ?>
                     <div class="expander h-90">
-                        <article class="h-full">
-                            <div class="w-12/12 flex h-80">
-                                <img class="w-full h-full object-cover" src="<?= $image_banner;?>"/>
-                            </div>
-                            <header class="mt-6 text-3xl h-10/12 truncate pb-2">
-                                <time class="text-2xl me-8"><?= $year;?> </time><?= $title_1.' '.$title_2;;?>
-                            </header>
-                            <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description">
-                                <p class="property-project-description pb-4 leading-8">
-                                    <?= $paragraph_left;?>
-                                </p>
-                            </div>
-                            <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description">
-                                <a href="<?= $link_slug;?>">
-                                    <div class="flex explore-rotate-left">
-                                        <p class="text-md font-normal text-end me-3">
-                                            Explore more
-                                        </p>
-                                        <div class="flex items-end pb-1 icon animate-pulse">
-                                            <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                        <a href="<?= $link_slug; ?>">
+                            <article class="h-full">
+                                <div class="w-12/12 flex h-80">
+                                    <img class="w-full h-full object-cover" src="<?= $image_banner;?>"/>
+                                </div>
+                                <header class="mt-6 text-3xl h-10/12 truncate pb-2">
+                                    <time class="text-2xl me-8"><?= $year;?> </time><?= $title_1.' '.$title_2;;?>
+                                </header>
+                                <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description">
+                                    <p class="property-project-description pb-4 leading-8">
+                                        <?= $paragraph_left;?>
+                                    </p>
+                                </div>
+                                <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description">
+                                    <a href="<?= $link_slug;?>">
+                                        <div class="flex explore-rotate-left">
+                                            <p class="text-md font-normal text-end me-3">
+                                                Explore more
+                                            </p>
+                                            <div class="flex items-end pb-1 icon animate-pulse">
+                                                <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </article>
+                                    </a>
+                                </div>
+                            </article>
+                        </a>
                     </div>
                     <?php
                 }
