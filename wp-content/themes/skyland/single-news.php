@@ -45,7 +45,7 @@
     <div class="flex h-8-12 mb-36 mt-40 ml-12 xl:ml-0">
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
-                <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:ms-10 xl:me-3">
+                <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:ms-10 xl:me-3 fade-in-element">
                     <p class="figtree-light">01</p>
                 </div>
             </div>
@@ -53,26 +53,26 @@
         <div class="w-full xl:w-4/12 xl:ms-10">
             <div class="w-full h-30 mb-8 xl:mb-16">
                 <div>
-                    <p class="font-medium text-3xl">News</p>
+                    <p class="font-medium text-3xl fade-in-element">News</p>
                     <h1 class="font-medium text-3xl lg:text-4xl mt-2 xl:mt-0"><strong><?= $news__title_1; ?></strong></h1>
                 </div>
             </div>
             <div class="flex text-md xl:text-lg">
                 <div class="flex flex-col justify-between figtree-light">
                     <div class="w-full h-40">
-                        <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                        <img class="w-full h-full object-cover fade-in-element" src="https://picsum.photos/800/533"/>
                     </div>
-                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden">
+                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_top; ?>
                     </p>
-                    <p class="pt-1 text-sm mt-12 text-ellipsis overflow-hidden">
+                    <p class="pt-1 text-sm mt-12 text-ellipsis overflow-hidden fade-in-element">
                         Written by: <?= $news__author; ?>
                     </p>
-                    <p class="pt-1 text-sm text-ellipsis overflow-hidden">
+                    <p class="pt-1 text-sm text-ellipsis overflow-hidden fade-in-element">
                         Published: <?= $news__publish_date; ?>
                     </p>
                     
-                    <div class="w-full flex border-b-2 border-white xl:hidden">
+                    <div class="w-full flex border-b-2 border-white xl:hidden fade-in-element">
                         <div class="w-full h-full">
                             <p class="mt-6 mb-3 text-md">Share</p>
                             <div class="flex mb-2">
@@ -104,7 +104,7 @@
         <div class="w-5/12">
             <div class="flex">
                 <div class="flex flex-col justify-between">
-                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden">
+                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_top; ?>
                     </p>
                 </div>
@@ -113,14 +113,14 @@
         <div class="w-5/12 ps-20">
             <div class="flex">
                 <div class="flex flex-col justify-between">
-                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden">
+                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_top; ?>
                     </p>
                 </div>
             </div>
         </div>
         <div class="w-2/12 flex justify-end items-end ps-20">
-            <div class="w-full h-full flex flex-col items-center">
+            <div class="w-full h-full flex flex-col items-center fade-in-element">
                 <p class="mb-6">Share</p>
                 <button onclick="shareToInstagram()">
                     <img class="w-10 mb-6" src="<?= $assets_folder_path."/icon/".'telegram.png'; ?>"/>
@@ -143,13 +143,13 @@
 <section class="w-screen full-page flex justify-center" id="properties">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full">
         <div class="flex mb-16">
-            <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12">
+            <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 fade-in-element">
                 <p class="figtree-light">02</p>
             </div>
             <div>
-                <p class="font-medium text-3xl hidden xl:block">Related</p>
-                <p class="font-medium text-3xl lg:text-4xl hidden xl:block">Articles</p>
-                <h1 class="font-medium text-3xl xl:hidden"><strong>Related Articles</strong></h1>
+                <p class="font-medium text-3xl hidden xl:block fade-in-element">Related</p>
+                <p class="font-medium text-3xl lg:text-4xl hidden xl:block fade-in-element">Articles</p>
+                <h1 class="font-medium text-3xl xl:hidden fade-in-element"><strong>Related Articles</strong></h1>
             </div>
         </div>
     </div>
@@ -160,7 +160,7 @@
         <!-- Swiper -->
         <div class="swiper home-properties w-full mb-12">
             <div class="swiper-wrapper h-full">
-                <div class="swiper-slide bg-white flex justify-center items-center w-36 opacity-0">Slide 1</div>
+                <div class="swiper-slide bg-white flex justify-center items-center w-36 opacity-0 fade-in-element">Slide 1</div>
                 <?php
                     $limit_posts = count($list_all_post) < 10 ? count($list_all_post) : 10;
                     for ($i = 0; $i < $limit_posts; $i++) {
@@ -180,7 +180,7 @@
                         $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
-                    <div class="swiper-slide w-3/12 px-4 py-10">
+                    <div class="swiper-slide w-3/12 px-4 py-10 fade-in-element">
                         <div>
                             <div class="w-full h-80">
                                 <img class="w-full h-full object-cover" src="<?= $news__image; ?>"/>
@@ -242,7 +242,7 @@
                         $link_slug = get_permalink($post_id);
                 ?>
                     <a href="">
-                        <article>
+                        <article class="fade-in-element">
                             <img src="<?= $news__image; ?>" alt="Image 1">
                             <div class="paragraph">
                                 <div class="flex justify-between">

@@ -112,11 +112,11 @@
                         <div class="flex lg:justify-end mt-8 lg:mt-20 mb-8 lg:mb-0 pe-4">
                             <a href="<?= $base_url;?>/properties">
                                 <div class="flex explore-rotate-left">
-                                    <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
+                                    <p class="text-lg lg:text-md font-normal text-end me-3 figtree-light ">
                                         Explore Project
                                     </p>
                                     <div class="flex items-end pb-1 icon animate-pulse">
-                                        <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                        <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                                     </div>
                                 </div>
                             </a>
@@ -196,7 +196,7 @@
     <div class="flex lg:justify-end mr-16">
         <a href="<?= $base_url;?>/properties">
             <div class="flex explore-rotate-left">
-                <p class="text-xl lg:text-md font-normal text-end me-3 ms-16 lg:ms-20 lg:ms-0 figtree-light ">
+                <p class="text-lg lg:text-md font-normal text-end me-3 ms-16 lg:ms-20 lg:ms-0 figtree-light ">
                     Explore more
                 </p>
                 <div class="flex items-end pb-1 icon animate-pulse">
@@ -233,7 +233,7 @@
                 <div class="flex lg:justify-end w-full lg:w-4/12 my-4 lg:my-0 ms-14 lg:ms-0 h-fit explore-rotate-left">
                     <a href="<?= $base_url;?>/teams">
                         <div class="flex items-end explore-rotate-left">
-                            <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
+                            <p class="text-lg lg:text-md font-normal text-end me-3 figtree-light ">
                                 Explore more
                             </p>
                             <div class="flex items-end pb-1 icon animate-pulse">

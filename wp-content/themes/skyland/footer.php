@@ -109,6 +109,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     
+    <?= '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>';?>
+    <?= '<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>';?>
+    <?= '<script src="'.$js_folder_path.'animation.js'.'"></script>';?>
     <?php
         echo '<script src="'.$js_folder_path.'global.js'.'"></script>';
         if (get_the_title() != 'investment') {
@@ -147,9 +150,7 @@
                 </script>
             <?php
         }
-        if(get_the_title() == 'About Us' || get_the_title() == 'Investment'){
-            echo '<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>';
-            echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>';
+        if(get_the_title() == 'About-Us' || get_the_title() == 'Investment'){
             ?>
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
@@ -176,29 +177,6 @@
                             });
                         });
                     });
-
-                    const fadeElements = document.querySelectorAll('.fade-in-element');
-
-                    // Animate the opacity of elements from 0 to 1 with ScrollTrigger
-                    fadeElements.forEach((element) => {
-                        gsap.fromTo(
-                        element,
-                        {
-                            autoAlpha: 0,
-                            yPercent: 50, // Optional: Move the elements slightly up before fade-in
-                        },
-                        {
-                            autoAlpha: 1,
-                            yPercent: 0, // Optional: Move back to the original position after fade-in
-                            duration: 2,
-                            ease: 'power2.out',
-                            scrollTrigger: {
-                                markers: false,
-                                trigger: element, // Use the current element as the trigger
-                            },
-                        }
-                        );
-                    });
                 </script>
             <?php
         } 
@@ -214,6 +192,5 @@
         }
     ?>">
     </script>
-
     </body>
 </html>

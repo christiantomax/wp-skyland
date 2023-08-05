@@ -79,9 +79,9 @@
 <section class="w-screen h-screen full-page mb-10" id="property-banner">
     <div class="bg-fixed bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner;?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
-            <h1 class="text-3xl xl:text-6xl"><?= $title_1;?></h1>
-            <h2 class="text-4xl xl:text-8xl mt-4"><?= $title_2;?></h2>
-            <p class="figtree-light font-thin text-lg xl:text-3xl mt-12"><?= $address;?><br class="xl:hidden" /> <span class="xl:ms-60"><?= $year;?></span></p>
+            <h1 class="text-3xl xl:text-6xl fade-in-element"><?= $title_1;?></h1>
+            <h2 class="text-4xl xl:text-8xl mt-4 fade-in-element"><?= $title_2;?></h2>
+            <p class="figtree-light font-thin text-lg xl:text-3xl mt-12 fade-in-element"><?= $address;?><br class="xl:hidden" /> <span class="xl:ms-60"><?= $year;?></span></p>
         </div>
     </div>
 </section>
@@ -89,10 +89,10 @@
 <!-- section description of detail property -->
 <section class="w-12/12 xl:ms-72 flex justify-center" id="property-description">
         <div class="w-11/12 flex flex-col xl:flex-row justify-end foreword-description mb-16 xl:pe-20 figtree-light">
-            <p class="pt-1 leading-8 text-ellipsis overflow-hidden w-full xl:w-6/12">
+            <p class="pt-1 leading-8 text-ellipsis overflow-hidden w-full xl:w-6/12 fade-in-element">
             <?= $paragraph_left;?>
             </p>
-            <p class="pt-1 leading-8 text-ellipsis overflow-hidden w-full xl:w-6/12 xl:ms-8 mt-8 xl:mt-0">
+            <p class="pt-1 leading-8 text-ellipsis overflow-hidden w-full xl:w-6/12 xl:ms-8 mt-8 xl:mt-0 fade-in-element">
             <?= $paragraph_right;?>
             </p>
         </div>
@@ -102,7 +102,7 @@
 <section class="w-screen full-page mb-36" id="property-galleries">
     <div class="flex justify-center">
         <div class="w-full xl:hidden">
-            <div class="slider">
+            <div class="slider fade-in-element">
                 <?php
                     for ($i = 0; $i < count($fieldset_text_image); $i++) {
                         ?>
@@ -116,7 +116,7 @@
                 ?>
             </div>
         </div>
-        <div class="w-11/12 hidden xl:block">
+        <div class="w-11/12 hidden xl:block fade-in-element">
             <div class="w-full flex justify-center pb-2 mb-6">
                 <?php
                     for ($i = 0; $i < count($fieldset_text_image); $i++) {
@@ -134,9 +134,9 @@
             </div>
             <div class="flex justify-between">
                 <div class="w-5/12">
-                    <h2 class="text-3xl figtree-light"><?= $address;?></h2>
+                    <h2 class="text-3xl figtree-light fade-in-element"><?= $address;?></h2>
                 </div>
-                <div class="flex justify-between">
+                <div class="flex justify-between fade-in-element">
                     <?php
                         for ($i = 0; $i < count($fieldset_text_image); $i++) {
                             ?>
@@ -147,7 +147,7 @@
                             <?php
                         }
                     ?>
-                    <div class="w-4/12 flex justify-end">
+                    <div class="w-4/12 flex justify-end fade-in-element">
                         <div class="w-10 h-10 flex justify-center items-center me-16 font-medium">
                             <p class="figtree-light hover:cursor-pointer hover:opacity-75" onclick="changeExpander(-1)">
                                 <svg id="SvgjsSvg1011" width="30" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1" 
@@ -158,7 +158,7 @@
                             </p>
                         </div>
 
-                        <div class="w-10 h-10 flex justify-center items-center rotate-180 font-medium">
+                        <div class="w-10 h-10 flex justify-center items-center rotate-180 font-medium fade-in-element">
                             <p class="figtree-light hover:cursor-pointer hover:opacity-75" onclick="changeExpander(1)">
                                 <svg id="SvgjsSvg1011" width="30" height="30" xmlns="http://www.w3.org/2000/svg" version="1.1" 
                                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
@@ -191,10 +191,10 @@
                             </p>
                         </div>
                         <div class="w-12/12">
-                            <p class="figtree-light font-medium text-2xl mb-4 xl:mb-12 pt-2">Up Next</p>
-                            <p class="font-medium text-3xl lg:text-6xl mb-3"><strong><?= $title_1_next; ?></strong></p>
-                            <p class="font-medium text-4xl lg:text-8xl mb-12"><strong><?= $title_2_next; ?></strong></p>
-                            <div class="items-end w-full pb-16 xl:hidden">
+                            <p class="figtree-light font-medium text-2xl mb-4 xl:mb-12 pt-2 fade-in-element">Up Next</p>
+                            <p class="font-medium text-3xl lg:text-6xl mb-3 fade-in-element"><strong><?= $title_1_next; ?></strong></p>
+                            <p class="font-medium text-4xl lg:text-8xl mb-12 fade-in-element"><strong><?= $title_2_next; ?></strong></p>
+                            <div class="items-end w-full pb-16 xl:hidden fade-in-element">
                                 <div class="flex explore-rotate-left">
                                     <p class="text-lg xl:text-2xl font-normal text-end me-3 figtree-light">
                                         Explore more
@@ -206,7 +206,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="items-end w-2/12 pb-16 hidden xl:flex">
+                    <div class="items-end w-2/12 pb-16 hidden xl:flex fade-in-element">
                         <div class="flex explore-rotate-left">
                             <p class="text-lg xl:text-2xl font-normal text-end me-3 figtree-light">
                                 Explore more

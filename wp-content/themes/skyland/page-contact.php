@@ -18,7 +18,7 @@
     $languages = "";
 ?>
 <!-- Contact section -->
-<section class="w-screen full-page" id="contact-description">
+<section class="w-screen full-page fade-in-element" id="contact-description">
     <div class="flex flex-col lg:flex-row mb-36 pt-40">
         <div class="w-full lg:w-6/12 flex justify-start items-end">
             <div class="w-full h-full">
@@ -64,11 +64,11 @@
 
 
 <!-- section reach us -->
-<section class="w-screen full-page" id="reach-us">
+<section class="w-screen full-page mt-20" id="reach-us">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.png';?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-24">
             <div class="flex flex-col xl:flex-row justify-end items-start w-full">
-                <div class="flex w-full lg:w-5/12">
+                <div class="flex w-full lg:w-5/12 fade-in-element">
                     <div class="border w-9 h-9 p-1 md:p-0 md:w-10 md:h-10 rounded-full border-white flex justify-center items-center lg:me-12">
                         <p class="figtree-light text-sm">02</p>
                     </div>
@@ -76,7 +76,7 @@
                         <h1 class="font-medium text-3xl lg:text-4xl mb-12 ms-4 md:ms-0"><strong>Reach Us</strong></h1>
                     </div>
                 </div>
-                <div class="figtree-light w-full lg:w-7/12 lg:pe-28" id="form">
+                <div class="figtree-light w-full lg:w-7/12 lg:pe-28 fade-in-element" id="form">
                     <?= 
                         do_shortcode('[contact-form-7 id="'.$reach_us.'" title="Reach Us Form"]');
                     ?>

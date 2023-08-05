@@ -30,7 +30,7 @@
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-40">
             <div class="flex justify-between w-full">
                 <div class="w-full flex">
-                    <div class="border w-12 h-10 xl:w-10 xl:h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 xl:ms-1 rotate-180 font-medium hover:cursor-pointer">
+                    <div class="border fade-in-element w-12 h-10 xl:w-10 xl:h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 xl:ms-1 rotate-180 font-medium hover:cursor-pointer">
                         <p class="figtree-light animate-pulse">
                             <svg id="SvgjsSvg1011" width="18" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" 
                             xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
@@ -40,8 +40,8 @@
                         </p>
                     </div>
                     <div class="w-full flex flex-col justify-between">
-                        <h2 class="font-medium text-3xl xl:text-4xl mb-4">Latest News</h2>
-                        <h1 class="font-medium text-4xl xl:text-7xl xl:mb-8"><strong><?= $title; ?></strong></h1>
+                        <h2 class="font-medium text-3xl xl:text-4xl mb-4 fade-in-element">Latest News</h2>
+                        <h1 class="font-medium text-4xl xl:text-7xl xl:mb-8 fade-in-element"><strong><?= $title; ?></strong></h1>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                     <?php
                         if ($i % 3 == 0) {
                     ?>
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12 xl:border-b-2 xl:border-white">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12 xl:border-b-2 xl:border-white fade-in-element">
                     <?php 
                         }
                     ?>

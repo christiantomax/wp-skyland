@@ -58,11 +58,11 @@
                         <div class="flex mt-8 lg:mt-10 pe-4">
                             <a href="#properties-swiper">
                                 <div class="flex explore-rotate-down">
-                                    <p class="text-md lg:text-2xl font-normal me-3 figtree-light">
+                                    <p class="text-lg lg:text-xl font-normal me-3 figtree-light">
                                         Scroll
                                     </p>
                                     <div class="flex items-end pb-1 icon animate-pulse rotate-90">
-                                        <img class="h-3 lg:h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                        <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                                     </div>
                                 </div>
                             </a>
@@ -84,7 +84,7 @@
                     <p class="pt-2 border-b-2 border-white text-transparent lg:hidden">sky</p>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p id="quotes" class="pt-5 lg:pt-1 min-h-content text-2xl lg:text-5xl leading-normal">
+                    <p id="quotes" class="pt-5 lg:pt-1 min-h-content text-2xl lg:text-5xl">
                         <?= $quotes; ?>
                     </p>
                 </div>

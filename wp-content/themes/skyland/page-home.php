@@ -61,9 +61,9 @@
 <section class="w-screen h-screen full-page relative" id="home-banner">
     <div class="bg-fixed w-full h-full flex justify-center">
         <div class="w-11/12 h-full flex flex-col justify-end py-10 lg:py-32 ps-4 lg:ps-0 z-10">
-            <h1 class="font-medium text-3xl lg:text-6xl"><?= $title1; ?></h1>
-            <h2 class="font-medium text-4xl lg:text-8xl mt-4"><?= $title2; ?></h2>
-            <p class="figtree-light font-regular text-xl lg:text-md mt-12"><?= $title3; ?> <span class="lg:ms-16">est. <?= $year; ?></span></p>
+            <h1 class="font-medium text-3xl lg:text-6xl fade-in-element"><?= $title1; ?></h1>
+            <h2 class="font-medium text-4xl lg:text-8xl mt-4 fade-in-element"><?= $title2; ?></h2>
+            <p class="figtree-light font-regular text-xl lg:text-md mt-12 fade-in-element"><?= $title3; ?> <span class="lg:ms-16">est. <?= $year; ?></span></p>
         </div>
     </div>
     <div class="absolute top-0 w-screen h-screen z-0">
@@ -88,7 +88,7 @@
 <!-- Offered Section Properties -->
 <section class="w-screen full-page flex justify-center" id="properties">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-10 lg:pt-36 xl:ps-0 lg:ps-0">
-        <div class="flex mb-2 lg:mb-16">
+        <div class="flex mb-2 lg:mb-16 fade-in-element">
             <div class="border w-8 h-8 lg:w-10 lg:h-10 rounded-full border-white flex justify-center items-center me-3 lg:me-12">
                 <p class="figtree-light">01</p>
             </div>
@@ -126,7 +126,7 @@
                         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
                         $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         ?>
-                            <div class="relative slick-slide bg-gray-700 text-2xl">
+                            <div class="relative slick-slide bg-gray-700 text-2xl fade-in-element">
                                 <div class="w-full h-full absolute top-0 left-0">
                                     <img class="w-full h-full bg-cover bg-center object-cover" src="<?= $image_banner; ?>"/>
                                 </div>
@@ -169,8 +169,8 @@
 ?>
 <!-- Investment Section -->
 <section class="w-screen full-page" id="properties-swiper">
-    <div class="flex h-8-12 mb-36 m-4 mr-0 xl:ms-10">
-        <div class="w-1/12">
+    <div class="flex h-8-12 mb-36 lg:mt-32 m-4 mr-0 xl:ms-10">
+        <div class="w-1/12 fade-in-element">
             <div class="w-full flex mb-14">
                 <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:ms-6">
                     <p class="figtree-light">02</p>
@@ -182,10 +182,10 @@
         </div>
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div>
-                <div class="w-full h-30 mb-8 lg:mb-16">
+                <div class="w-full h-30 mb-8 lg:mb-16 fade-in-element">
                     <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Investment</strong></h1>
                 </div>
-                <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16">
+                <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16 fade-in-element">
                     <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
                 </div>
                 <div class="flex flex-col lg:flex-row">
@@ -193,13 +193,13 @@
                         <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
-                        <p class="pt-1 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="pt-1 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden fade-in-element">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden">
+                        <p class="mt-10 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden fade-in-element">
                             <?= $paragraph_bottom;?>
                         </p>
-                        <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4">
+                        <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4 fade-in-element">
                             <a href="<?= $base_url;?>/investment">
                                 <div class="flex explore-rotate-left">
                                     <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
@@ -215,7 +215,7 @@
                 </div>
             </div>
             <div class="flex justify-end items-end">
-                <div class="w-full lg:w-8/12 home-investment-right-image">
+                <div class="w-full lg:w-8/12 home-investment-right-image fade-in-element">
                     <img class="w-full h-full object-cover" src="<?= $image_right; ?>"/>
                 </div>
             </div>
@@ -234,7 +234,7 @@
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image;?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
             <div class="flex flex-col lg:flex-row lg:justify-between w-full z-30">
-                <div class="w-full lg:w-10/12 flex ps-0 lg:ps-0" >
+                <div class="w-full lg:w-10/12 flex ps-0 lg:ps-0 fade-in-element" >
                     <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-0 lg:ms-2 lg:me-10">
                         <p class="figtree-light">03</p>
                     </div>
@@ -245,7 +245,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex lg:justify-end w-full lg:w-2/12 my-4 lg:my-0 ms-10 lg:ms-0 h-fit explore-rotate-left">
+                <div class="flex lg:justify-end w-full lg:w-2/12 my-4 lg:my-0 ms-10 lg:ms-0 h-fit explore-rotate-left fade-in-element">
                     <a href="<?= $base_url;?>/about-us">
                         <div class="flex items-end explore-rotate-left">
                             <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">

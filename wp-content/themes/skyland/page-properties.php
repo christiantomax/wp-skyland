@@ -54,12 +54,12 @@
         <div class="bg-fixed w-11/12  flex bg-no-repeat bg-cover h-full">
             <div class="flex justify-between w-full ps-4 lg:ps-0">
                 <div class="flex" >
-                    <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
+                    <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12 fade-in-element">
                         <p class="figtree-light">01</p>
                     </div>
                     <div class="w-12/12 ps-1">
-                        <h2 class="font-medium text-3xl lg:text-4xl mb-4"><?= $title1; ?></h2>
-                        <h1 class="font-medium text-4xl lg:text-7xl mb-4 lg:mb-10"><strong><?= $title2; ?></strong></h1>
+                        <h2 class="font-medium text-3xl lg:text-4xl mb-4 fade-in-element"><?= $title1; ?></h2>
+                        <h1 class="font-medium text-4xl lg:text-7xl mb-4 lg:mb-10 fade-in-element"><strong><?= $title2; ?></strong></h1>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
 </section>
     
 <section class="w-12/12 lg:ms-72" id="property-description">
-        <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-16 figtree-light ml-3 lg:ml-0 pl-16 lg:pl-0 pr-4">
+        <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-16 figtree-light ml-3 lg:ml-0 pl-16 lg:pl-0 pr-4 fade-in-element">
             <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:h-24">
                 <?= $paragraph_left; ?>
             </p>
@@ -77,7 +77,7 @@
             </p>
         </div>
         
-        <div class="lg:w-12/12 lg:h-72 flex foreword-image-container ml-3 lg:ml-0 ps-16 lg:ps-0">
+        <div class="lg:w-12/12 lg:h-72 flex foreword-image-container ml-3 lg:ml-0 ps-16 lg:ps-0 fade-in-element">
             <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
         </div>
 </section>
@@ -91,7 +91,7 @@
 	$prefix = 'properties_category_';
 ?>
 <!-- section project list header -->
-<section class="w-screen full-page" id="project-list">
+<section class="w-screen full-page fade-in-element" id="project-list">
     <div class="w-full h-full flex justify-center">
         <div class="bg-fixed w-full lg:w-11/12 flex bg-no-repeat bg-cover h-full pt-24 lg:pt-40 ml-3 lg:ml-0">
             <div class="flex flex-col lg:flex-row justify-between w-full lg:ps-0">
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div>
-                    <nav class="p-0 xl:hidden">
+                    <nav class="p-0 xl:hidden fade-in-element">
                         <div class="flex flex-wrap items-center justify-between mx-auto p-0 ml-8">
                             <div class="w-full md:w-auto" id="navbar-dropdown">
                             <ul class="flex flex-col font-medium md:p-0 mt-4 hidden">
@@ -200,7 +200,7 @@
                         $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
                     ?>
-                    <div class="expander h-90">
+                    <div class="expander h-90 fade-in-element">
                         <a href="<?= $link_slug; ?>">
                             <article class="h-full">
                                 <div class="w-12/12 flex h-80">
@@ -239,7 +239,7 @@
                     $countLastRow = 3 - $limit_posts % 3;
                     for ($k = 0; $k < $countLastRow; $k++) {
                         ?>
-                        <div class="h-90 opacity-0">
+                        <div class="h-90 opacity-0 fade-in-element">
                             <article class="h-full">
                                 <div class="w-12/12 flex h-80">
                                     <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
@@ -301,18 +301,18 @@
                                         <time class="text-sm me-8"><?= $year;?> </time>
                                     </div>
                                     <div>
-                                        <div class="w-12/12 flex h-32">
+                                        <div class="w-12/12 flex h-32 fade-in-element">
                                             <img class="w-full h-full object-cover" src="<?= $image_banner;?>"/>
                                         </div>
-                                        <header class="mt-6 text-xl pb-2 flex">
+                                        <header class="mt-6 text-xl pb-2 flex fade-in-element">
                                             <h1 class="text-2xl font-bold"><?= $title_1.' '.$title_2;?></h1>
                                         </header>
-                                        <div class="text-ellipsis overflow-hidden">
+                                        <div class="text-ellipsis overflow-hidden fade-in-element">
                                             <p class="pb-4 text-md mt-4 leading-8">
                                                 <?= $paragraph_left;?>
                                             </p>
                                         </div>
-                                        <div class="flex mt-3 mb-8">
+                                        <div class="flex mt-3 mb-8 fade-in-element">
                                             <a href="<?= $link_slug;?>">
                                                 <div class="flex explore-rotate-left">
                                                     <p class="text-md font-normal text-end me-3">

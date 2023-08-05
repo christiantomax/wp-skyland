@@ -32,19 +32,19 @@
             <div class="flex flex-col lg:flex-row justify-between items-end w-full lg:ps-0">
                 <div class="flex flex-col lg:flex-row items-end">
                     <div class="w-full lg:w-3/12 mb-10 lg:mb-0">
-                        <h1 class="font-medium text-7xl mb-0"><strong><?= $title_right; ?></strong></h1>
+                        <h1 class="font-medium text-7xl mb-0 fade-in-element"><strong><?= $title_right; ?></strong></h1>
                     </div>
                     <div class="w-full lg:w-7/12">
-                        <p class="pt-1 leading-8 text-ellipsis overflow-hidden figtree-light ">
+                        <p class="pt-1 leading-8 text-ellipsis overflow-hidden figtree-light fade-in-element">
                             <?= $paragraph; ?>
                         </p>
                     </div>
                 </div>
                 <div class="w-full lg:w-4/12 flex h-fit lg:justify-end explore-rotate-down me-4 ps-4 lg:ps-0 mt-5 lg:mt-0">
-                    <p class="text-lg lg:text-md font-normal text-right figtree-light ">
+                    <p class="text-lg lg:text-md font-normal text-right figtree-light fade-in-element">
                         Scroll
                     </p>
-                    <div class="pt-2 ms-3 icon animate-pulse rotate-90">
+                    <div class="pt-2 ms-3 icon animate-pulse rotate-90 fade-in-element">
                         <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                 $image = get_post_meta($post_id, $prefix . '_image' )[0];
                 $image = wp_get_attachment_image_src($image, 'full')[0];
         ?>
-            <div class="w-full team-person__container__image lg:mb-16 <?= $i%2 == 0 ? 'me-4' : 'ms-4'?>">
+            <div class="w-full team-person__container__image lg:mb-16 fade-in-element <?= $i%2 == 0 ? 'me-4' : 'ms-4'?>">
                 <a href="<?= $link; ?>" target="_blank">
                     <img class="w-full h-full object-cover" src="<?= $image; ?>"/>
                 </a>
@@ -98,10 +98,10 @@
 <section class="w-screen full-page flex justify-center lg:ps-4" id="team-partners">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-24">
         <div class="flex mb-16">
-            <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-4 xl:me-12">
+            <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-4 xl:me-12 fade-in-element">
                 <p class="figtree-light">02</p>
             </div>
-            <h1 class="font-medium text-4xl lg:text-7xl"><strong>Partners</strong></h1>
+            <h1 class="font-medium text-4xl lg:text-7xl fade-in-element"><strong>Partners</strong></h1>
         </div>
     </div>
 </section>
@@ -135,7 +135,7 @@
                 <?php
             }
         ?>
-            <div class="w-1/3 lg:w-1/5 max-h-52 team-partners-list__image mb-16 p-2">
+            <div class="w-1/3 lg:w-1/5 max-h-52 team-partners-list__image mb-16 p-2 fade-in-element">
                 <a href="<?= $link; ?>" target="_blank">
                     <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
                 </a>
@@ -179,7 +179,7 @@
                 <?php
             }
         ?>
-            <div class="w-1/3 lg:w-1/5 max-h-52 team-partners-list__image mb-16 p-2">
+            <div class="w-1/3 lg:w-1/5 max-h-52 team-partners-list__image mb-16 p-2 fade-in-element">
                 <a href="<?= $link; ?>" target="_blank">
                     <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
                 </a>
