@@ -15,6 +15,18 @@
         $query = new WP_Query($args);
         return $query->posts;
     }
+
+    function get_post_without_taxonomy($post_type, $post_id) {
+        $args = array(
+            'post_type'      => $post_type,
+            'posts_per_page' => -1,
+            'post__not_in'   => array($post_id),
+            'post_status'    => 'publish',
+        );
+        
+        $query = new WP_Query($args);
+        return $query->posts;
+    }
     
     global $wpdb;
 
@@ -100,27 +112,32 @@
                     </div>
                 </div>
                 <?php
-                    $taxonomy = 'properties-category'; // Replace 'properties-category' with your desired taxonomy slug
+                    $list_all_post = get_post_without_taxonomy("property", "");
+                    $limit_posts = count($list_all_post);
+                    $prefix = 'properties_';
 
-                    // Get all the terms (categories) for the taxonomy
-                    $terms = get_terms(array(
-                        'taxonomy' => $taxonomy,
-                        'hide_empty' => false, // Set to 'true' if you want to exclude empty categories
-                    ));
+                    for ($i = 0; $i < $limit_posts; $i++) {
+                        $post_id = $list_all_post[$i]->ID;
 
-                    if (!empty($terms)) {
-                        foreach ($terms as $term) {
+                        $title_1 = get_post_meta($post_id, $prefix . 'title_1' )[0];
+                        $title_2 = get_post_meta($post_id, $prefix . 'title_2' )[0];
+
+                        //get image banner project detail
+                        $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
+                        $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         ?>
                             <div class="relative slick-slide bg-gray-700 text-2xl">
                                 <div class="w-full h-full absolute top-0 left-0">
-                                    <img class="w-full h-full bg-cover bg-center object-cover" src="<?= $imageListTaxonomy['z_taxonomy_image'.$term->term_id]; ?>"/>
+                                    <img class="w-full h-full bg-cover bg-center object-cover" src="<?= $image_banner; ?>"/>
                                 </div>
                                 <div class="w-full h-full px-10 py-10 flex items-end z-10">
-                                    <h5 class="figtree-light drop-shadow-sm"><?= $term->name;?></h5>
+                                    <div>
+                                        <h5 class="figtree-light text-left"><?= $title_1?></h5>
+                                        <p class="figtree-light"><?= $title_2?></p>
+                                    </div>
                                 </div>
                             </div>
                         <?php
-                        }
                     }
                 ?>
             </div>
@@ -213,11 +230,11 @@
     $image= rwmb_meta($prefix.$section.'image'.$languages)["full_url"];
 ?>
 <!-- story section -->
-<section class="w-screen full-page" id="home-story">
+<section class="relative w-screen h-screen" id="home-story">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image;?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
-            <div class="flex flex-col lg:flex-row lg:justify-between w-full">
-                <div class="w-full lg:w-8/12 flex ps-0 lg:ps-0" >
+            <div class="flex flex-col lg:flex-row lg:justify-between w-full z-30">
+                <div class="w-full lg:w-10/12 flex ps-0 lg:ps-0" >
                     <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-0 lg:ms-2 lg:me-10">
                         <p class="figtree-light">03</p>
                     </div>
@@ -228,7 +245,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="flex lg:justify-end w-full lg:w-4/12 my-4 lg:my-0 ms-10 lg:ms-0 h-fit explore-rotate-left">
+                <div class="flex lg:justify-end w-full lg:w-2/12 my-4 lg:my-0 ms-10 lg:ms-0 h-fit explore-rotate-left">
                     <a href="<?= $base_url;?>/about-us">
                         <div class="flex items-end explore-rotate-left">
                             <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
@@ -243,6 +260,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay"></div>
 </section>
 
 <div class="hidden drag-cursor fixed z-40 pointer-events-none lg:hidden">

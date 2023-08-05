@@ -17,7 +17,7 @@
 ?>
 
     <footer>
-        <section class="w-screen full-page" id="footer">
+        <section class="w-screen full-page z-50" id="footer">
             <div class="h-fit flex justify-center text-base xl:text-1xl mb-14 mt-0 pt-16 px-3 figtree-light relative bg-black z-30">
                 <div class="flex flex-col xl:flex-row w-11/12 items-between">
                     <div class="w-full xl:w-3/12 me-2">

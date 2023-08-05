@@ -151,11 +151,6 @@
     </div>
 </section>
 
-<?php
-    $list_all_post = get_posts_taxonomy("property_category", "");
-    $limit_posts = count($list_all_post);
-	$prefix = 'properties_category_';
-?>
 <section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
         <div class="wrapper mb-10">
