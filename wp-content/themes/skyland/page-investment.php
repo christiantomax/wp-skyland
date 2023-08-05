@@ -206,7 +206,7 @@
     const onMouseMove = (e) =>{
         if(is_moving_object){
             circle.style.left = (e.pageX + 15) + 'px'
-            circle.style.top = (e.pageY - 250) + 'px'
+            circle.style.top = (e.pageY - 75) + 'px'
         }
     }
     document.addEventListener('mousemove', onMouseMove)
