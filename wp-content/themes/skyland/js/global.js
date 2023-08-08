@@ -4,21 +4,13 @@ var scrolled = false;
 var scrollPosition = window.scrollY;
 
 button.addEventListener("click", function() {
-    var element = document.getElementById("navbar-dropdown");
-    console.log("masuk");
-    // Get the src attribute value of the image
-    if(element.classList.contains("hidden")){
-        scrolled = true;
-        element.classList.remove("hidden");
-        navbar.classList.remove("bg-transparent");
+    var isExpanded = $('#nav-btn-macaron').attr('aria-expanded');
+    console.log("isExpanded", isExpanded)
+    if (isExpanded === 'true') {
+        navbar.classList.remove("bg-with-black");
         navbar.classList.add("bg-with-gradient");
-        document.body.style.overflow = 'hidden';
     } else {
-        scrolled = true;
-        navbar.classList.remove("bg-with-gradient");
-        navbar.classList.add("bg-transparent");
-        element.classList.add("hidden");
-        document.body.style.overflow = 'auto';
+        navbar.classList.add("bg-with-black");
     }
 });
 

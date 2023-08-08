@@ -89,6 +89,10 @@
     transition: 1.5s ease;
 }
 
+.bg-with-black {
+    background-color: #000 !important;
+}
+
 .grecaptcha-badge{
     display: none;
 }

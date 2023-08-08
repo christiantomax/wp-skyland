@@ -86,7 +86,7 @@
 </section>
 
 <!-- Section About Us Mission -->
-<section class="w-screen full-page flex justify-center" id="about-us-mission">
+<section class="w-screen full-page flex justify-center hidden" id="about-us-mission">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-4 lg:pt-24 ps-0 lg:ps-0">
         <div class="flex mb-4 lg:mb-16 fade-in-element">
             <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:ms-1 lg:me-12">
@@ -104,7 +104,7 @@
     $list_all_post = get_post_without_taxonomy("mission", "");
     $limit_posts = count($list_all_post);
 ?>
-<section class="w-screen full-page mb-20" id="properties-swiper">
+<section class="w-screen full-page mb-20 hidden" id="properties-swiper">
     <div>
         <div class="wrapper mb-10">
             <div class="carousel hover:cursor-none">
@@ -154,7 +154,7 @@
         <div class="w-1/12">
             <div class="w-full flex mb-14">
                 <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:ms-6">
-                    <p class="figtree-light">03</p>
+                    <p class="figtree-light">02</p>
                 </div>
             </div>
             <div class="w-full lg:hidden mr-2 mt-36">
@@ -210,7 +210,7 @@
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-24 ps-0 lg:ps-0">
         <div class="flex mb-4 lg:mb-16">
             <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
-                <p class="figtree-light">04</p>
+                <p class="figtree-light">03</p>
             </div>
             <p class="font-medium text-3xl lg:text-6xl">Team</p>
         </div>
@@ -239,7 +239,7 @@
         <div class="w-1/12 flex justify-end hidden lg:block">
             <div class="flex mb-14">
                 <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center xl:ms-12 fade-in-element">
-                    <p class="figtree-light">04</p>
+                    <p class="figtree-light">03</p>
                 </div>
             </div>
         </div>

@@ -69,10 +69,10 @@
     
 <section class="w-12/12 lg:ms-72" id="property-description">
         <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-16 figtree-light ml-3 lg:ml-0 pl-16 lg:pl-0 pr-4 fade-in-element">
-            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:h-24">
+            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis lg:w-4/12">
                 <?= $paragraph_left; ?>
             </p>
-            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis overflow-hidden lg:w-4/12 lg:h-24 lg:ms-8">
+            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis lg:w-4/12 lg:ms-8">
                 <?= $paragraph_right; ?>
             </p>
         </div>
