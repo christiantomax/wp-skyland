@@ -174,18 +174,20 @@
                         //get image banner project detail
                         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
                         $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
+                        $link_slug = get_permalink($post_id);
                         ?>
-                            <div class="relative slick-slide bg-gray-700 text-2xl">
+                            <a class="relative slick-slide bg-gray-700 text-2xl" href="<?= $link_slug; ?>">
                                 <div class="w-full h-full absolute top-0 left-0">
                                     <img class="w-full h-full bg-cover bg-center object-cover" src="<?= $image_banner; ?>"/>
                                 </div>
-                                <div class="w-full h-full px-10 py-10 flex items-end z-10">
-                                    <div>
+                                <div class="w-full h-full px-10 py-10 flex items-end">
+                                    <div class="z-30">
                                         <h5 class="figtree-light text-left"><?= $title_1?></h5>
                                         <p class="figtree-light"><?= $title_2?></p>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="overlay hover:bg-transparent z-20"></div>
+                            </a>
                         <?php
                     }
                 ?>
@@ -221,7 +223,7 @@
             <div class="flex flex-col lg:flex-row lg:justify-between w-full pb-52 lg:pb-0">
                 <div class="flex" >
                     <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
-                        <p class="figtree-light">04</p>
+                        <p class="figtree-light">03</p>
                     </div>
                     <div class="w-full lg:w-5/12">
                         <h1 class="font-medium text-3xl lg:text-6xl mb-6 lg:mb-12"><strong>Partnership</strong></h1>

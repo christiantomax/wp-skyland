@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth !important;
+}
+
 .full-page{
     max-width: 100vw;
 }
@@ -64,8 +68,8 @@
 
 #moving-object {
     position:absolute;
-    height:6vw !important;
-    width:8vw !important;
+    height:16vw !important;
+    width:14vw !important;
     z-index:50;
     visibility: hidden;
     
@@ -85,7 +89,7 @@
 }
 
 .bg-with-gradient {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     transition: 1.5s ease;
 }
 

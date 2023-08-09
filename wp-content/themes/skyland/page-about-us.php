@@ -164,7 +164,7 @@
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div class="lg:w-11/12">
                 <div class="w-full h-30 mb-8 lg:mb-16">
-                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl fade-in-element"><strong>Investment</strong></h1>
+                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl fade-in-element"><strong>Our Story</strong></h1>
                 </div>
                 <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16 pe-10 lg:pe-0">
                     <img class="w-full h-full object-cover fade-in-element" src="<?= $image_left; ?>"/>
@@ -181,7 +181,7 @@
                             <?= $paragraph_bottom;?>
                         </p>
                         <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4 fade-in-element">
-                            <a href="#about-us-team">
+                            <a href="<?= $base_url;?>/team">
                                 <div class="flex explore-rotate-left">
                                     <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
                                         Partners
@@ -256,7 +256,7 @@
                         <?= $paragraph_bottom;?>
                     </p>
                     <div class="flex mt-10 pe-4 fade-in-element">
-                        <a href="<?= $base_url;?>/teams">
+                        <a href="<?= $base_url;?>/team">
                             <div class="flex explore-rotate-left">
                                 <p class="text-xl lg:text-md font-normal text-end me-3">
                                     Explore more

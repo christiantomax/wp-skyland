@@ -63,7 +63,7 @@
         <div class="w-11/12 h-full flex flex-col justify-end py-10 lg:py-32 ps-4 lg:ps-0 z-10">
             <h1 class="font-medium text-3xl lg:text-6xl fade-in-element"><?= $title1; ?></h1>
             <h2 class="font-medium text-4xl lg:text-8xl mt-4 fade-in-element"><?= $title2; ?></h2>
-            <p class="figtree-light font-regular text-xl lg:text-md mt-12 fade-in-element"><?= $title3; ?> <span class="lg:ms-16">est. <?= $year; ?></span></p>
+            <p class="figtree-light font-regular text-xl lg:text-md mt-12 fade-in-element"><?= $title3; ?> <span class="lg:ms-16"><?= $year; ?></span></p>
         </div>
     </div>
     <div class="absolute top-0 w-screen h-screen z-0">
@@ -74,7 +74,7 @@
                     foreach ($image as $key => $value) {
                         ?>
                             <div class="swiper-slide swiper-slide-home-banner w-full h-full">
-                                <img class=" w-screen h-screen bg-no-repeat bg-cover" src="<?= $image[$key]['full_url'];?>" alt="img">
+                                <img class=" w-screen h-screen bg-no-repeat bg-cover bg-center" src="<?= $image[$key]['full_url'];?>" alt="img">
                             </div>
                         <?php
                     }

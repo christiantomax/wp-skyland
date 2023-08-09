@@ -16,6 +16,7 @@
 
     $section = "section_";
     $languages = "";
+    $email = rwmb_meta($prefix.$section.'email'.$languages);
 ?>
 <!-- Contact section -->
 <section class="w-screen full-page fade-in-element" id="contact-description">
@@ -50,6 +51,9 @@
                 <div class="flex h-3/4">
                     <div class="flex flex-col justify-between figtree-light ">
                         <div class="pt-1 min-h-content text-ellipsis overflow-hidden">
+                            <a href="mailto:<?= $email; ?>">
+                                <?= $email; ?><br/><br/>
+                            </a>
                             <?= $paragraph; ?>
                         </div>
                         <div class="flex mt-10 lg:mt-24 pe-4">

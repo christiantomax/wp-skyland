@@ -177,10 +177,10 @@
 <!-- story section -->
 <section class="w-screen full-page-height" id="next-property">
     <a href="<?= $next_slug; ?>">
-        <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner_next;?>)">
+        <div class="relative bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner_next;?>)">
             <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
                 <div class="flex justify-between w-full">
-                    <div class="flex" >
+                    <div class="flex z-20">
                         <div class="border w-14 h-10 xl:w-10 xl:h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 rotate-180 font-medium hover:cursor-pointer">
                             <p class="figtree-light animate-pulse">
                                 <svg id="SvgjsSvg1011" width="18" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" 
@@ -218,6 +218,7 @@
                     </div>
                 </div>
             </div>
+            <div class="overlay"></div>
         </div>
     </a>
 </section>

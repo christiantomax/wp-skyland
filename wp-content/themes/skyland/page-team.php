@@ -99,7 +99,7 @@
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-24">
         <div class="flex mb-16">
             <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-4 xl:me-12 fade-in-element">
-                <p class="figtree-light">02</p>
+                <p class="figtree-light">01</p>
             </div>
             <h1 class="font-medium text-4xl lg:text-7xl fade-in-element"><strong>Partners</strong></h1>
         </div>

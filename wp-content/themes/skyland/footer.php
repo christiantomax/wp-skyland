@@ -13,6 +13,7 @@
         $instagram = get_post_meta($post_id, $prefix.$section.'instagram'.$languages, true);
         $email = get_post_meta($post_id, $prefix.$section.'email'.$languages, true);
         $facebook = get_post_meta($post_id, $prefix.$section.'instagram'.$languages, true);
+        $address = get_post_meta($post_id, 'contact_Maps_section_paragraph', true);
     }
 ?>
 
@@ -25,7 +26,7 @@
                             <img class="h-8 mb-8 xl:mb-0 footer__logo__container" src="<?= $assets_folder_path.'/img/logo.png';?>"/>
                             <p></p>
                         </div>
-                        <p class="h-1/4">Skye, Victoria, 3977<br/>Australia</p>
+                        <?= $address; ?>
                         <div class="h-2/4 pt-12 lg:pt-0 grid grid-cols-1 gap-4 hidden xl:block">
                             <div class="lg:my-7">
                                 <a href="<?= $instagram != '' ? $instagram : '#'; ?>" target="_blank">Instagram</a>
@@ -82,7 +83,7 @@
                     <div class="w-full xl:w-4/12 me-2">
                         <div class="mt-10 xl:mt-0 h-full flex flex-col xl:justify-between items-center xl:items-end">
                             <p class="h-2/4 hidden xl:block"></p>
-                            <a href="#">
+                            <a onclick="scrollToTop()">
                                 <div class="w-full h-2/4 flex items-end justify-end w-4/12 h-fit icon-rotate-up">
                                     <p class="font-normal w-11/12 text-right mr-3">
                                         Scroll to Top
