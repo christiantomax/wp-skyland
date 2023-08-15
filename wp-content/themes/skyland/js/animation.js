@@ -14,8 +14,9 @@ fadeElements.forEach((element) => {
         duration: 2,
         ease: 'power2.out',
         scrollTrigger: {
-            markers: false,
-            trigger: element, // Use the current element as the trigger
+            markers: true,
+            trigger: element,
+            toggleActions: 'play resume resume reverse',
         },
     }
     );
