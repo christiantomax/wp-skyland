@@ -15,7 +15,7 @@
     <title>Coming Soon | Skyland</title>
     <link rel="stylesheet" href="<?= $assets_folder_path."/style/font.css"; ?>">
 </head>
-<body class="scroll-smooth bg-black text-white overflow-x-hidden relative">
+<body class="bg-black text-white overflow-x-hidden relative">
         <section class="w-screen h-screen full-page relative" id="coming-soon">
             <div class="w-screen h-screen flex flex-col justify-between items-center bg-dark py-20 lora-regular" style="color: #BF955B;">
                 <h1 class="text-3xl"><strong>Under Construction</strong></h1>

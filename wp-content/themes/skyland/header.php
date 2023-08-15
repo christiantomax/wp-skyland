@@ -80,7 +80,7 @@
         
     ?>
 </head>
-<body class="scroll-smooth bg-black text-white overflow-x-hidden relative lora-regular">
+<body class="bg-black text-white overflow-x-hidden relative lora-regular">
     <div class="rounded-xl" id="moving-object"></div>
 
 <?php 
