@@ -9,8 +9,13 @@ button.addEventListener("click", function() {
     if (isExpanded === 'true') {
         navbar.classList.remove("bg-with-black");
         navbar.classList.add("bg-with-gradient");
+
+        $('#close-icon').addClass('hidden');
+        $('#macaron-icon').removeClass('hidden');
     } else {
         navbar.classList.add("bg-with-black");
+        $('#macaron-icon').addClass('hidden');
+        $('#close-icon').removeClass('hidden');
     }
 });
 

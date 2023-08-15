@@ -75,7 +75,7 @@
     />
     <?php 
         if(get_the_title() != 'Contact' && get_the_title() != 'Investment'){
-            // echo '<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />';
+            echo '<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />';
         }
         
     ?>
