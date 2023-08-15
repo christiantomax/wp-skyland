@@ -35,3 +35,29 @@ window.addEventListener("scroll", function() {
         scrolled = true;
     }
 });
+
+function scrollToTop() {
+    const startingY = window.scrollY;
+    
+    const duration = 500;
+    
+    const startTime = performance.now();
+    
+    function step(timestamp) {
+      const currentTime = timestamp - startTime;
+      
+      const scrollY = startingY * Math.pow(1 - currentTime / duration, 3);
+      
+      window.scrollTo(0, scrollY);
+      
+      if (currentTime < duration) {
+        requestAnimationFrame(step);
+      }
+    }
+    
+    requestAnimationFrame(step);
+  }
+  
+  const scrollToTopButton = document.getElementById('scrollToTopButton');
+  scrollToTopButton.addEventListener('click', scrollToTop);
+  
