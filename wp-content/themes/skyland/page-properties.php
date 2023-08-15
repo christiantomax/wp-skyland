@@ -59,7 +59,7 @@
                     </div>
                     <div class="w-12/12 ps-1">
                         <h2 class="font-medium text-3xl lg:text-4xl mb-4 fade-in-element"><?= $title1; ?></h2>
-                        <h1 class="font-medium text-4xl lg:text-7xl mb-4 lg:mb-10 fade-in-element"><strong><?= $title2; ?></strong></h1>
+                        <h1 class="font-medium text-4xl lg:text-7xl mb-4 mt-3 leading-[3rem] lg:mb-10 fade-in-element"><strong><?= $title2; ?></strong></h1>
                     </div>
                 </div>
             </div>
@@ -69,10 +69,10 @@
     
 <section class="w-12/12 lg:ms-72" id="property-description">
         <div class="flex flex-col lg:flex-row foreword-description mb-6 lg:mb-16 figtree-light ml-3 lg:ml-0 pl-16 lg:pl-0 pr-4 fade-in-element">
-            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis lg:w-4/12">
+            <p class="pt-1 my-3 mr-5 leading-8 lg:my-0 text-ellipsis lg:w-4/12">
                 <?= $paragraph_left; ?>
             </p>
-            <p class="pt-1 my-3 leading-8 lg:my-0 text-ellipsis lg:w-4/12 lg:ms-8">
+            <p class="pt-1 my-3 mr-5 leading-8 lg:my-0 text-ellipsis lg:w-4/12 lg:ms-8">
                 <?= $paragraph_right; ?>
             </p>
         </div>
@@ -272,7 +272,7 @@
 <section class="w-screen full-page flex flex-col items-center lg:hidden" id="news-list">
     <div class="w-full h-full flex items-end flex-col justify-center pb-2 figtree-light">
         <div class="w-full flex justify-end mb-8">
-            <div class="flex flex-col justify-end border-b-4 border-white pb-8 project-list__container__project">
+            <div class="flex flex-col justify-end pb-8 project-list__container__project">
                 <?php
                     for ($i = 0; $i < $limit_posts; $i++) {
                         $post_id = $list_all_post[$i]->ID;
@@ -301,7 +301,7 @@
                                             <h1 class="text-2xl font-bold"><?= $title_1.' '.$title_2;?></h1>
                                         </header>
                                         <div class="text-ellipsis overflow-hidden fade-in-element">
-                                            <p class="pb-4 text-md mt-4 leading-8">
+                                            <p class="pb-4 text-md mt-4 mr-5 leading-8">
                                                 <?= $paragraph_left;?>
                                             </p>
                                         </div>

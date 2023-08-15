@@ -49,7 +49,7 @@
                 <div class="w-full">
                     <h1 class="font-medium text-3xl lg:text-4xl mb-2"><?= $title1; ?></h1>
                     <h2 class="font-medium text-4xl lg:text-7xl mb-10 lg:mb-16"><strong><?= $title2; ?></strong></h2>
-                    <p class="pt-1 leading-8 min-h-content text-ellipsis overflow-hidden figtree-light lg:me-28">
+                    <p class="pt-1 leading-8 min-h-content text-ellipsis overflow-hidden figtree-light mr-5 lg:me-28">
                         <?= $paragraph; ?>
                     </p>
                 </div>
@@ -131,7 +131,7 @@
                         <div class="w-full h-56 lg:hidden <?= $i == 0 ? 'mt-5' : 'mt-8'; ?>">
                             <img class="w-full h-full object-cover bg-center" src="<?= $image; ?>"/>
                         </div>
-                        <p class="w-full lg:w-6/12 pt-1 min-h-content text-ellipsis overflow-hidden mb-6 lg:mb-12 cursor-pointer leading-8  <?= $i == 0 ? 'mt-4' : 'mt-12';?> figtree-light pe-8 lg:pe-0"
+                        <p class="w-full lg:w-6/12 pt-1 min-h-content text-ellipsis overflow-hidden mr-5 lg:mr-0 mb-6 lg:mb-12 cursor-pointer leading-8  <?= $i == 0 ? 'mt-4' : 'mt-12';?> figtree-light pe-8 lg:pe-0"
                         id="investment-paragraph-<?= $i; ?>">
                             <?= $paragraph;?>
                         </p>
@@ -161,8 +161,8 @@
 <!-- section reach us -->
 <section class="w-screen full-page mb-40" id="reach-us">
     <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.png';?>)">
-        <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-24">
-            <div class="flex flex-col xl:flex-row justify-end items-start w-full">
+        <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-[15vh] lg:py-24">
+            <div class="flex flex-col xl:flex-row lg:justify-end items-start w-full">
                 <div class="flex w-full">
                     <div class="border w-9 h-9 p-1 md:p-0 md:w-10 md:h-10 rounded-full border-white flex justify-center items-center lg:me-12">
                         <p class="figtree-light text-sm">03</p>

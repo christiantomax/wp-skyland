@@ -82,7 +82,7 @@
                     <div class="w-full xl:w-4/12 me-2">
                         <div class="mt-10 xl:mt-0 h-full flex flex-col xl:justify-between items-center xl:items-end">
                             <p class="h-2/4 hidden xl:block"></p>
-                            <a onclick="scrollToTop()">
+                            <a href="#">
                                 <div class="w-full h-2/4 flex items-end justify-end w-4/12 h-fit icon-rotate-up">
                                     <p class="font-normal w-11/12 text-right mr-3">
                                         Scroll to Top

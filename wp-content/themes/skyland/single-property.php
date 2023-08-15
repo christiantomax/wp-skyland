@@ -107,7 +107,9 @@
                     for ($i = 0; $i < count($fieldset_text_image); $i++) {
                         ?>
                             <article>
-                                <img src="<?= $fieldset_text_image[$i]; ?>" alt="Image 1">
+                                <div class="w-full">
+                                    <img class="w-full h-full bg-no-repeat bg-cover bg-center object-none" src="<?= $fieldset_text_image[$i]; ?>" alt="Image <?= $i; ?>">
+                                </div>
                                 <h2 class="paragraph text-xl figtree-light"><?= $address;?></h2>
                                 <p class="paragraph leading-8 text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
                             </article>
@@ -181,7 +183,7 @@
             <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
                 <div class="flex justify-between w-full">
                     <div class="flex z-20">
-                        <div class="border w-14 h-10 xl:w-10 xl:h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 rotate-180 font-medium hover:cursor-pointer">
+                        <div class="border w-10 h-10 xl:w-10 xl:h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 rotate-180 font-medium hover:cursor-pointer">
                             <p class="figtree-light animate-pulse">
                                 <svg id="SvgjsSvg1011" width="18" height="18" xmlns="http://www.w3.org/2000/svg" version="1.1" 
                                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">

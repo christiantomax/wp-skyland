@@ -174,25 +174,39 @@
 ?>
 <!-- Investment Section -->
 <section class="w-screen full-page" id="properties-swiper">
-    <div class="flex h-8-12 mb-36 lg:mt-32 m-4 mr-0 xl:ms-10">
+    <div class="flex h-8-12 lg:mt-32 m-4 mr-0 xl:ms-10 lg:mb-8">
         <div class="w-1/12 fade-in-element">
-            <div class="w-full flex mb-14">
+            <div class="w-full flex">
                 <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:ms-6">
                     <p class="figtree-light">02</p>
                 </div>
             </div>
-            <div class="w-full lg:hidden mr-2 mt-36">
+        </div>
+        <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
+            <div>
+                <div class="w-full h-30 fade-in-element">
+                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Investment</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex h-8-12 xl:m-4 mr-0 mt-10 xl:ms-10">
+        <div class="w-1/12 hidden lg:block fade-in-element">
+        </div>
+        <div class="w-full lg:w-11/12 grid grid-cols-1 lg:grid-cols-2 lg:ps-0">
+            <div class="w-full h-40 lg:h-48 mb-8 fade-in-element">
+                <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
+            </div>
+        </div>
+    </div>
+    <div class="flex h-8-12 mb-36 m-4 mr-0 xl:ms-10">
+        <div class="w-1/12 fade-in-element">
+            <div class="w-full lg:hidden mr-2">
                 <span class="border-b-2 border-white text-transparent">sky</span>
             </div>
         </div>
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div>
-                <div class="w-full h-30 mb-8 lg:mb-16 fade-in-element">
-                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Investment</strong></h1>
-                </div>
-                <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16 fade-in-element">
-                    <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
-                </div>
                 <div class="flex flex-col lg:flex-row">
                     <div class="w-8/12 hidden lg:block">
                         <span class="border-b-2 border-white text-transparent">skyland</span>
@@ -242,15 +256,15 @@
                 <div class="w-full lg:w-10/12 flex ps-0 lg:ps-0 fade-in-element" >
                     <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-0 lg:ms-2 lg:me-10">
                         <p class="figtree-light">03</p>
-                    </div>
+                    </div>44
                     <div class="w-full lg:w-5/12 ps-2 lg:ps-0">
                         <h1 class="figtree-light font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>The Story</strong></h1>
-                        <p class="pt-1 leading-8 text-ellipsis overflow-hidden figtree-light">
+                        <p class="pt-1 mr-5 xl:mr-5 leading-8 text-ellipsis overflow-hidden figtree-light">
                             <?= $paragraph;?>
                         </p>
                     </div>
                 </div>
-                <div class="flex lg:justify-end w-full lg:w-2/12 my-4 lg:my-0 ms-10 lg:ms-0 h-fit explore-rotate-left fade-in-element">
+                <div class="flex lg:justify-end w-full lg:w-2/12 my-4 mt-10 lg:my-0 ms-10 lg:ms-0 h-fit explore-rotate-left fade-in-element">
                     <a href="<?= $base_url;?>/about-us">
                         <div class="flex items-end explore-rotate-left">
                             <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
