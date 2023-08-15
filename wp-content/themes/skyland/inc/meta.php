@@ -4,19 +4,15 @@ require_once get_template_directory().'/inc/taxonomy/taxonomy_property.php';
 require_once get_template_directory().'/inc/meta_post/news.php';
 require_once get_template_directory().'/inc/meta_post/property.php';
 require_once get_template_directory().'/inc/meta_post/investment_opportunities.php';
-require_once get_template_directory().'/inc/meta_post/partner.php';
-require_once get_template_directory().'/inc/meta_post/team.php';
 require_once get_template_directory().'/inc/meta_post/mission.php';
 
 
 require_once get_template_directory().'/inc/meta_page/home.php';
 require_once get_template_directory().'/inc/meta_page/about-us.php';
-require_once get_template_directory().'/inc/meta_page/experience.php';
 require_once get_template_directory().'/inc/meta_page/investment.php';
 require_once get_template_directory().'/inc/meta_page/property.php';
 require_once get_template_directory().'/inc/meta_page/news.php';
 require_once get_template_directory().'/inc/meta_page/contact.php';
-require_once get_template_directory().'/inc/meta_page/team.php';
 
 // for spesific page title
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
