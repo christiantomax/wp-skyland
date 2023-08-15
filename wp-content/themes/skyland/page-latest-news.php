@@ -92,7 +92,7 @@
                                     <?= $news__paragraph_top; ?>
                                 </p>
                                 <div class="flex items-end figtree-light mb-10">
-                                    <div class="flex items-center">
+                                    <div class="flex items-center mt-5">
                                         <p class="figtree-link-light text-sm me-10">
                                             2023
                                         </p>
