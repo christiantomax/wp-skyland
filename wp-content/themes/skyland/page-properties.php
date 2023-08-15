@@ -178,14 +178,14 @@
     $idx_print = 0;
 ?>
 <!-- section news list item -->
-<section class="w-screen full-page flex-col items-center hidden xl:flex" id="news-list">
+<section class="w-screen full-page flex-col items-center hidden lg:flex" id="news-list">
         <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15 figtree-light">
     <?php
         for ($i = 0; $i < $limit_posts/3; $i++) {
             $loopingItem = $i * 3 + 3;
     ?>
         <div class="w-full flex justify-end ms-24 mb-8">
-            <div class="flex justify-end border-b-4 border-white pb-8 project-list__container__project">
+            <div class="w-full flex justify-between <?=($i == round($limit_posts/3)-1 ? ' ' : 'border-b-4 border-white')?> pb-8 project-list__container__project">
             <?php
                 for ($j = $i * 3; $j < $loopingItem && $j < $limit_posts; $j++, $idx_print++) {
                         $post_id = $list_all_post[$idx_print]->ID;
@@ -200,7 +200,7 @@
                         $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
                     ?>
-                    <div class="expander h-90 fade-in-element">
+                    <div class="expander h-90 fade-in-element" items="<?=($i+1)?>_<?=(($j+1) > 3 ? round(($j+1) / 3) : ($j+1))?>">
                         <a href="<?= $link_slug; ?>">
                             <article class="h-full">
                                 <div class="w-12/12 flex h-80">
@@ -209,12 +209,12 @@
                                 <header class="mt-6 text-3xl h-10/12 truncate pb-2">
                                     <time class="text-2xl me-8"><?= $year;?> </time><?= $title_1.' '.$title_2;;?>
                                 </header>
-                                <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description">
+                                <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description property-detail" items="desc_<?=($i+1)?>_<?=(($j+1) > 3 ? round(($j+1) / 3) : ($j+1))?>">
                                     <p class="property-project-description pb-4 leading-8">
                                         <?= $paragraph_left;?>
                                     </p>
                                 </div>
-                                <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description">
+                                <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description property-detail" items="explore_<?=($i+1)?>_<?=(($j+1) > 3 ? round(($j+1) / 3) : ($j+1))?>">
                                     <a href="<?= $link_slug;?>">
                                         <div class="flex explore-rotate-left">
                                             <p class="text-md font-normal text-end me-3">
@@ -242,7 +242,7 @@
                         <div class="h-90 opacity-0 fade-in-element">
                             <article class="h-full">
                                 <div class="w-12/12 flex h-80">
-                                    <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                                    <img class="w-full h-full object-cover" src="<?=get_template_directory_uri()?>/assets/img/property-placeholder.png"/>
                                 </div>
                                 <header class="mt-6 text-3xl h-10/12 truncate pb-2">
                                     <time class="text-2xl me-8"> </time>
@@ -252,14 +252,7 @@
                                     </p>
                                 </div>
                                 <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description">
-                                    <div class="flex explore-rotate-left">
-                                        <p class="text-2xl font-normal text-end me-3">
-                                            Explore more
-                                        </p>
-                                        <div class="flex items-end pb-1 icon animate-pulse">
-                                            <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </article>
                         </div>
