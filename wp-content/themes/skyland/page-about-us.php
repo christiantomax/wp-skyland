@@ -180,18 +180,6 @@
                         <p class="mt-10 leading-8 text-ellipsis overflow-y-scroll lg:overflow-hidden pe-8 lg:pe-0 fade-in-element">
                             <?= $paragraph_bottom;?>
                         </p>
-                        <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4 fade-in-element">
-                            <a href="<?= $base_url;?>/team">
-                                <div class="flex explore-rotate-left">
-                                    <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
-                                        Partners
-                                    </p>
-                                    <div class="flex items-end pb-1 icon animate-pulse ">
-                                        <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -255,18 +243,6 @@
                     <p class="mt-10 leading-8 text-ellipsis overflow-hidden pe-8 lg:pe-0 fade-in-element">
                         <?= $paragraph_bottom;?>
                     </p>
-                    <div class="flex mt-10 pe-4 fade-in-element">
-                        <a href="<?= $base_url;?>/team">
-                            <div class="flex explore-rotate-left">
-                                <p class="text-xl lg:text-md font-normal text-end me-3">
-                                    Explore more
-                                </p>
-                                <div class="flex items-end pb-1 icon animate-pulse">
-                                    <img class="h-5" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
