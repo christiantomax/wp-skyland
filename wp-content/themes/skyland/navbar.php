@@ -22,9 +22,6 @@
                         <a href="<?= $base_url; ?>/investment" class="block py-2 mx-6 rounded hover:text-gray-200 nav-service-dropdown__li" aria-current="about">Investment</a>
                     </li>
                     <li>
-                        <a href="<?= $base_url; ?>/experience" class="block py-2 mx-6 rounded hover:text-gray-200 nav-service-dropdown__li" aria-current="about">Experience</a>
-                    </li>
-                    <li>
                         <a href="<?= $base_url; ?>/latest-news" class="block py-2 mx-6 rounded hover:text-gray-200 nav-service-dropdown__li" aria-current="about">News</a>
                     </li>
                     <li>

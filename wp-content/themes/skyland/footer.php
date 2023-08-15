@@ -50,7 +50,6 @@
                                 <a href="<?= esc_url( home_url() )."/about-us"; ?>" class="my-4">About Us</a>
                             </div>
                             <div class="flex flex-col ml-8">
-                                <a href="<?= esc_url( home_url() )."/experience"; ?>" class="my-4">Experience</a>
                                 <a href="<?= esc_url( home_url() )."/news"; ?>" class="my-4">News</a>
                                 <a href="<?= esc_url( home_url() )."/contact"; ?>" class="my-4">Contact</a>
                             </div>
