@@ -88,6 +88,17 @@
     z-index: 1; /* Make sure the overlay appears above other elements */
 }
 
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0.5; /* Adjust the opacity to make it more or less transparent */
+    z-index: 1; /* Make sure the overlay appears above other elements */
+}
+
 .bg-with-gradient {
     background: rgba(0, 0, 0, 0.9);
     transition: 1.5s ease;
