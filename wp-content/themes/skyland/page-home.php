@@ -74,7 +74,9 @@
                     foreach ($image as $key => $value) {
                         ?>
                             <div class="swiper-slide swiper-slide-home-banner w-full h-full">
-                                <img class=" w-screen h-screen bg-no-repeat bg-cover bg-center" src="<?= $image[$key]['full_url'];?>" alt="img">
+                                <div class="h-full w-full">
+                                    <img class="w-full h-full bg-no-repeat bg-cover bg-center object-cover" src="<?= $image[$key]['full_url'];?>" alt="img">
+                                </div>
                             </div>
                         <?php
                     }

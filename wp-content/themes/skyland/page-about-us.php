@@ -166,7 +166,7 @@
                 <div class="w-full h-30 mb-8 lg:mb-16">
                     <h1 class="figtree-light font-medium text-4xl lg:text-6xl fade-in-element"><strong>Our Story</strong></h1>
                 </div>
-                <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16 pe-10 lg:pe-0">
+                <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16 lg:pe-0">
                     <img class="w-full h-full object-cover fade-in-element" src="<?= $image_left; ?>"/>
                 </div>
                 <div class="flex flex-col lg:flex-row">
