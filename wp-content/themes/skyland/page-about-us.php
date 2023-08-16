@@ -149,42 +149,68 @@
     $image_right= rwmb_meta($prefix.$section.'image_right'.$languages)['full_url'];
 ?>
 <!-- section background story -->
-<section class="w-screen full-page" id="about-us-background-story">
-    <div class="flex h-8-12 mb-0 xl:mb-36 ms-4 xl:ms-10">
-        <div class="w-1/12">
-            <div class="w-full flex mb-14">
+<section class="w-screen full-page" id="properties-swiper">
+    <div class="flex h-8-12 lg:mt-32 m-4 mr-0 xl:ms-10 lg:mb-8">
+        <div class="w-1/12 fade-in-element">
+            <div class="w-full flex">
                 <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center lg:ms-6">
                     <p class="figtree-light">02</p>
                 </div>
             </div>
-            <div class="w-full lg:hidden mr-2 mt-36">
+        </div>
+        <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
+            <div>
+                <div class="w-full h-30 fade-in-element">
+                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Our Story</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex h-8-12 xl:m-4 mr-0 mt-10 xl:ms-10">
+        <div class="w-1/12 hidden lg:block fade-in-element">
+        </div>
+        <div class="w-full lg:w-11/12 grid grid-cols-1 lg:grid-cols-2 lg:ps-0">
+            <div class="w-full h-40 lg:h-48 mb-8 fade-in-element">
+                <img class="w-full h-full object-cover" src="<?= $image_left; ?>"/>
+            </div>
+        </div>
+    </div>
+    <div class="flex h-8-12 mb-28 m-4 mr-0 xl:ms-10">
+        <div class="w-1/12 fade-in-element">
+            <div class="w-full lg:hidden mr-2">
                 <span class="border-b-2 border-white text-transparent">sky</span>
             </div>
         </div>
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
-            <div class="lg:w-11/12">
-                <div class="w-full h-30 mb-8 lg:mb-16">
-                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl fade-in-element"><strong>Our Story</strong></h1>
-                </div>
-                <div class="w-full h-20 lg:h-48 mb-8 lg:mb-16 lg:pe-0">
-                    <img class="w-full h-full object-cover fade-in-element" src="<?= $image_left; ?>"/>
-                </div>
+            <div>
                 <div class="flex flex-col lg:flex-row">
                     <div class="w-8/12 hidden lg:block">
-                        <span class="border-b-2 border-white text-transparent lg:me-8">skyland</span>
+                        <span class="border-b-2 border-white text-transparent">skyland</span>
                     </div>
-                    <div class="flex flex-col justify-between figtree-light ">
-                        <p class="pt-2 leading-8 text-ellipsis overflow-y-scroll lg:overflow-hidden pe-8 lg:pe-0 fade-in-element">
+                    <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
+                        <p class="pt-1 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden fade-in-element">
                             <?= $paragraph_top;?>
                         </p>
-                        <p class="mt-10 leading-8 text-ellipsis overflow-y-scroll lg:overflow-hidden pe-8 lg:pe-0 fade-in-element">
+                        <p class="mt-10 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden fade-in-element">
                             <?= $paragraph_bottom;?>
                         </p>
+                        <div class="flex lg:justify-end mt-8 lg:mt-10 mb-8 lg:mb-0 pe-4 fade-in-element">
+                            <a href="<?= $base_url;?>/investment">
+                                <div class="flex explore-rotate-left">
+                                    <p class="text-xl lg:text-md font-normal text-end me-3 figtree-light ">
+                                        Explore more
+                                    </p>
+                                    <div class="flex items-end pb-1 icon animate-pulse">
+                                        <img class="h-4" src="<?= $assets_folder_path.'/icon/PANAH.png';?>"/>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="flex justify-end items-end">
-                <div class="w-full lg:w-11/12 home-investment-right-image fade-in-element">
+                <div class="w-full lg:w-8/12 home-investment-right-image fade-in-element">
                     <img class="w-full h-full object-cover" src="<?= $image_right; ?>"/>
                 </div>
             </div>
@@ -195,7 +221,7 @@
 
 <!-- Section Team -->
 <section class="w-screen full-page flex justify-center xl:hidden" id="about-us-team-header">
-    <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-24 ps-0 lg:ps-0">
+    <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full lg:pt-24 ps-0 lg:ps-0">
         <div class="flex mb-4 lg:mb-16">
             <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-2 lg:me-12">
                 <p class="figtree-light">03</p>
