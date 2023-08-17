@@ -256,7 +256,7 @@
                 <div class="w-full lg:w-10/12 flex ps-0 lg:ps-0 fade-in-element" >
                     <div class="border w-8 h-8 lg:w-10 lg:h-10 p-2 lg:p-0 rounded-full border-white flex justify-center items-center me-0 lg:ms-2 lg:me-10">
                         <p class="figtree-light">03</p>
-                    </div>44
+                    </div>
                     <div class="w-full lg:w-5/12 ps-2 lg:ps-0">
                         <h1 class="figtree-light font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>The Story</strong></h1>
                         <p class="pt-1 mr-5 xl:mr-5 leading-8 text-ellipsis overflow-hidden figtree-light">

@@ -201,10 +201,9 @@
                         $link_slug = get_permalink($post_id);
                     ?>
                     <div class="expander h-90 fade-in-element" items="<?=($i+1)?>_<?=(($j+1) > 3 ? round(($j+1) / 3) : ($j+1))?>">
-                        <a href="<?= $link_slug; ?>">
-                            <article class="h-full">
-                                <div class="w-12/12 flex h-80">
-                                    <img class="w-full h-full object-cover" src="<?= $image_banner;?>"/>
+                        <a class="w-full" href="<?= $link_slug; ?>">
+                            <div class="h-full w-full">
+                                <div class="w-12/12 flex h-80 bg-[url(<?= $image_banner;?>)] bg-cover bg-center">
                                 </div>
                                 <header class="mt-6 text-3xl h-10/12 truncate pb-2">
                                     <time class="text-2xl me-8"><?= $year;?> </time><?= $title_1.' '.$title_2;;?>
@@ -226,7 +225,7 @@
                                         </div>
                                     </a>
                                 </div>
-                            </article>
+                            </div>
                         </a>
                     </div>
                     <?php

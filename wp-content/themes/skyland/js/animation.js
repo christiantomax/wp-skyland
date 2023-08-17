@@ -16,7 +16,6 @@ fadeElements.forEach((element) => {
         scrollTrigger: {
             markers: false,
             trigger: element,
-            toggleActions: 'play resume resume reverse',
         },
     }
     );
