@@ -69,30 +69,10 @@ function scrollToTop() {
   $(document).ready(function() {
         $("html, body").addClass("overflow-hidden");
 
-        var totalImages = $("img").length;
-        var loadedImages = 0;
-
-        function checkAllImagesLoaded() {
-            if (loadedImages === totalImages) {
-                delayedFunction();
-            }
-        }
-
-        $("img").each(function() {
-            var image = new Image();
-            image.onload = function() {
-                loadedImages++;
-                checkAllImagesLoaded();
-            };
-            image.src = $(this).attr("src");
-        });
-
-        function delayedFunction() {
-            setTimeout(() => {
-                $("#loader-screen").addClass("hidden");
-                $("html, body").removeClass("overflow-hidden");  
-            }, 1000);
-        }
+        setTimeout(() => {
+            $("#loader-screen").addClass("hidden");
+            $("html, body").removeClass("overflow-hidden");  
+        }, 2800);
     
     });
   
