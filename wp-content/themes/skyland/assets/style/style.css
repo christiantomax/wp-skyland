@@ -116,6 +116,14 @@
     line-height: 4.5rem;
 }
 
+#loader-screen{
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     #message{

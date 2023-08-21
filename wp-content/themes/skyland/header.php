@@ -82,6 +82,16 @@
 </head>
 <body class="bg-black text-white overflow-x-hidden relative lora-regular">
     <div class="rounded-xl" id="moving-object"></div>
+    <section class="w-screen h-screen flex flex-col justify-between items-center bg-dark lora-regular" id="loader-screen">
+        <div class="w-full h-full flex flex-col items-center justify-center">
+            <div class="flex flex-col items-center">
+                <div class="w-28 h-[5.5rem]">
+                    <img class="w-full h-full object-cover bg-top bg-cover bg-no-repeat rounded-full" src="<?= $assets_folder_path."/img/logo-gold.gif";?>">
+                </div>
+                <h2 class="text-5xl mt-5 text-center"><strong>Skyland</strong></h2>
+            </div>
+        </div>
+    </section>
 
 <?php 
     require get_theme_file_path( 'navbar.php' );
