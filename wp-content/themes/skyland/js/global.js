@@ -72,7 +72,7 @@ function scrollToTop() {
         setTimeout(() => {
             $("#loader-screen").addClass("hidden");
             $("html, body").removeClass("overflow-hidden");  
-        }, 2800);
+        }, 1500);
     
     });
   
