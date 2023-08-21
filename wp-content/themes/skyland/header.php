@@ -33,7 +33,7 @@
 
     <meta name="description" content="<?= $description; ?>">
     <meta name="keywords" content="<?= $keyword; ?>">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="<?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?>">
     <meta property="og:description" content="<?= $description; ?>">

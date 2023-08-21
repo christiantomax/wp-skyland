@@ -241,7 +241,7 @@
                         <div class="h-90 opacity-0 fade-in-element">
                             <article class="h-full">
                                 <div class="w-12/12 flex h-80">
-                                    <img class="w-full h-full object-cover" src="<?=get_template_directory_uri()?>/assets/img/property-placeholder.png"/>
+                                    <img class="w-full h-full object-cover" src="<?=get_template_directory_uri()?>/assets/img/property-placeholder.webp"/>
                                 </div>
                                 <header class="mt-6 text-3xl h-10/12 truncate pb-2">
                                     <time class="text-2xl me-8"> </time>
