@@ -101,7 +101,7 @@
     $title= rwmb_meta($prefix.$section.'title'.$languages);
 ?>
 <!-- section investment opportunity -->
-<section class="w-screen full-page m-0" id="properties-swiper">
+<section class="w-screen full-page m-0 hidden" id="properties-swiper">
     <div class="flex h-8-12 mb-36 pt-36 ps-6 lg:ps-16">
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
@@ -159,13 +159,13 @@
     }
 ?>
 <!-- section reach us -->
-<section class="w-screen full-page mb-40" id="reach-us">
-    <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.png';?>)">
+<section class="relative w-screen full-page my-40" id="reach-us">
+    <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.jpg';?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-[15vh] lg:py-24">
-            <div class="flex flex-col xl:flex-row lg:justify-end items-start w-full">
+            <div class="flex flex-col xl:flex-row lg:justify-end items-start w-full z-30">
                 <div class="flex w-full">
                     <div class="border w-9 h-9 p-1 md:p-0 md:w-10 md:h-10 rounded-full border-white flex justify-center items-center lg:me-12">
-                        <p class="figtree-light text-sm">03</p>
+                        <p class="figtree-light text-sm">02</p>
                     </div>
                     <div class="w-full xl:w-6/12">
                         <h1 class="font-medium text-3xl lg:text-4xl mb-12 ms-4 md:ms-0"><strong>Reach Us</strong></h1>
@@ -179,6 +179,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay"></div>
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

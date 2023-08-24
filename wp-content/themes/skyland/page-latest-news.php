@@ -76,11 +76,11 @@
                     <?php
                         if ($i % 3 == 0) {
                     ?>
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12 xl:border-b-2 xl:border-white fade-in-element">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12 xl:border-b-[1px] xl:border-white fade-in-element">
                     <?php 
                         }
                     ?>
-                    <article class="border-b-2 border-white xl:border-0 <?= $i > 0 ? 'mt-12' : ''; ?> xl:mt-0">
+                    <article class="border-b-[1px] border-white xl:border-0 <?= $i > 0 ? 'mt-12' : ''; ?> xl:mt-0">
                         <a href="">
                             <img src="<?= $news__image; ?>" alt="Image 1" title="<?= $news__title_1; ?>">
                             <div class="">

@@ -178,14 +178,14 @@
     <div class="flex h-8-12 mb-28 m-4 mr-0 xl:ms-10">
         <div class="w-1/12 fade-in-element">
             <div class="w-full lg:hidden mr-2">
-                <span class="border-b-2 border-white text-transparent">sky</span>
+                <span class="border-b-[1px] border-white text-transparent">sky</span>
             </div>
         </div>
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div>
                 <div class="flex flex-col lg:flex-row">
                     <div class="w-8/12 hidden lg:block">
-                        <span class="border-b-2 border-white text-transparent">skyland</span>
+                        <span class="border-b-[1px] border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
                         <p class="pt-1 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden fade-in-element">

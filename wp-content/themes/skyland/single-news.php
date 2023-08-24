@@ -28,11 +28,15 @@
         $news__publish_date = new DateTime($news__publish_date);
         $news__publish_date = $news__publish_date->format('M jS Y');
         $news__paragraph_left = get_post_meta($post_id, $prefix . '_paragraph_left' )[0];
-        $news__paragraph_Right = get_post_meta($post_id, $prefix . '_paragraph_Right' )[0];
+        $news__paragraph_right = get_post_meta($post_id, $prefix . '_paragraph_Right' )[0];
 
         //get image banner project detail
         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
+        $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
+
+
+        $news__image_right = get_post_meta($post_id, $prefix . '_image' )[0];
+        $news__image_right = wp_get_attachment_image_src($news__image_right, 'thumbnail')[0];
 
         $list_all_post = get_posts_taxonomy($post_type, $post_id);
     } else {
@@ -60,7 +64,7 @@
             <div class="flex text-md xl:text-lg">
                 <div class="flex flex-col justify-between figtree-light">
                     <div class="w-full h-40">
-                        <img class="w-full h-full object-cover fade-in-element" src="https://picsum.photos/800/533"/>
+                        <img class="w-full h-full object-cover fade-in-element" src="<?= $news__image; ?>"/>
                     </div>
                     <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_top; ?>
@@ -88,7 +92,7 @@
         </div>
         <div class="w-8/12 flex justify-end items-end ps-20 hidden xl:block">
             <div class="w-full home-investment-right-image">
-                <img class="w-full h-full object-cover" src="https://picsum.photos/800/533"/>
+                <img class="w-full h-full object-cover" src="<?= $news__image_right; ?>"/>
             </div>
         </div>
     </div>
@@ -105,7 +109,7 @@
             <div class="flex">
                 <div class="flex flex-col justify-between">
                     <p class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
-                        <?= $news__paragraph_top; ?>
+                        <?= $news__paragraph_left; ?>
                     </p>
                 </div>
             </div>
@@ -114,7 +118,7 @@
             <div class="flex">
                 <div class="flex flex-col justify-between">
                     <p class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
-                        <?= $news__paragraph_top; ?>
+                        <?= $news__paragraph_right; ?>
                     </p>
                 </div>
             </div>
@@ -160,7 +164,7 @@
         <!-- Swiper -->
         <div class="swiper home-properties w-full mb-12">
             <div class="swiper-wrapper h-full">
-                <div class="swiper-slide bg-white flex justify-center items-center w-36 opacity-0 fade-in-element">Slide 1</div>
+                <div class="swiper-slide bg-black text-black flex justify-center items-center w-5 lg:w-28 opacity-0 fade-in-element">Slide 1</div>
                 <?php
                     $limit_posts = count($list_all_post) < 10 ? count($list_all_post) : 10;
                     for ($i = 0; $i < $limit_posts; $i++) {
@@ -177,7 +181,7 @@
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-                        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
+                        $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
                     <div class="swiper-slide w-3/12 px-4 py-10 fade-in-element">

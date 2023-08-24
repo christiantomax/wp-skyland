@@ -68,10 +68,10 @@
 
 
 <!-- section reach us -->
-<section class="w-screen full-page mb-40" id="reach-us">
-    <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.png';?>)">
+<section class="relative w-screen full-page mb-40" id="reach-us">
+    <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $assets_folder_path.'/img/banner-reach-us.jpg';?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full py-[15vh] lg:py-24">
-            <div class="flex flex-col xl:flex-row lg:justify-end items-start w-full">
+            <div class="flex flex-col xl:flex-row lg:justify-end items-start w-full z-30">
                 <div class="flex w-full">
                     <div class="border w-9 h-9 p-1 md:p-0 md:w-10 md:h-10 rounded-full border-white flex justify-center items-center lg:me-12">
                         <p class="figtree-light text-sm">02</p>
@@ -88,6 +88,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay"></div>
 </section>
 
 <?php get_footer() ?>

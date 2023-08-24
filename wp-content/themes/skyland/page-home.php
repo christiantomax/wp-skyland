@@ -91,10 +91,10 @@
 <section class="w-screen full-page flex justify-center" id="properties">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-10 lg:pt-36 xl:ps-0 lg:ps-0">
         <div class="flex mb-2 lg:mb-16 fade-in-element">
-            <div class="border w-8 h-8 lg:w-10 lg:h-10 rounded-full border-white flex justify-center items-center me-3 lg:me-12">
+            <div class="border w-8 h-8 lg:w-10 lg:h-10 rounded-full border-white flex justify-center items-center">
                 <p class="figtree-light">01</p>
             </div>
-            <p class="font-medium text-4xl lg:text-6xl">Properties</p>
+            <p class="font-medium text-4xl lg:text-6xl ms-2 lg:ms-14">Properties</p>
         </div>
     </div>
 </section>
@@ -202,14 +202,14 @@
     <div class="flex h-8-12 mb-36 m-4 mr-0 xl:ms-10">
         <div class="w-1/12 fade-in-element">
             <div class="w-full lg:hidden mr-2">
-                <span class="border-b-2 border-white text-transparent">sky</span>
+                <span class="border-b-[1px] border-white text-transparent">sky</span>
             </div>
         </div>
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div>
                 <div class="flex flex-col lg:flex-row">
                     <div class="w-8/12 hidden lg:block">
-                        <span class="border-b-2 border-white text-transparent">skyland</span>
+                        <span class="border-b-[1px] border-white text-transparent">skyland</span>
                     </div>
                     <div class="flex flex-col justify-between figtree-light mr-4 lg:mr-0">
                         <p class="pt-1 leading-8 lg:ps-14 mr-5 md:mr-0 text-ellipsis overflow-y-scroll lg:overflow-hidden fade-in-element">

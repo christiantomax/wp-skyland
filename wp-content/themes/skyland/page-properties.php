@@ -130,8 +130,8 @@
                             <ul class="flex flex-col font-medium md:p-0 mt-4 hidden">
                                 <li>
                                     <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" 
-                                    class="figtree-light font-bold flex items-center justify-between w-full border-b-2 border-white ml-3 pr-8 pb-3 lg:pe-0 text-sm
-                                        focus:border-b-2
+                                    class="figtree-light font-bold flex items-center justify-between w-full border-b-[1px] border-white ml-3 pr-8 pb-3 lg:pe-0 text-sm
+                                        focus:border-b-[1px]
                                     ">
                                         <?= $getCategory ?> 
                                         <div class="flex items-end explore-rotate-left">
@@ -185,7 +185,7 @@
             $loopingItem = $i * 3 + 3;
     ?>
         <div class="w-full flex justify-end ms-24 mb-8">
-            <div class="w-full flex justify-between <?=($i == round($limit_posts/3)-1 ? ' ' : 'border-b-4 border-white')?> pb-8 project-list__container__project">
+            <div class="w-full flex justify-between <?=($i == round($limit_posts/3)-1 ? ' ' : 'border-b-[1px] border-white')?> pb-8 project-list__container__project">
             <?php
                 for ($j = $i * 3; $j < $loopingItem && $j < $limit_posts; $j++, $idx_print++) {
                         $post_id = $list_all_post[$idx_print]->ID;
@@ -286,7 +286,7 @@
                         $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
                         ?>
-                        <div class="w-full h-90 pe-4 border-b-2 border-white mb-5">
+                        <div class="w-full h-90 pe-4 border-b-[1px] border-white mb-5">
                             <a href="<?= $link_slug;?>">
                                 <article class="h-full flex mt-4">
                                     <div>
