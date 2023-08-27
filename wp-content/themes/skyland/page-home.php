@@ -90,7 +90,7 @@
 <!-- Offered Section Properties -->
 <section class="w-screen full-page flex justify-center" id="properties">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full pt-10 lg:pt-36 xl:ps-0 lg:ps-0">
-        <div class="flex mb-2 lg:mb-16 fade-in-element">
+        <div class="flex mb-10 lg:mb-16 fade-in-element">
             <div class="border w-8 h-8 lg:w-10 lg:h-10 rounded-full border-white flex justify-center items-center">
                 <p class="figtree-light">01</p>
             </div>
@@ -106,13 +106,9 @@
 ?>
 <section class="w-screen full-page mb-20" id="properties-swiper">
     <div>
-        <div class="wrapper mb-10">
-            <div class="carousel hover:cursor-none">
-                <div class="slick-slide opacity-0" id="carousel-first-child">
-                    <div class="w-full h-full px-10 py-10 flex items-end">
-                        <h5 class="figtree-light">Property</h5>
-                    </div>
-                </div>
+        <!-- Swiper -->
+        <div class="swiper swiper-property">
+            <div class="swiper-wrapper">
                 <?php
                     $list_all_post = get_post_without_taxonomy("property", "");
                     $limit_posts = count($list_all_post);
@@ -130,7 +126,7 @@
 
                         $link_slug = get_permalink($post_id);
                         ?>
-                            <a class="relative slick-slide bg-gray-700 text-2xl" href="<?= $link_slug; ?>">
+                            <a class="relative swiper-slide swiper-slide-property bg-gray-700 text-2xl" href="<?= $link_slug; ?>">
                                 <div class="w-full h-full absolute top-0 left-0">
                                     <img class="w-full h-full bg-cover bg-center object-cover" src="<?= $image_banner; ?>"/>
                                 </div>
@@ -146,10 +142,12 @@
                     }
                 ?>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
-    <div class="flex lg:justify-end mr-16">
+    <div class="flex lg:justify-end mr-16 mt-10">
         <a href="<?= $base_url;?>/properties">
             <div class="flex explore-rotate-left">
                 <p class="text-xl lg:text-md font-normal text-end me-3 ms-16 lg:ms-20 lg:ms-0 figtree-light ">

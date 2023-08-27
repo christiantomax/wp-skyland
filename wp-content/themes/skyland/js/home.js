@@ -40,4 +40,16 @@ $(document).ready(function(){
         variableWidth: true,
         centerMode: false,
     });
+
+
+    var swiper = new Swiper(".swiper-property", {
+        loop: true,
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
 });
+

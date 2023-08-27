@@ -34,10 +34,6 @@
         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
         $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
 
-
-        $news__image_right = get_post_meta($post_id, $prefix . '_image' )[0];
-        $news__image_right = wp_get_attachment_image_src($news__image_right, 'thumbnail')[0];
-
         $list_all_post = get_posts_taxonomy($post_type, $post_id);
     } else {
         
@@ -46,7 +42,7 @@
 
 <!-- news Section -->
 <section class="w-screen full-page" id="properties-swiper">
-    <div class="flex h-8-12 mb-36 mt-40 ml-12 xl:ml-0">
+    <div class="flex h-8-12 mb-32 lg:mb-12 mt-40 ml-12 xl:ml-0">
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
                 <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:ms-10 xl:me-3 fade-in-element">
@@ -58,21 +54,27 @@
             <div class="w-full h-30 mb-8 xl:mb-16">
                 <div>
                     <p class="font-medium text-3xl fade-in-element">News</p>
-                    <h1 class="font-medium text-3xl lg:text-4xl mt-2 xl:mt-0"><strong><?= $news__title_1; ?></strong></h1>
+                    <h1 class="font-medium text-3xl lg:text-4xl mt-2 xl:mt-4 mr-8"><strong><?= $news__title_1; ?></strong></h1>
                 </div>
             </div>
             <div class="flex text-md xl:text-lg">
                 <div class="flex flex-col justify-between figtree-light">
-                    <div class="w-full h-40">
+                    <div class="w-full h-40 lg:hidden">
                         <img class="w-full h-full object-cover fade-in-element" src="<?= $news__image; ?>"/>
                     </div>
-                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element">
+                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element lg:hidden mr-8">
+                        <?= $news__paragraph_left; ?>
+                    </p>
+                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element lg:hidden mr-8">
+                        <?= $news__paragraph_right; ?>
+                    </p>
+                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element hidden lg:block">
                         <?= $news__paragraph_top; ?>
                     </p>
-                    <p class="pt-1 text-sm mt-12 text-ellipsis overflow-hidden fade-in-element">
+                    <p class="pt-1 text-sm mt-12 text-ellipsis overflow-hidden fade-in-element  mr-8">
                         Written by: <?= $news__author; ?>
                     </p>
-                    <p class="pt-1 text-sm text-ellipsis overflow-hidden fade-in-element">
+                    <p class="pt-1 mb-10 text-sm text-ellipsis overflow-hidden fade-in-element mr-8">
                         Published: <?= $news__publish_date; ?>
                     </p>
                     
@@ -90,17 +92,14 @@
                 </div>
             </div>
         </div>
-        <div class="w-8/12 flex justify-end items-end ps-20 hidden xl:block">
-            <div class="w-full home-investment-right-image">
-                <img class="w-full h-full object-cover" src="<?= $news__image_right; ?>"/>
-            </div>
+        <div class="w-8/12 flex justify-end items-end ps-20 hidden xl:block bg-center bg-cover bg-no-repeat ms-32" style="background-image: url(<?= $news__image; ?>)">
         </div>
     </div>
 </section>
 
 <!-- news content Section -->
 <section class="w-screen full-page hidden xl:block" id="properties-swiper">
-    <div class="flex h-8-12 mb-10 mt-40 figtree-light">
+    <div class="flex h-8-12 mb-10 mt-20 figtree-light">
         <div class="w-1/12 flex justify-end">
             <div class="flex mb-14">
             </div>
