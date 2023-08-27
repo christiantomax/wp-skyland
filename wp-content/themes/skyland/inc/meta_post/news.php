@@ -115,13 +115,6 @@ function news_section( $meta_boxes ) {
 				'force_delete'     => true,
 				'max_file_uploads' => 1,
 			],
-			[
-				'id'               => $prefix.'_image_right',
-				'name'             => esc_html__( 'Image Right', 'english' ),
-				'type'    		   => 'image_advanced',
-				'force_delete'     => true,
-				'max_file_uploads' => 1,
-			],
 		],
 	];
 return $meta_boxes;

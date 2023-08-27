@@ -82,7 +82,9 @@
                     ?>
                     <article class="border-b-[1px] border-white xl:border-0 <?= $i > 0 ? 'mt-12' : ''; ?> xl:mt-0">
                         <a href="">
-                            <img src="<?= $news__image; ?>" alt="Image 1" title="<?= $news__title_1; ?>">
+                            <div class="w-full h-56">
+                                <img class="w-full h-full object-fit object-cover object-center" src="<?= $news__image; ?>" alt="<?= $news__title_1; ?>" title="<?= $news__title_1; ?>">
+                            </div>
                             <div class="">
                                 <div class="flex justify-between mt-10">
                                     <p class="font-medium text-3xl">News</p>
