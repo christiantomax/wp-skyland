@@ -184,8 +184,8 @@
         for ($i = 0; $i < $limit_posts/3; $i++) {
             $loopingItem = $i * 3 + 3;
     ?>
-        <div class="w-full flex justify-end ms-24 mb-8">
-            <div class="w-full flex justify-between <?=($i == round($limit_posts/3)-1 ? ' ' : 'border-b-[1px] border-white')?> pb-8 project-list__container__project">
+        <div class="w-full flex justify-end ms-24 <?= ($i == round($limit_posts/3)-1 ? ' ' : 'mb-8')?>?>">
+            <div class="w-full flex justify-between border-b-[1px] border-white pb-8 project-list__container__project">
             <?php
                 for ($j = $i * 3; $j < $loopingItem && $j < $limit_posts; $j++, $idx_print++) {
                         $post_id = $list_all_post[$idx_print]->ID;

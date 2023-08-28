@@ -145,8 +145,8 @@
 <!-- Offered Section news -->
 <section class="w-screen full-page flex justify-center" id="properties">
     <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full">
-        <div class="flex mb-16">
-            <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center me-4 xl:me-12 fade-in-element">
+        <div class="flex mb-3">
+            <div class="border w-10 h-10 rounded-full border-white flex justify-center items-center ms-1 me-4 xl:me-12 fade-in-element">
                 <p class="figtree-light">02</p>
             </div>
             <div>
@@ -158,10 +158,10 @@
     </div>
 </section>
 
-<section class="w-screen full-page mb-20 hidden xl:block" id="properties-swiper">
+<section class="w-screen full-page mb-0 hidden xl:block" id="properties-swiper">
     <div>
         <!-- Swiper -->
-        <div class="swiper home-properties w-full mb-12">
+        <div class="swiper home-properties w-full">
             <div class="swiper-wrapper h-full">
                 <div class="swiper-slide bg-black text-black flex justify-center items-center w-5 lg:w-28 opacity-0 fade-in-element">Slide 1</div>
                 <?php
@@ -183,14 +183,14 @@
                         $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
-                    <div class="swiper-slide w-3/12 px-4 py-10 fade-in-element">
+                    <div class="swiper-slide w-3/12 pl-5 pr-4 py-10 fade-in-element">
                         <div>
                             <div class="w-full h-80">
                                 <img class="w-full h-full object-cover" src="<?= $news__image; ?>"/>
                             </div>
                             <p class="mt-8 font-medium text-3xl">News</p>
                             <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
-                            <p class="mt-7 h-20 leading-8 line-clamp-3 text-ellipsis figtree-link-light figtree-light">
+                            <p class="mt-7 leading-8 line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                 <?= $news__paragraph_top; ?>
                             </p>
                             <div class="mt-12 flex items-end figtree-light">
@@ -255,7 +255,7 @@
                                     </p>
                                 </div>
                                 <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
-                                <p class="mt-7 h-28 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
+                                <p class="mt-7 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                     <?= $news__paragraph_top; ?>
                                 </p>
                                 <div class="flex items-end figtree-light">

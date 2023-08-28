@@ -50,7 +50,7 @@
 </section>
 
 <!-- section related news -->
-<section class="w-screen" id="property-galleries">
+<section class="w-screen lg:mb-3" id="property-galleries">
     <div class="flex justify-center">
         <div class="w-full ms-8 me-8 lg:ms-40 lg:me-20">
                 <?php
