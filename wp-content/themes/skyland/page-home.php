@@ -183,7 +183,7 @@
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div>
                 <div class="w-full h-30 fade-in-element">
-                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Investment</strong></h1>
+                    <h1 class="font-medium text-4xl lg:text-6xl"><strong>Investment</strong></h1>
                 </div>
             </div>
         </div>
@@ -256,7 +256,7 @@
                         <p class="figtree-light">03</p>
                     </div>
                     <div class="w-full lg:w-5/12 ps-2 lg:ps-0">
-                        <h1 class="figtree-light font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>The Story</strong></h1>
+                        <h1 class="font-medium text-4xl lg:text-6xl mb-4 lg:mb-12"><strong>The Story</strong></h1>
                         <p class="pt-1 mr-5 xl:mr-5 leading-8 text-ellipsis overflow-hidden figtree-light">
                             <?= $paragraph;?>
                         </p>

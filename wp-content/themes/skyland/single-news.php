@@ -32,7 +32,7 @@
 
         //get image banner project detail
         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-        $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
+        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
 
         $list_all_post = get_posts_taxonomy($post_type, $post_id);
     } else {

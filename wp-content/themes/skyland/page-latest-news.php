@@ -81,7 +81,7 @@
                         }
                     ?>
                     <article class="border-b-[1px] border-white xl:border-0 <?= $i > 0 ? 'mt-12' : ''; ?> xl:mt-0">
-                        <a href="">
+                        <a href="<?= $link_slug; ?>">
                             <div class="w-full h-56">
                                 <img class="w-full h-full object-fit object-cover object-center" src="<?= $news__image; ?>" alt="<?= $news__title_1; ?>" title="<?= $news__title_1; ?>">
                             </div>

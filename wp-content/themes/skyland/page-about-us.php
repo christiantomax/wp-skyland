@@ -161,7 +161,7 @@
         <div class="w-11/12 grid grid-cols-1 lg:grid-cols-2 ps-3 lg:ps-0">
             <div>
                 <div class="w-full h-30 fade-in-element">
-                    <h1 class="figtree-light font-medium text-4xl lg:text-6xl"><strong>Our Story</strong></h1>
+                    <h1 class="font-medium text-4xl lg:text-6xl"><strong>Our Story</strong></h1>
                 </div>
             </div>
         </div>
