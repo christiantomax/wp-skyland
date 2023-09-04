@@ -66,11 +66,16 @@
                         $news__publish_date = $news__publish_date->format('M jS Y');
                         $news__paragraph_left = get_post_meta($post_id, $prefix . '_paragraph_left' )[0];
                         $news__paragraph_Right = get_post_meta($post_id, $prefix . '_paragraph_Right' )[0];
+                        $news__alternative_url = get_post_meta($post_id, $prefix . '_alternative_url' )[0];
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
                         $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
+                        
+                        if ($news__alternative_url != "") {
+                            $link_slug = $news__alternative_url;
+                        }
                 ?>
 
                     <?php

@@ -177,14 +177,19 @@
                         $news__publish_date = $news__publish_date->format('M jS Y');
                         $news__paragraph_left = get_post_meta($post_id, $prefix . '_paragraph_left' )[0];
                         $news__paragraph_Right = get_post_meta($post_id, $prefix . '_paragraph_Right' )[0];
+                        $news__alternative_url = get_post_meta($post_id, $prefix . '_alternative_url' )[0];
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
                         $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
                         $link_slug = get_permalink($post_id);
+
+                        if ($news__alternative_url != "") {
+                            $link_slug = $news__alternative_url;
+                        }
                 ?>
                     <div class="swiper-slide w-3/12 pl-5 pr-4 py-10 fade-in-element">
-                        <div>
+                        <a href="<?= $link_slug; ?>">
                             <div class="w-full h-80">
                                 <img class="w-full h-full object-cover" src="<?= $news__image; ?>"/>
                             </div>
@@ -198,7 +203,6 @@
                                     2023
                                 </p>
                                 <div class="flex ms-16">
-                                    <a href="<?= $link_slug; ?>">
                                         <div class="flex explore-rotate-left">
                                             <p class="text-xl font-normal text-end me-3">
                                                 Explore more
@@ -207,10 +211,9 @@
                                                 <img class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
                                             </div>
                                         </div>
-                                    </a>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 <?php 
                     }
@@ -244,7 +247,7 @@
                         $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
-                    <a href="">
+                    <a href="<?= $link_slug; ?>">
                         <article class="fade-in-element">
                             <img src="<?= $news__image; ?>" alt="Image 1">
                             <div class="paragraph">

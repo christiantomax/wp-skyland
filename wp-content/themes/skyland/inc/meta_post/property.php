@@ -106,6 +106,14 @@ function properties_section( $meta_boxes ) {
 				'max_file_uploads' => 1,
 			],
 			[
+				'id'               => $prefix.'video',
+				'name'             => esc_html__( 'Property Video', 'english' ),
+				'type'    		   => 'video',
+				'force_delete'     => true,
+				'max_status'       => true,
+				'max_file_uploads' => 1,
+			],
+			[
 				'type' => 'divider',
 			],
 			[

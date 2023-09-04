@@ -115,6 +115,11 @@ function news_section( $meta_boxes ) {
 				'force_delete'     => true,
 				'max_file_uploads' => 1,
 			],
+			[
+				'id'               => $prefix.'_alternative_url',
+				'type' 			   => 'text',
+				'name'             => esc_html__( 'Alternative URL', 'english' ),
+			],
 		],
 	];
 return $meta_boxes;
