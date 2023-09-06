@@ -29,6 +29,7 @@
         $news__publish_date = $news__publish_date->format('M jS Y');
         $news__paragraph_left = get_post_meta($post_id, $prefix . '_paragraph_left' )[0];
         $news__paragraph_right = get_post_meta($post_id, $prefix . '_paragraph_Right' )[0];
+        $news__alternative_url = get_post_meta($post_id, $prefix . '_alternative_url' )[0];
 
         //get image banner project detail
         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
@@ -68,6 +69,16 @@
                     <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element lg:hidden mr-8">
                         <?= $news__paragraph_right; ?>
                     </p>
+                    <a class="mt-5 lg:hidden <?= $news__alternative_url == "" ? "hidden" : ""; ?>" href="<?= $news__alternative_url; ?>" target="_blank">
+                        <div class="flex explore-rotate-left">
+                            <p class="text-md font-normal me-3">
+                                Show more
+                            </p>
+                            <div class="flex items-end pb-1 icon animate-pulse">
+                                <img id="explore-more" class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                            </div>
+                        </div>
+                    </a>
                     <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element hidden lg:block">
                         <?= $news__paragraph_top; ?>
                     </p>
@@ -110,6 +121,16 @@
                     <p class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_left; ?>
                     </p>
+                    <a class="mt-5 hidden lg:block <?= $news__alternative_url == "" ? "hidden" : ""; ?>" href="<?= $news__alternative_url; ?>" target="_blank">
+                        <div class="flex explore-rotate-left">
+                            <p class="text-md font-normal me-3">
+                                Show more
+                            </p>
+                            <div class="flex items-end pb-1 icon animate-pulse">
+                                <img id="explore-more" class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -177,16 +198,11 @@
                         $news__publish_date = $news__publish_date->format('M jS Y');
                         $news__paragraph_left = get_post_meta($post_id, $prefix . '_paragraph_left' )[0];
                         $news__paragraph_Right = get_post_meta($post_id, $prefix . '_paragraph_Right' )[0];
-                        $news__alternative_url = get_post_meta($post_id, $prefix . '_alternative_url' )[0];
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
                         $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
                         $link_slug = get_permalink($post_id);
-
-                        if ($news__alternative_url != "") {
-                            $link_slug = $news__alternative_url;
-                        }
                 ?>
                     <div class="swiper-slide w-3/12 pl-5 pr-4 py-10 fade-in-element">
                         <a href="<?= $link_slug; ?>">
@@ -241,6 +257,7 @@
                         $news__publish_date = $news__publish_date->format('M jS Y');
                         $news__paragraph_left = get_post_meta($post_id, $prefix . '_paragraph_left' )[0];
                         $news__paragraph_Right = get_post_meta($post_id, $prefix . '_paragraph_Right' )[0];
+                        $news__alternative_url = get_post_meta($post_id, $prefix . '_alternative_url' )[0];
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];

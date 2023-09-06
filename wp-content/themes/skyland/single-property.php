@@ -99,7 +99,7 @@
 </section>
 
 <!-- section galleries detail property -->
-<section class="w-screen full-page mb-36" id="property-galleries">
+<section class="w-screen full-page mb-3 lg:mb-36" id="property-galleries">
     <div class="flex justify-center">
         <div class="w-full xl:hidden">
             <div class="slider fade-in-element">
@@ -174,6 +174,19 @@
             </div>
         </div>
     </div>
+</section>
+
+<?php
+    $video_data = rwmb_meta('properties_video', [], $post_id);
+    $video_url = "";
+    foreach ($video_data as $key => $value) {
+        $video_url = $video_data[$key]['src'];
+    }
+?>
+<section id="video" class="mx-5 lg:mx-20 mb-20">
+    <video class="w-full h-[40vh] lg:h-[60vh]" src="<?= esc_url($video_url);?>" controls>
+        Your browser does not support the video tag.
+    </video>
 </section>
 
 <!-- story section -->
