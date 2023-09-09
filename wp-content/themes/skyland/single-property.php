@@ -183,7 +183,7 @@
         $video_url = $video_data[$key]['src'];
     }
 ?>
-<section id="video" class="mx-5 lg:mx-20 mb-20">
+<section id="video" class="mx-5 lg:mx-20 mb-20 <?= $video_url == "" ? "hidden" : ""; ?>">
     <video class="w-full h-[40vh] lg:h-[60vh]" src="<?= esc_url($video_url);?>" controls>
         Your browser does not support the video tag.
     </video>

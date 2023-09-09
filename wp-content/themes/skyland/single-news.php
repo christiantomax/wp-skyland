@@ -201,7 +201,7 @@
 
                         //get image banner project detail
                         $news__image = get_post_meta($post_id, $prefix . '_image' )[0];
-                        $news__image = wp_get_attachment_image_src($news__image, 'thumbnail')[0];
+                        $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
                     <div class="swiper-slide w-3/12 pl-5 pr-4 py-10 fade-in-element">
