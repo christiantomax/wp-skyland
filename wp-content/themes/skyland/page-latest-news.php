@@ -41,7 +41,6 @@
                     </div>
                     <div class="w-full flex flex-col justify-between">
                         <h2 class="font-medium text-3xl xl:text-4xl mb-4 fade-in-element">Latest News</h2>
-                        <h1 class="font-medium text-4xl xl:text-7xl xl:mb-8 fade-in-element"><strong><?= $title; ?></strong></h1>
                     </div>
                 </div>
             </div>
