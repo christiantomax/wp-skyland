@@ -75,7 +75,7 @@
                     <?php
                         if ($i % 3 == 0) {
                     ?>
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12 xl:border-b-[1px] xl:border-white fade-in-element">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-12 xl:border-b-[1px] xl:border-white">
                     <?php 
                         }
                     ?>
