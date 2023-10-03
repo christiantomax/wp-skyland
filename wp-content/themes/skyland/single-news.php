@@ -93,10 +93,10 @@
                         <div class="w-full h-full">
                             <p class="mt-6 mb-3 text-md">Share</p>
                             <div class="flex mb-2">
-                                <img class="w-8 mr-1 mb-6" src="<?= $assets_folder_path."/icon/".'telegram.png'; ?>"/>
-                                <img class="w-8 mx-1 mb-6" src="<?= $assets_folder_path."/icon/".'instagram.png'; ?>"/>
-                                <img class="w-8 mx-1 mb-6" src="<?= $assets_folder_path."/icon/".'facebook.png'; ?>"/>
-                                <img class="w-8 ml-1 mb-6" src="<?= $assets_folder_path."/icon/".'link.png'; ?>"/>
+                                <img class="w-8 mr-2 mb-6" src="<?= $assets_folder_path."/icon/".'telegram.png'; ?>"/>
+                                <img class="w-8 mx-2 mb-6" src="<?= $assets_folder_path."/icon/".'instagram.png'; ?>"/>
+                                <img class="w-8 mx-2 mb-6" src="<?= $assets_folder_path."/icon/".'facebook.png'; ?>"/>
+                                <img class="w-8 ml-2 mb-6" src="<?= $assets_folder_path."/icon/".'link.png'; ?>"/>
                             </div>
                         </div>
                     </div>
