@@ -55,7 +55,7 @@
             <div class="w-full h-30 mb-8 xl:mb-16">
                 <div>
                     <p class="font-medium text-3xl fade-in-element">News</p>
-                    <h1 class="font-medium text-3xl lg:text-4xl mt-2 xl:mt-4 mr-8"><strong><?= $news__title_1; ?></strong></h1>
+                    <h1 class="text-3xl lg:text-4xl mt-2 xl:mt-4 mr-8"><?= $news__title_1; ?></h1>
                 </div>
             </div>
             <div class="flex text-md xl:text-lg">
@@ -210,7 +210,7 @@
                                 <img class="w-full h-full object-cover" src="<?= $news__image; ?>"/>
                             </div>
                             <p class="mt-8 font-medium text-3xl">News</p>
-                            <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
+                            <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></h2>
                             <p class="mt-7 leading-8 line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                 <?= $news__paragraph_top; ?>
                             </p>
@@ -274,7 +274,7 @@
                                         2023
                                     </p>
                                 </div>
-                                <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
+                                <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></h2>
                                 <p class="mt-7 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                     <?= $news__paragraph_top; ?>
                                 </p>

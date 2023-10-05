@@ -88,7 +88,7 @@
                                 <div class="flex justify-between mt-10">
                                     <p class="font-medium text-3xl">News</p>
                                 </div>
-                                <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></strong></h2>
+                                <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></h2>
                                 <p class="mt-7 leading-8 overflow-y-hidden line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                     <?= $news__paragraph_top; ?>
                                 </p>
