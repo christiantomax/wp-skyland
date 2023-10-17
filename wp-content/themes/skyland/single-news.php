@@ -120,7 +120,7 @@
         </div>
         <div class="w-5/12">
             <div class="flex">
-                <div class="flex flex-col justify-between">
+                <div class="flex flex-col justify-between xl:ml-8">
                     <div class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_left; ?>
                     </div>
