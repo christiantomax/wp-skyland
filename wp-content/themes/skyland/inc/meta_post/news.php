@@ -75,7 +75,7 @@ function news_section( $meta_boxes ) {
 			],
 			[
 				'id'               => $prefix.'_paragraph_top',
-				'type' 			   => 'textarea',
+				'type' 			   => 'wysiwyg',
 				'name'             => esc_html__( 'Paragraph Top', 'english' ),
 			],
 			[
@@ -90,7 +90,7 @@ function news_section( $meta_boxes ) {
 			],
 			[
 				'id'               => $prefix.'_paragraph_left',
-				'type' 			   => 'textarea',
+				'type' 			   => 'wysiwyg',
 				'name'             => esc_html__( 'Paragraph Left', 'english' ),
 				'raw'     => false,
 				'options' => [
@@ -100,7 +100,7 @@ function news_section( $meta_boxes ) {
 			],
 			[
 				'id'               => $prefix.'_paragraph_Right',
-				'type' 			   => 'textarea',
+				'type' 			   => 'wysiwyg',
 				'name'             => esc_html__( 'Paragraph Right', 'english' ),
 				'raw'     => false,
 				'options' => [

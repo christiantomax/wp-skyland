@@ -116,6 +116,14 @@
     line-height: 4.5rem;
 }
 
+@supports (-webkit-overflow-scrolling: touch) { 	
+    img{ 		
+        background-attachment: scroll; 	
+        
+    } 
+    
+}
+
 #loader-screen{
     z-index: 9999;
     position: fixed;
