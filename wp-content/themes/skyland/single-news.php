@@ -197,7 +197,7 @@
             <div class="swiper-wrapper h-full">
                 <div class="swiper-slide bg-black text-black flex justify-center items-center w-5 lg:w-28 opacity-0 fade-in-element">Slide 1</div>
                 <?php
-                    $limit_posts = count($list_all_post) < 10 ? count($list_all_post) : 10;
+                    $limit_posts = count($list_all_post);
                     for ($i = 0; $i < $limit_posts; $i++) {
                         $post_id = $list_all_post[$i]->ID;
 
