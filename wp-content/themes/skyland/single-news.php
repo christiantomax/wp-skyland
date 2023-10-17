@@ -275,35 +275,37 @@
                         $news__image = wp_get_attachment_image_src($news__image, 'full')[0];
                         $link_slug = get_permalink($post_id);
                 ?>
-                    <a class="fade-in-element" href="<?= $link_slug; ?>">
-                        <img src="<?= $news__image; ?>" alt="Image 1">
-                        <div class="paragraph">
-                            <div class="flex justify-between">
-                                <p class="font-medium text-3xl">News</p>
-                                <p class="figtree-link-light text-lg ms-4">
-                                    2023
-                                </p>
-                            </div>
-                            <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></h2>
-                            <div class="mt-7 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
-                                <?= $news__paragraph_top; ?>
-                            </div>
-                            <div class="flex items-end figtree-light">
-                                <div class="flex">
-                                    <a href="<?= $link_slug; ?>">
-                                        <div class="flex explore-rotate-left">
-                                            <p class="text-md font-normal me-3">
-                                                Explore more
-                                            </p>
-                                            <div class="flex items-end pb-1 icon animate-pulse">
-                                                <img id="explore-more" class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                    <article class="fade-in-element">
+                        <a href="<?= $link_slug; ?>">
+                            <img src="<?= $news__image; ?>" alt="Image 1">
+                            <div class="paragraph">
+                                <div class="flex justify-between">
+                                    <p class="font-medium text-3xl">News</p>
+                                    <p class="figtree-link-light text-lg ms-4">
+                                        2023
+                                    </p>
+                                </div>
+                                <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></h2>
+                                <div class="mt-7 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
+                                    <?= $news__paragraph_top; ?>
+                                </div>
+                                <div class="flex items-end figtree-light">
+                                    <div class="flex">
+                                        <a href="<?= $link_slug; ?>">
+                                            <div class="flex explore-rotate-left">
+                                                <p class="text-md font-normal me-3">
+                                                    Explore more
+                                                </p>
+                                                <div class="flex items-end pb-1 icon animate-pulse">
+                                                    <img id="explore-more" class="h-4" src="<?= $assets_folder_path.'/img/icon-arrow.png';?>"/>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </article>
                 <?php
                     }
                 ?>
