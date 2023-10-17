@@ -96,10 +96,18 @@
                         <div class="w-full h-full">
                             <p class="mt-6 mb-3 text-md">Share</p>
                             <div class="flex mb-2">
-                                <img class="w-8 mr-2 mb-6" src="<?= $assets_folder_path."/icon/".'telegram.png'; ?>"/>
-                                <img class="w-8 mx-2 mb-6" src="<?= $assets_folder_path."/icon/".'instagram.png'; ?>"/>
-                                <img class="w-8 mx-2 mb-6" src="<?= $assets_folder_path."/icon/".'facebook.png'; ?>"/>
-                                <img class="w-8 ml-2 mb-6" src="<?= $assets_folder_path."/icon/".'link.png'; ?>"/>
+                                <button onclick="shareToInstagram()">
+                                    <img class="w-8 mr-2 mb-6" src="<?= $assets_folder_path."/icon/".'telegram.png'; ?>"/>
+                                </button>
+                                <button onclick="shareToInstagram()">
+                                    <img class="w-8 mx-2 mb-6" src="<?= $assets_folder_path."/icon/".'instagram.png'; ?>"/>
+                                </button>
+                                <button onclick="shareToFacebook()">
+                                    <img class="w-8 mx-2 mb-6" src="<?= $assets_folder_path."/icon/".'facebook.png'; ?>"/>
+                                </button>
+                                <button onclick="copyToClipboard()">
+                                    <img class="w-8 ml-2 mb-6" src="<?= $assets_folder_path."/icon/".'link.png'; ?>"/>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -278,9 +286,9 @@
                                     </p>
                                 </div>
                                 <h2 class="mt-2 font-medium text-3xl"><?= $news__title_1; ?></h2>
-                                <p class="mt-7 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
+                                <div class="mt-7 leading-8 mb-4 overflow-y-scroll line-clamp-3 text-ellipsis figtree-link-light figtree-light">
                                     <?= $news__paragraph_top; ?>
-                                </p>
+                                </div>
                                 <div class="flex items-end figtree-light">
                                     <div class="flex">
                                         <a href="<?= $link_slug; ?>">
