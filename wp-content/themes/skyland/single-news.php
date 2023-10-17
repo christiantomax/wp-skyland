@@ -76,9 +76,6 @@
                             </div>
                         </div>
                     </a>
-                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element hidden lg:block">
-                        <?= $news__paragraph_top; ?>
-                    </p>
                     <p class="pt-1 text-sm mt-12 text-ellipsis overflow-hidden fade-in-element  mr-8">
                         Written by: <?= $news__author; ?>
                     </p>
