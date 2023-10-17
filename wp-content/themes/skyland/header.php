@@ -29,7 +29,11 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php preg_replace('/-/', '', wp_title('', true, 'right')); ?> | <?php bloginfo('name'); ?></title>
+    <?php
+        $title = wp_title('|', true, 'right');
+        $title = $title . bloginfo('name');
+    ?>
+    <title><?= $title ?></title>
 
     <meta name="description" content="<?= $description; ?>">
     <meta name="keywords" content="<?= $keyword; ?>">
