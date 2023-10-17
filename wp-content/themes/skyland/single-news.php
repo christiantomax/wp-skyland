@@ -64,10 +64,7 @@
                         <img class="w-full h-full object-cover fade-in-element" src="<?= $news__image; ?>"/>
                     </div>
                     <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element lg:hidden mr-8">
-                        <?= $news__paragraph_left; ?>
-                    </p>
-                    <p class="pt-1 leading-8 mt-8 xl:mt-12 text-ellipsis overflow-hidden fade-in-element lg:hidden mr-8">
-                        <?= $news__paragraph_right; ?>
+                        <?= $news__paragraph_top; ?>
                     </p>
                     <a class="mt-5 lg:hidden <?= $news__alternative_url == "" ? "hidden" : ""; ?>" href="<?= $news__alternative_url; ?>" target="_blank">
                         <div class="flex explore-rotate-left">
