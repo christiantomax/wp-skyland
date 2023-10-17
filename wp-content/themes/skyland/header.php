@@ -30,8 +30,8 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php
-        $title = wp_title('|', true, 'right').bloginfo('name');
-        $updatedTitle = preg_replace('/-/', '', $title);
+        $title = wp_title('|', true, 'right');
+        $updatedTitle = preg_replace('/-/', '', $title).bloginfo('name');
     ?>
     <title><?= $updatedTitle?></title>
 
