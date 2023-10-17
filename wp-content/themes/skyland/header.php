@@ -30,7 +30,7 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
-
+    
     <meta name="description" content="<?= $description; ?>">
     <meta name="keywords" content="<?= $keyword; ?>">
     <meta name="robots" content="index, follow">
@@ -39,6 +39,14 @@
     <meta property="og:description" content="<?= $description; ?>">
     <meta property="og:image" content="<?= esc_url($site_icon_url); ?>">
     <meta property="og:url" content="<?= get_permalink();?>">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= get_theme_file_path( 'assets/favicon' )?>/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= get_theme_file_path( 'assets/favicon' )?>/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= get_theme_file_path( 'assets/favicon' )?>/favicon-16x16.png">
+    <link rel="manifest" href="<?= get_theme_file_path( 'assets/favicon' )?>/site.webmanifest">
+    <link rel="mask-icon" href="<?= get_theme_file_path( 'assets/favicon' )?>/safari-pinned-tab.svg" color="#bf955b">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
