@@ -63,7 +63,7 @@
                     <div class="w-full h-40 md:hidden lg:hidden">
                         <img class="w-full h-full object-cover fade-in-element" src="<?= $news__image; ?>"/>
                     </div>
-                    <div class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element hidden lg:hidden">
+                    <div class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element lg:hidden">
                         <?= $news__paragraph_top; ?>
                     </div>
                     <div class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element md:hidden lg:hidden mr-8">
