@@ -31,7 +31,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 			}	
 		}else if ( strpos( $meta_box['id'], 'about' ) !== false ) {
 			if(isset($_GET['post'])){
-				if (strtolower(get_the_title($_GET['post'])) != 'about-us') {
+				if (strtolower(get_the_title($_GET['post'])) != 'about us') {
 					unset( $meta_boxes[ $k ] );
 				}
 			}	
