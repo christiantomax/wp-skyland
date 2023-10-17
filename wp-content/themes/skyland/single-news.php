@@ -121,9 +121,9 @@
         <div class="w-5/12">
             <div class="flex">
                 <div class="flex flex-col justify-between">
-                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
+                    <div class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_left; ?>
-                    </p>
+                    </div>
                     <a class="mt-5 hidden lg:block <?= $news__alternative_url == "" ? "hidden" : ""; ?>" href="<?= $news__alternative_url; ?>" target="_blank">
                         <div class="flex explore-rotate-left">
                             <p class="text-md font-normal me-3">
@@ -140,9 +140,9 @@
         <div class="w-5/12 ps-20">
             <div class="flex">
                 <div class="flex flex-col justify-between">
-                    <p class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
+                    <div class="pt-1 leading-8 text-ellipsis overflow-hidden fade-in-element">
                         <?= $news__paragraph_right; ?>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
