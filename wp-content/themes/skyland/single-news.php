@@ -256,7 +256,7 @@
         <div class="w-full xl:hidden">
             <div class="slider">
                 <?php
-                    $limit_posts = count($list_all_post) < 10 ? count($list_all_post) : 10;
+                    $limit_posts = count($list_all_post);
                     for ($i = 0; $i < $limit_posts; $i++) {
                         $post_id = $list_all_post[$i]->ID;
 
