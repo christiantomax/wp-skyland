@@ -60,16 +60,16 @@
             </div>
             <div class="flex text-md xl:text-lg">
                 <div class="flex flex-col justify-between figtree-light">
-                    <div class="w-full h-40">
+                    <div class="w-full h-40 md:hidden lg:hidden">
                         <img class="w-full h-full object-cover fade-in-element" src="<?= $news__image; ?>"/>
                     </div>
-                    <p class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element mr-8">
+                    <div class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element md:hidden lg:hidden mr-8">
                         <?= $news__paragraph_left; ?>
-                    </p>
-                    <p class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element mr-8">
+                    </div>
+                    <div class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element md:hidden lg:hidden mr-8">
                         <?= $news__paragraph_right; ?>
-                    </p>
-                    <a class="mt-5 <?= $news__alternative_url == "" ? "hidden" : ""; ?>" href="<?= $news__alternative_url; ?>" target="_blank">
+                    </div>
+                    <a class="mt-5 md:hidden lg:hidden <?= $news__alternative_url == "" ? "hidden" : ""; ?>" href="<?= $news__alternative_url; ?>" target="_blank">
                         <div class="flex explore-rotate-left">
                             <p class="text-md font-normal me-3">
                                 Show more
