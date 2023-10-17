@@ -63,6 +63,9 @@
                     <div class="w-full h-40 md:hidden lg:hidden">
                         <img class="w-full h-full object-cover fade-in-element" src="<?= $news__image; ?>"/>
                     </div>
+                    <div class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element hidden lg:hidden">
+                        <?= $news__paragraph_top; ?>
+                    </div>
                     <div class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element md:hidden lg:hidden mr-8">
                         <?= $news__paragraph_left; ?>
                     </div>
@@ -79,9 +82,9 @@
                             </div>
                         </div>
                     </a>
-                    <p class="pt-1 leading-8 mt-8 xl:mt-12 fade-in-element hidden lg:block">
+                    <div class="hidden pt-1 leading-8 mt-8 xl:mt-12 fade-in-element hidden lg:block">
                         <?= $news__paragraph_top; ?>
-                    </p>
+                    </div>
                     <p class="pt-1 text-sm mt-12 fade-in-element  mr-8">
                         Written by: <?= $news__author; ?>
                     </p>
