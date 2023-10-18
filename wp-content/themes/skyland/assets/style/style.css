@@ -117,7 +117,7 @@
 }
 
 @supports (-webkit-overflow-scrolling: touch) { 	
-    img{ 		
+    .single_project_headerBG{ 		
         background-attachment: scroll; 	
         
     } 

@@ -76,7 +76,7 @@
 ?>
 <!-- section banner of detail property -->
 <section class="relative w-screen h-screen full-page mb-10" id="property-banner">
-    <div class="bg-fixed bg-no-repeat bg-center bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner;?>)">
+    <div class="single_project_headerBG bg-fixed bg-no-repeat bg-center bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner;?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
             <h1 class="text-3xl xl:text-6xl fade-in-element z-10"><?= $title_1;?></h1>
             <h2 class="text-4xl xl:text-8xl mt-4 fade-in-element z-10"><?= $title_2;?></h2>
