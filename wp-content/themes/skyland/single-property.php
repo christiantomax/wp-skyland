@@ -76,13 +76,9 @@
 ?>
 
 <style>
-@supports (-webkit-overflow-scrolling: touch) { 	
-    #single_project_headerBG, #single_project_footerBG{ 		
-        background-attachment: scroll; 	
-        
-    } 
-    
-}
+#single_project_headerBG, #single_project_footerBG{ 		
+    background-attachment: scroll; 	
+} 
 </style>
 <!-- section banner of detail property -->
 <section class="relative w-screen h-screen full-page mb-10" id="property-banner">

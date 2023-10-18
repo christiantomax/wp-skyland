@@ -208,7 +208,7 @@ gsap.fromTo(headerBG,
         end: "bottom top",           // End when the top of the trigger element reaches the top of the viewport
         scrub: true                  // Enable scrubbing for the parallax effect
     },
-    backgroundPosition: "center 100px",  // Adjust the value to control the parallax effect
+    backgroundPosition: "center -100px",  // Adjust the value to control the parallax effect
 });
 
 
