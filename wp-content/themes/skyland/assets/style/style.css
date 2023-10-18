@@ -116,13 +116,7 @@
     line-height: 4.5rem;
 }
 
-@supports (-webkit-overflow-scrolling: touch) { 	
-    .single_project_headerBG{ 		
-        background-attachment: scroll; 	
-        
-    } 
-    
-}
+
 
 #loader-screen{
     z-index: 9999;

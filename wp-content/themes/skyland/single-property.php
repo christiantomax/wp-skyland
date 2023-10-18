@@ -74,17 +74,30 @@
         
     }
 ?>
+
+<style>
+@supports (-webkit-overflow-scrolling: touch) { 	
+    #single_project_headerBG, #single_project_footerBG{ 		
+        background-attachment: scroll; 	
+        
+    } 
+    
+}
+</style>
 <!-- section banner of detail property -->
 <section class="relative w-screen h-screen full-page mb-10" id="property-banner">
-    <div class="single_project_headerBG bg-fixed bg-no-repeat bg-center bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner;?>)">
+    <div id="single_project_headerBG" class="bg-fixed bg-no-repeat bg-center bg-cover w-full h-full flex justify-center"
+         style="background-image: url(<?= $image_banner; ?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
-            <h1 class="text-3xl xl:text-6xl fade-in-element z-10"><?= $title_1;?></h1>
-            <h2 class="text-4xl xl:text-8xl mt-4 fade-in-element z-10"><?= $title_2;?></h2>
-            <p class="figtree-light font-thin text-lg xl:text-3xl mt-12 fade-in-element z-10"><?= $address;?><br class="xl:hidden" /> <span class="xl:ms-60"><?= $year;?></span></p>
+            <h1 class="text-3xl xl:text-6xl fade-in-element z-10"><?= $title_1; ?></h1>
+            <h2 class="text-4xl xl:text-8xl mt-4 fade-in-element z-10"><?= $title_2; ?></h2>
+            <p class="figtree-light font-thin text-lg xl:text-3xl mt-12 fade-in-element z-10"><?= $address; ?><br
+                    class="xl:hidden"/> <span class="xl:ms-60"><?= $year; ?></span></p>
         </div>
     </div>
     <div class="overlay-gradient"></div>
 </section>
+
 
 <!-- section description of detail property -->
 <section class="w-12/12 xl:ms-72 flex justify-center" id="property-description">
@@ -192,7 +205,7 @@
 <!-- story section -->
 <section class="w-screen full-page-height" id="next-property">
     <a href="<?= $next_slug; ?>">
-        <div class="relative bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner_next;?>)">
+        <div id="single_project_footerBG" class="relative bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner_next;?>)">
             <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
                 <div class="flex justify-between w-full">
                     <div class="flex z-20">
@@ -237,5 +250,7 @@
         </div>
     </a>
 </section>
+
+
 
 <?php get_footer() ?>

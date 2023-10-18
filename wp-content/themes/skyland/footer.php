@@ -190,5 +190,43 @@
         }
     ?>">
     </script>
+
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Create a timeline for the parallax effect
+const headerBG = document.getElementById("single_project_headerBG");
+
+gsap.fromTo(headerBG, 
+{
+    backgroundPosition: "center 0px",
+},{
+    scrollTrigger: {
+        trigger: "#property-banner",  // Trigger element
+        start: "top top",            // Start when the top of the trigger element reaches the top of the viewport
+        end: "bottom top",           // End when the top of the trigger element reaches the top of the viewport
+        scrub: true                  // Enable scrubbing for the parallax effect
+    },
+    backgroundPosition: "center 100px",  // Adjust the value to control the parallax effect
+});
+
+
+
+const footerBG = document.getElementById("single_project_footerBG");
+
+gsap.fromTo(footerBG, 
+{
+    backgroundPosition: "center 0px",
+},{
+    scrollTrigger: {
+        trigger: "#next-property",  // Trigger element
+        start: "top bottom",            // Start when the top of the trigger element reaches the bottom of the viewport
+        end: "bottom center",           // End when the top of the trigger element reaches the top of the viewport
+        scrub: true ,                 // Enable scrubbing for the parallax effect
+    },
+    backgroundPosition: "center -50px",  // Adjust the value to control the parallax effect
+});
+</script>
     </body>
 </html>
