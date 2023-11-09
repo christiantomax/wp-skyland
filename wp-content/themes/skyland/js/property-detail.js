@@ -14,7 +14,6 @@ expanders.forEach(function(expander, index){
             expander.animation.play();
             active = expander;
             showElements(expander);
-            scrollToElement(expander);
             }, 1000); // Set a timeout to delay the animation
     }
 
@@ -67,6 +66,4 @@ $(document).ready(function() {
             }
         ]
     });
-
-
 });  

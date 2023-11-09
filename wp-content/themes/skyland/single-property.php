@@ -81,7 +81,7 @@
 } 
 </style>
 <!-- section banner of detail property -->
-<section class="relative w-screen h-screen full-page mb-10" id="property-banner">
+<section class="relative w-screen h-screen full-page mb-10 z-10" id="property-banner">
     <div id="single_project_headerBG" class="bg-fixed bg-no-repeat bg-center bg-cover w-full h-full flex justify-center"
          style="background-image: url(<?= $image_banner; ?>)">
         <div class="bg-fixed w-11/12 bg-no-repeat bg-cover h-full flex flex-col justify-end py-32">
@@ -96,7 +96,7 @@
 
 
 <!-- section description of detail property -->
-<section class="w-12/12 xl:ms-72 flex justify-center" id="property-description">
+<section class="w-12/12 xl:ms-72 flex justify-center z-10" id="property-description">
         <div class="w-11/12 flex flex-col xl:flex-row justify-end foreword-description mb-16 xl:pe-20 figtree-light">
             <p class="pt-1 leading-8 text-ellipsis overflow-hidden w-full xl:w-6/12 fade-in-element">
             <?= $paragraph_left;?>
@@ -108,7 +108,7 @@
 </section>
 
 <!-- section galleries detail property -->
-<section class="w-screen full-page mb-3 lg:mb-36" id="property-galleries">
+<section class="w-screen full-page mb-3 lg:mb-36 z-10" id="property-galleries">
     <div class="flex justify-center">
         <div class="w-full xl:hidden">
             <div class="slider fade-in-element">
@@ -135,7 +135,7 @@
                             <div class="expander h-fit">
                                 <div class="h-full">
                                     <div class="w-12/12 flex property-galleries__image__container">
-                                        <img class="w-full h-full object-cover" src="<?= $fieldset_text_image[$i]; ?>"/>
+                                        <img class="w-full h-full object-cover cursor-pointer" src="<?= $fieldset_text_image[$i]; ?>" onclick="openModal(<?= $i;?>)"/>
                                     </div>
                                 </div>
                             </div>
@@ -192,14 +192,14 @@
         $video_url = $video_data[$key]['src'];
     }
 ?>
-<section id="video" class="mx-5 lg:mx-20 mb-20 <?= $video_url == "" ? "hidden" : ""; ?>">
+<section id="video" class="mx-5 lg:mx-20 mb-20 z-10 <?= $video_url == "" ? "hidden" : ""; ?>">
     <video class="w-full h-[40vh] lg:h-[60vh]" src="<?= esc_url($video_url);?>" controls>
         Your browser does not support the video tag.
     </video>
 </section>
 
 <!-- story section -->
-<section class="w-screen full-page-height" id="next-property">
+<section class="w-screen full-page-height z-10" id="next-property">
     <a href="<?= $next_slug; ?>">
         <div id="single_project_footerBG" class="relative bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image_banner_next;?>)">
             <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
@@ -247,6 +247,133 @@
     </a>
 </section>
 
+<section id="popup-galleries" class="opacity-0 z-[-9999] fixed left-0 top-0 bg-black h-fit min-w-screen min-h-screen pb-12 pt-5">
+    <section class="flex justify-end mb-5 px-3 md:px-10">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256" onclick="hiddenModal()" class="cursor-pointer">
+            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z"></path></g></g>
+        </svg>
+    </section>
+    <section class="galleries-jumbotron w-screen px-3 md:px-10 ">
+            <?php
+                for ($i = 0; $i < count($fieldset_text_image); $i++) {
+                    ?>
+                        <figure class="h-[70vh]">
+                            <img class="w-full h-full object-cover object-center" src="<?= $fieldset_text_image[$i]; ?>" alt="image-gallery"/>
+                        </figure>
+                    <?php
+                }
+            ?>
+    </section>
+    <section id="slider-controller" class="flex justify-between mt-3 px-3 md:px-10 ">
+        <p class="text-white text-3xl figtree-light">Living Room</p>
+        <section id="slider-controller-arrows" class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" onclick="prevSlick()" class="cursor-pointer">
+                <path d="M6.586 12l8.707 8.707-1.414 1.414L4.758 12l9.121-9.121 1.414 1.414L6.586 12z" fill="#FFF"/>
+            </svg>                    
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" onclick="nextSlick()" class="rotate-180 ml-20 cursor-pointer">
+                <path d="M6.586 12l8.707 8.707-1.414 1.414L4.758 12l9.121-9.121 1.414 1.414L6.586 12z" fill="#FFF"/>
+            </svg>                    
+        </section>
+    </section>
 
+    <section class="galleries-preview w-screen px-3 md:px-10 ">
+        <?php
+            for ($i = 0; $i < count($fieldset_text_image); $i++) {
+                ?>
+                    <figure class="h-[5rem] xl:h-[7rem] p-2">
+                        <img class="w-full h-full object-cover object-center opacity-30 galleries-skyland galleries-<?= $i;?> cursor-pointer"  onclick="slickGoTo(<?= $i;?>)" src="<?= $fieldset_text_image[$i]; ?>" alt="image-gallery"/>
+                    </figure>
+                <?php
+            }
+        ?>
+    </section>            
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+<script>
+    let currentIdx = 0, countSlick = <?= count($fieldset_text_image);?>
 
+    $('.galleries-preview').slick({
+        infinite: true,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.galleries-jumbotron',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    $('.galleries-preview').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        slickGoTo(currentSlide)
+    });
+
+    $('.galleries-jumbotron').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        focusOnSelect: true,
+    });
+
+    $('.galleries-jumbotron').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        slickGoTo(currentSlide)
+    });
+
+    function nextSlick () {
+        $('.galleries-jumbotron').slick("slickNext")
+        currentIdx++
+        changeCenterPreview()
+    }
+    function prevSlick () {
+        $('.galleries-jumbotron').slick("slickPrev")
+        currentIdx--
+        changeCenterPreview()
+    }
+    function slickGoTo(idx){
+        $('.galleries-jumbotron').slick("slickGoTo", idx)
+        currentIdx = idx
+        changeCenterPreview()
+    }
+    function changeCenterPreview(){
+        if(currentIdx < 0){
+            currentIdx = countSlick-1
+        }else if (currentIdx >= countSlick){
+            currentIdx = 0
+        }
+        $('.galleries-skyland').removeClass('opacity-100');
+        $('.galleries-skyland').addClass('opacity-30');
+        $('.galleries-'+currentIdx).addClass('opacity-100');
+    }
+    function hiddenModal () {
+        $('#popup-galleries').removeClass('z-50');
+        $('#popup-galleries').removeClass('opacity-100');
+    }
+    function openModal (idx) {
+        $('#popup-galleries').addClass('z-50');
+        $('#popup-galleries').addClass('opacity-100');
+        slickGoTo(idx)
+    }
+    changeCenterPreview()
+</script>
 <?php get_footer() ?>
