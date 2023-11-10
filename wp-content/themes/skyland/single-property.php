@@ -117,7 +117,7 @@
                         ?>
                             <article>
                                 <div class="w-full">
-                                    <img class="w-full h-full bg-no-repeat bg-cover bg-center object-none" src="<?= $fieldset_text_image[$i]; ?>" alt="Image <?= $i; ?>">
+                                    <img class="w-full h-full bg-no-repeat bg-cover bg-center object-none" src="<?= $fieldset_text_image[$i]; ?>"alt ="Image <?= $i; ?>" onclick="openModal(<?= $i;?>)">
                                 </div>
                                 <h2 class="paragraph text-xl figtree-light"><?= $address;?></h2>
                                 <p class="paragraph leading-8 text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
@@ -257,8 +257,10 @@
             <?php
                 for ($i = 0; $i < count($fieldset_text_image); $i++) {
                     ?>
-                        <figure class="h-[70vh]">
-                            <img class="w-full h-full object-cover object-center" src="<?= $fieldset_text_image[$i]; ?>" alt="image-gallery"/>
+                        <figure class="">
+                            <section class="h-[70vh] flex items-center">
+                                <img class="w-full h-full object-cover object-center" src="<?= $fieldset_text_image[$i]; ?>" alt="image-gallery"/>
+                            </section>
                         </figure>
                     <?php
                 }
@@ -317,8 +319,8 @@
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
                 }
             }
         ]
