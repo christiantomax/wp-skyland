@@ -12,7 +12,7 @@
         // Now you can use the $post_id to retrieve the Metabox data
         $instagram = get_post_meta($post_id, $prefix.$section.'instagram'.$languages, true);
         $email = get_post_meta($post_id, $prefix.$section.'email'.$languages, true);
-        $facebook = get_post_meta($post_id, $prefix.$section.'instagram'.$languages, true);
+        $facebook = get_post_meta($post_id, $prefix.$section.'facebook'.$languages, true);
         $address = get_post_meta($post_id, 'contact_Maps_section_paragraph', true);
     }
 ?>
