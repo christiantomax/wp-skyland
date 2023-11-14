@@ -248,7 +248,7 @@
 ?>
 <!-- story section -->
 <section class="relative w-screen h-screen" id="home-story">
-    <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center" style="background-image: url(<?= $image;?>)">
+    <div class="bg-fixed bg-right bg-no-repeat bg-cover w-full h-full flex justify-center single_project_footerBG" style="background-image: url(<?= $image;?>)">
         <div class="bg-fixed w-11/12 flex bg-no-repeat bg-cover h-full pt-24">
             <div class="flex flex-col lg:flex-row lg:justify-between w-full z-30">
                 <div class="w-full lg:w-10/12 flex ps-0 lg:ps-0 fade-in-element" >

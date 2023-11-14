@@ -37,6 +37,10 @@
 		height: 13rem;
 		padding: 0 5px;
 	}
+
+	.galleries-preview .slick-slide img {
+		height: 5rem;
+	}
 	
 	.slick-center .paragraph {
 		display: block;

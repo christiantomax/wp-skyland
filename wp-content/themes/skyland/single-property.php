@@ -117,7 +117,7 @@
                         ?>
                             <article>
                                 <div class="w-full">
-                                    <img class="w-full h-full bg-no-repeat bg-cover bg-center object-none" src="<?= $fieldset_text_image[$i]; ?>"alt ="Image <?= $i; ?>" onclick="openModal(<?= $i;?>)">
+                                    <img class="w-full h-full bg-no-repeat bg-cover bg-center object-cover lg:object-none" src="<?= $fieldset_text_image[$i]; ?>"alt ="Image <?= $i; ?>" onclick="openModal(<?= $i;?>)">
                                 </div>
                                 <h2 class="paragraph text-xl figtree-light"><?= $address;?></h2>
                                 <p class="paragraph leading-8 text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
@@ -135,7 +135,7 @@
                             <div class="expander h-fit">
                                 <div class="h-full">
                                     <div class="w-12/12 flex property-galleries__image__container">
-                                        <img class="w-full h-full object-cover cursor-pointer" src="<?= $fieldset_text_image[$i]; ?>" onclick="openModal(<?= $i;?>)"/>
+                                        <img class="w-full h-full xl:w-full xl:h-auto xl:h-min-[50%] object-cover cursor-pointer" src="<?= $fieldset_text_image[$i]; ?>" onclick="openModal(<?= $i;?>)"/>
                                     </div>
                                 </div>
                             </div>
