@@ -38,6 +38,11 @@
 		padding: 0 5px;
 	}
 
+	.img-popup{
+		width: auto !important;
+		height: 100% !important;
+	}
+
 	.galleries-preview .slick-slide img {
 		height: 5rem;
 	}

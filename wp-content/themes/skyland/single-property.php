@@ -259,7 +259,7 @@
                     ?>
                         <figure class="">
                             <section class="h-[70vh] flex items-center justify-center">
-                                <img class="w-full h-full xl:w-auto object-cover object-center" src="<?= $fieldset_text_image[$i]; ?>" alt="image-gallery"/>
+                                <img class="w-auto h-full xl:w-auto object-cover object-center img-popup" src="<?= $fieldset_text_image[$i]; ?>" alt="image-gallery"/>
                             </section>
                         </figure>
                     <?php
