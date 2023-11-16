@@ -119,8 +119,8 @@
                                 <div class="w-full">
                                     <img class="w-full h-full bg-no-repeat bg-cover bg-center object-cover lg:object-none" src="<?= $fieldset_text_image[$i]; ?>"alt ="Image <?= $i; ?>" onclick="openModal(<?= $i;?>)">
                                 </div>
-                                <h2 class="paragraph text-xl figtree-light"><?= $address;?></h2>
-                                <p class="paragraph leading-8 text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
+                                <h2 class="paragraph mt-[3rem] text-xl figtree-light"><?= $address;?></h2>
+                                <p class="paragraph mt-5 mb-10 xl:mt-0 xl:mb-0 text-md figtree-light"><?= $fieldset_text[$i]["description"]; ?></p>
                             </article>
                         <?php
                     }
@@ -144,20 +144,20 @@
                 ?>
             </div>
             <div class="flex justify-between">
-                <div class="w-5/12">
-                    <h2 class="text-3xl figtree-light fade-in-element"><?= $address;?></h2>
-                </div>
-                <div class="flex justify-between fade-in-element">
+                <div class="w-full flex fade-in-element">
+                    <h2 class="text-3xl figtree-light"><?= $address;?></h2>
                     <?php
                         for ($i = 0; $i < count($fieldset_text_image); $i++) {
                             ?>
                                 
-                            <p class="w-8/12 leading-8 pt-1 min-h-content-description text-ellipsis overflow-hidden description-gallery description-gallery-<?= $i; ?> figtree-light">
+                            <p class="leading-8 pt-1 xl:ml-40 min-h-content-description text-ellipsis overflow-hidden description-gallery description-gallery-<?= $i; ?> figtree-light">
                                 <?= $fieldset_text[$i]["description"]; ?>
                             </p>
                             <?php
                         }
                     ?>
+                </div>
+                <div class="flex justify-between fade-in-element">
                     <div class="w-4/12 flex justify-end fade-in-element">
                         <div class="w-10 h-10 flex justify-center items-center me-16 font-medium">
                             <p class="figtree-light hover:cursor-pointer hover:opacity-75" onclick="changeExpander(-1)">
@@ -266,8 +266,20 @@
                 }
             ?>
     </section>
-    <section id="slider-controller" class="flex justify-between mt-3 px-3 md:px-10 ">
-        <p class="text-white text-3xl figtree-light">Living Room</p>
+    <section id="slider-controller" class="flex justify-between items-center mt-3 px-3 md:px-10 ">
+        <section id="slider-description" class="w-[50vw]">
+            <?php
+                for ($i = 0; $i < count($fieldset_text_image); $i++) {
+                    ?>
+                    <section>
+                        <p class="leading-8 px-1 pt-1 xl:ml-40 min-h-content-description text-ellipsis overflow-hidden description-gallery description-gallery-<?= $i; ?> figtree-light">
+                            <?= $fieldset_text[$i]["description"]; ?>
+                        </p>
+                    </section>
+                    <?php
+                }
+            ?>
+        </section>
         <section id="slider-controller-arrows" class="flex">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" onclick="prevSlick()" class="cursor-pointer">
                 <path d="M6.586 12l8.707 8.707-1.414 1.414L4.758 12l9.121-9.121 1.414 1.414L6.586 12z" fill="#FFF"/>
@@ -326,6 +338,14 @@
         ]
     });
 
+    $('#slider-description').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.galleries-jumbotron',
+    });
+
     $('.galleries-preview').on('afterChange', function(event, slick, currentSlide, nextSlide){
         slickGoTo(currentSlide)
     });
@@ -346,13 +366,16 @@
         $('.galleries-jumbotron').slick("slickNext")
         currentIdx++
         changeCenterPreview()
+        changeExpander(1)
     }
     function prevSlick () {
         $('.galleries-jumbotron').slick("slickPrev")
         currentIdx--
         changeCenterPreview()
+        changeExpander(-1)
     }
     function slickGoTo(idx){
+        $('#slider-description').slick("slickGoTo", idx)
         $('.galleries-jumbotron').slick("slickGoTo", idx)
         currentIdx = idx
         changeCenterPreview()
