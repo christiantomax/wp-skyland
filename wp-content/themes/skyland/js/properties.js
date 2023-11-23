@@ -5,18 +5,13 @@ var expanders = document.querySelectorAll('.expander');
 gsap.set(".property-detail[items]",{autoAlpha: 0, display: 'none'})
 
 expanders.forEach(function(expander) {
-    expander.addEventListener('mouseenter', (event) => {
-        var hoveredElement = event.target;
-        var attributeValue = hoveredElement.getAttribute('items');
-        
-        var parts = attributeValue.split('_');
-        var numberRow = parts[0];
-        var numberColumn = parts[1];
+
+    $(expander).each(function(index, element){
+        var attributeValue = element.getAttribute('items');
 
         var tl = gsap.timeline({ paused: true, defaults: { duration: 1 } });
 
-
-        tl.fromTo(event.target,{
+        tl.fromTo(element.target,{
             width: '27.5vw',
         },{
             width: '55.vw',
@@ -35,43 +30,60 @@ expanders.forEach(function(expander) {
             autoAlpha: 1, 
             display: 'block',
         },"<")
-        
-        tl.play()
+
+        element.animation = tl;
+
+        console.log(index,element,attributeValue)
     });
+  
+    $(expander).hover(over, out);
+    function over(){ 
+        this.animation.play() 
+        
+
+        console.log("MASUK OVER")
+    };
+    function out(){ 
+        this.animation.reverse() 
+        console.log("MASUK OUT")
+    };
+
+    // expander.addEventListener('mouseenter', (event) => {
+    // });
     
-    expander.addEventListener('mouseleave', (event) => {
-        var hoveredElement = event.target;
-        var attributeValue = hoveredElement.getAttribute('items');
+    // expander.addEventListener('mouseleave', (event) => {
+    //     var hoveredElement = event.target;
+    //     var attributeValue = hoveredElement.getAttribute('items');
         
-        var parts = attributeValue.split('_');
-        var numberRow = parts[0];
-        var numberColumn = parts[1];
+    //     var parts = attributeValue.split('_');
+    //     var numberRow = parts[0];
+    //     var numberColumn = parts[1];
 
-        var tl = gsap.timeline({ paused: true, defaults: { duration: .5 } });
+    //     var tl = gsap.timeline({ paused: true, defaults: { duration: .5 } });
 
 
-        tl.fromTo(event.target,{
-            width: '55.vw',
-        },{
-            width: '27.5vw',
-        })
-        .fromTo('[items="desc_'+attributeValue+'"]',{
-            autoAlpha: 1, 
-            display: 'block',
-        },{
-            autoAlpha: 0, 
-            display: 'none',
-        },">-0.3")
-        .fromTo('[items="explore_'+attributeValue+'"]',{
-            autoAlpha: 1, 
-            display: 'block',
-        },{
-            autoAlpha: 0, 
-            display: 'none',
-        },"<")
+    //     tl.fromTo(event.target,{
+    //         width: '55.vw',
+    //     },{
+    //         width: '27.5vw',
+    //     })
+    //     .fromTo('[items="desc_'+attributeValue+'"]',{
+    //         autoAlpha: 1, 
+    //         display: 'block',
+    //     },{
+    //         autoAlpha: 0, 
+    //         display: 'none',
+    //     },">-0.3")
+    //     .fromTo('[items="explore_'+attributeValue+'"]',{
+    //         autoAlpha: 1, 
+    //         display: 'block',
+    //     },{
+    //         autoAlpha: 0, 
+    //         display: 'none',
+    //     },"<")
         
-        tl.play()
-    });
+    //     tl.play()
+    // });
 });
 
 
