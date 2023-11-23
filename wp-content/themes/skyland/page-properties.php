@@ -188,6 +188,7 @@
         <div class="w-11/12 h-full flex items-end flex-col justify-center pb-2 ms-15 figtree-light">
     <?php
         for ($i = 0; $i < $limit_posts/3; $i++) {
+           
             $loopingItem = $i * 3 + 3;
     ?>
         <div class="w-full flex justify-end ms-24 <?= ($i == round($limit_posts/3)-1 ? ' ' : 'mb-8')?>?>">
@@ -205,8 +206,10 @@
                         $image_banner = get_post_meta($post_id, $prefix . 'image_banner' )[0];
                         $image_banner = wp_get_attachment_image_src($image_banner, 'full')[0];
                         $link_slug = get_permalink($post_id);
+
+                        // echo '<script>console.log("i",'.$i.',"==",'.($j % 3 + 1).')</script>';
                     ?>
-                    <div class="expander h-90 fade-in-element" items="<?=($i+1)?>_<?=(($j+1) > 3 ? round(($j+1) / 3) : ($j+1))?>">
+                    <div class="expander h-90 fade-in-element" items="<?=($i+1)?>_<?=($j % 3 + 1)?>">
                         <a class="w-full" href="<?= $link_slug; ?>">
                             <div class="h-full w-full">
                                 <div class="w-12/12 flex h-80 bg-[url(<?= $image_banner;?>)] bg-cover bg-center">
@@ -214,12 +217,12 @@
                                 <header class="mt-6 text-3xl h-10/12 truncate pb-2">
                                     <time class="text-2xl me-8"><?= $year;?> </time><?= $title_1.' '.$title_2;;?>
                                 </header>
-                                <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description property-detail" items="desc_<?=($i+1)?>_<?=(($j+1) > 3 ? round(($j+1) / 3) : ($j+1))?>">
+                                <div class="text-ellipsis overflow-hidden project-description-<?= $j; ?> project-description property-detail" items="desc_<?=($i+1)?>_<?=($j % 3 + 1)?>">
                                     <p class="property-project-description pb-4 leading-8">
-                                        <?= $paragraph_left;?>
+                                        <?= trim(substr($paragraph_left,0,120));?><?=(substr(trim(substr($paragraph_left,0,120)), -1) === '.' ? '' : '...')?>
                                     </p>
                                 </div>
-                                <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description property-detail" items="explore_<?=($i+1)?>_<?=(($j+1) > 3 ? round(($j+1) / 3) : ($j+1))?>">
+                                <div class="flex mt-6 pb-4 project-description-<?= $j; ?> project-description property-detail" items="explore_<?=($i+1)?>_<?=($j % 3 + 1)?>">
                                     <a href="<?= $link_slug;?>">
                                         <div class="flex explore-rotate-left">
                                             <p class="text-md font-normal text-end me-3">
@@ -247,7 +250,7 @@
                         <div class="h-90 opacity-0 fade-in-element">
                             <article class="h-full">
                                 <div class="w-12/12 flex h-80">
-                                    <img class="w-full h-full object-cover" src="<?=get_template_directory_uri()?>/assets/img/property-placeholder.webp"/>
+                                    <img class="w-full h-full object-cover" src="<?=get_template_directory_uri()?>/assets/img/property-placeholder.png"/>
                                 </div>
                                 <header class="mt-6 text-3xl h-10/12 truncate pb-2">
                                     <time class="text-2xl me-8"> </time>
