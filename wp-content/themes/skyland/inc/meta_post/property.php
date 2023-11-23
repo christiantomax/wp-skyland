@@ -69,6 +69,13 @@ function properties_section( $meta_boxes ) {
 		'autosave'   => true,
 		'fields'     => [
 			[
+				'id'               => $prefix.'order_number',
+				'type' 			   => 'number',
+				'min' 			   => 0,
+				'std' 			   => 1,
+				'name'             => esc_html__( 'Order Number', 'english' ),
+			],
+			[
 				'id'               => $prefix.'title_1',
 				'type' 			   => 'text',
 				'name'             => esc_html__( 'Title 1', 'english' ),

@@ -10,6 +10,9 @@
             'posts_per_page' => -1,
             'post__not_in'   => array($post_id),
             'post_status'    => 'publish',
+            'meta_key'       => 'properties_order_number',
+            'orderby'        => 'meta_value_num',
+            'order'          => 'DESC',
         );
         
         $query = new WP_Query($args);
@@ -29,6 +32,9 @@
                     'terms'    => $terms,
                 ),
             ),
+            'meta_key'       => 'properties_order_number',
+            'orderby'        => 'meta_value_num',
+            'order'          => 'DESC',
         );
         
         $query = new WP_Query($args);
